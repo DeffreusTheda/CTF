@@ -388,12 +388,12 @@ Dummy me took an hour to figure out that I mistyped twice T-T
 ```solve.py
 from z3 import *
 
-a = bitvec('a', 64)
-b = bitvec('b', 64)
-c = bitvec('c', 64)
-d = bitvec('d', 64)
-e = bitvec('e', 64)
-f = bitvec('f', 64)
+a = BitVec('a', 64)
+b = BitVec('b', 64)
+c = BitVec('c', 64)
+d = BitVec('d', 64)
+e = BitVec('e', 64)
+f = BitVec('f', 64)
 
 solve(
     100000000 < a,
