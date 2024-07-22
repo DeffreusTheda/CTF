@@ -1,0 +1,1 @@
+picoCTF{s0lv3_angry_symb0ls_31b29976}
