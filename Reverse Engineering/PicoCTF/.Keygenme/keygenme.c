@@ -10,7 +10,7 @@
 //-------------------------------------------------------------------------
 // Function declarations
 
-long long (**init_proc())(void);
+__int64 (**init_proc())(void);
 void sub_1020();
 void sub_1030();
 void sub_1040();
@@ -19,35 +19,48 @@ void sub_1060();
 void sub_1070();
 void sub_1080();
 void sub_1090();
-// int _cxa_finalize(void *);
+// int __fastcall _cxa_finalize(void *);
 // int printf(const char *format, ...);
 // int puts(const char *s);
 // char *fgets(char *s, int n, FILE *stream);
 // size_t strlen(const char *s);
-// long long MD5(_QWORD, _QWORD, _QWORD); weak
+// __int64 __fastcall MD5(_QWORD, _QWORD, _QWORD); weak
 // int sprintf(char *s, const char *format, ...);
-void __noreturn start(long long a1, long long a2, void (*a3)(void));
+void __fastcall __noreturn start(__int64 a1, __int64 a2, void (*a3)(void));
 FILE **sub_1150();
-long long sub_1180();
+__int64 sub_1180();
 FILE **sub_11C0();
-long long sub_1200();
-long long sub_1209(const char *a1);
+__int64 sub_1200();
+__int64 __fastcall sub_1209(const char *a1);
 void fini(void); // idb
 void term_proc();
-// int _libc_start_main(int (*main)(int, char **, char **), int argc, char **ubp_av, void (*init)(void), void (*fini)(void), void (*rtld_fini)(void), void *stack_end);
-// int __cxa_finalize(void *);
-// long long _gmon_start__(void); weak
+// int __fastcall _libc_start_main(int (__fastcall *main)(int, char **, char **), int argc, char **ubp_av, void (*init)(void), void (*fini)(void), void (*rtld_fini)(void), void *stack_end);
+// int __fastcall __cxa_finalize(void *);
+// __int64 _gmon_start__(void); weak
 
 //-------------------------------------------------------------------------
 // Data declarations
 
 _UNKNOWN main;
 _UNKNOWN init;
-long long (*off_3D78)() = &sub_1200; // weak
-long long (*off_3D80)() = &sub_11C0; // weak
+__int64 (__fastcall *off_3D78)() = &sub_1200; // weak
+__int64 (__fastcall *off_3D80)() = &sub_11C0; // weak
 void *off_4008 = &off_4008; // idb
 FILE *stdin; // idb
 char byte_4018; // weak
+
+
+//----- (0000000000001000) ----------------------------------------------------
+__int64 (**init_proc())(void)
+{
+  __int64 (**result)(void); // rax
+
+  result = &_gmon_start__;
+  if ( &_gmon_start__ )
+    return (__int64 (**)(void))_gmon_start__();
+  return result;
+}
+// 4068: using guessed type __int64 _gmon_start__(void);
 
 //----- (0000000000001020) ----------------------------------------------------
 void sub_1020()
@@ -100,16 +113,16 @@ void sub_1090()
 
 //----- (0000000000001120) ----------------------------------------------------
 // positive sp value has been detected, the output may be wrong!
-void start(long long a1, long long a2, void (*a3)(void))
+void __fastcall __noreturn start(__int64 a1, __int64 a2, void (*a3)(void))
 {
-  long long v3; // rax
+  __int64 v3; // rax
   int v4; // esi
-  long long v5; // [rsp-8h] [rbp-8h] BYREF
+  __int64 v5; // [rsp-8h] [rbp-8h] BYREF
   char *retaddr; // [rsp+0h] [rbp+0h] BYREF
 
   v4 = v5;
   v5 = v3;
-  _libc_start_main((int (*)(int, char **, char **))main, v4, &retaddr, (void (*)(void))init, fini, a3, &v5);
+  _libc_start_main((int (__fastcall *)(int, char **, char **))main, v4, &retaddr, (void (*)(void))init, fini, a3, &v5);
   __halt();
 }
 // 112A: positive sp value 8 has been found
@@ -122,7 +135,7 @@ FILE **sub_1150()
 }
 
 //----- (0000000000001180) ----------------------------------------------------
-long long sub_1180()
+__int64 sub_1180()
 {
   return 0LL;
 }
@@ -145,14 +158,16 @@ FILE **sub_11C0()
 
 //----- (0000000000001200) ----------------------------------------------------
 // attributes: thunk
-long long sub_1200()
+__int64 sub_1200()
 {
   return sub_1180();
 }
 
 //----- (0000000000001209) ----------------------------------------------------
-long long sub_1209(const char *a1)
+__int64 __fastcall sub_1209(const char *a1)
 {
+  size_t v1; // rax
+  size_t v2; // rax
   int v4; // [rsp+18h] [rbp-C8h]
   int v5; // [rsp+18h] [rbp-C8h]
   int i; // [rsp+1Ch] [rbp-C4h]
@@ -164,26 +179,29 @@ long long sub_1209(const char *a1)
   char s[61]; // [rsp+50h] [rbp-90h] BYREF
   char v13; // [rsp+8Dh] [rbp-53h]
   char v14[72]; // [rsp+90h] [rbp-50h] BYREF
-  unsigned long long v15; // [rsp+D8h] [rbp-8h]
+  unsigned __int64 v15; // [rsp+D8h] [rbp-8h]
 
   v15 = __readfsqword(0x28u);
   strcpy(s, "picoCTF{br1ng_y0ur_0wn_k3y_");
   strcpy(v10, "}");
-  MD5(s, strlen(s), &v10[2]);
-  MD5(v10, strlen(v10), v11);
+  v1 = strlen(s);
+  MD5(s, v1, &v10[2]);
+  v2 = strlen(v10);
+  MD5(v10, v2, v11);
   v4 = 0;
-  for ( i = 0; i <= 15; ++i ) {
+  for ( i = 0; i <= 15; ++i )
+  {
     sprintf(&s[v4 + 32], "%02x", (unsigned __int8)v10[i + 2]);
     v4 += 2;
   }
   v5 = 0;
-  for ( j = 0; j <= 15; ++j ) {
+  for ( j = 0; j <= 15; ++j )
+  {
     sprintf(&v14[v5], "%02x", (unsigned __int8)v11[j]);
     v5 += 2;
   }
-  for ( k = 0; k <= 26; ++k ) {
+  for ( k = 0; k <= 26; ++k )
     v14[k + 32] = s[k];
-	}
   v14[59] = s[45];
   v14[60] = s[50];
   v14[61] = v13;
@@ -195,27 +213,61 @@ long long sub_1209(const char *a1)
   v14[67] = v10[0];
   if ( strlen(a1) != 36 )
     return 0LL;
-  for ( m = 0; m <= 35; ++m ) {
+  for ( m = 0; m <= 35; ++m )
+  {
     if ( a1[m] != v14[m + 32] )
       return 0LL;
   }
   return 1LL;
 }
-// 10F0: using guessed type long long MD5(_QWORD, _QWORD, _QWORD);
+// 10F0: using guessed type __int64 __fastcall MD5(_QWORD, _QWORD, _QWORD);
 // 1209: using guessed type char var_A0[16];
 
 //----- (000000000000148B) ----------------------------------------------------
-long long main(int a1, char **a2, char **a3)
+__int64 __fastcall main(int a1, char **a2, char **a3)
 {
   char s[40]; // [rsp+10h] [rbp-30h] BYREF
-  unsigned long long v5; // [rsp+38h] [rbp-8h]
+  unsigned __int64 v5; // [rsp+38h] [rbp-8h]
 
   v5 = __readfsqword(0x28u);
   printf("Enter your license key: ");
   fgets(s, 37, stdin);
-  if ( (u_int8)sub_1209(s) )
+  if ( (unsigned __int8)sub_1209(s) )
     puts("That key is valid.");
   else
     puts("That key is invalid.");
   return 0LL;
 }
+
+//----- (0000000000001520) ----------------------------------------------------
+void __fastcall init(unsigned int a1, __int64 a2, __int64 a3)
+{
+  signed __int64 v4; // rbp
+  __int64 i; // rbx
+
+  init_proc();
+  v4 = &off_3D80 - &off_3D78;
+  if ( v4 )
+  {
+    for ( i = 0LL; i != v4; ++i )
+      ((void (__fastcall *)(_QWORD, __int64, __int64))*(&off_3D78 + i))(a1, a2, a3);
+  }
+}
+// 3D78: using guessed type __int64 (__fastcall *off_3D78)();
+// 3D80: using guessed type __int64 (__fastcall *off_3D80)();
+
+//----- (0000000000001590) ----------------------------------------------------
+void fini(void)
+{
+  ;
+}
+
+//----- (0000000000001598) ----------------------------------------------------
+void term_proc()
+{
+  ;
+}
+
+// nfuncs=37 queued=19 decompiled=19 lumina nreq=0 worse=0 better=0
+// ALL OK, 19 function(s) have been successfully decompiled
+
