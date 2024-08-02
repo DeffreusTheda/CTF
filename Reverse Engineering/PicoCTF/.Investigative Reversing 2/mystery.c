@@ -1,5 +1,5 @@
-long long codedChar(int a1, char a2, char a3) {
-  return (a2 >> a1) & 1 | a3 & 0xFEu;
+long long codedChar(int n, char f, char ptr) {
+  return (f >> n) & 1 | ptr & 0xFEu;
 }
 
 int main(int argc, const char **argv, const char **envp) {
@@ -8,13 +8,13 @@ int main(int argc, const char **argv, const char **envp) {
   int v6 = fread(&ptr, 1uLL, 1uLL, original);
   FILE *flag = fopen("flag.txt", "r");
   FILE *encoded = fopen("encoded.bmp", "a");
-  char v16[56];
+  char flagBytes[56];
 
   if ( !flag )
     puts("No flag found, please make sure this is run on the server");
   if ( !original )
     puts("original.bmp is missing, please run this on the server");
-  if ( fread(v16, 0x32uLL, 1uLL, flag) <= 0 ) {
+  if ( fread(flagBytes, 0x32uLL, 1uLL, flag) <= 0 ) {
     puts("flag is not 50 chars");
     exit(0);
   }
@@ -24,8 +24,8 @@ int main(int argc, const char **argv, const char **envp) {
     v6 = fread(&ptr, 1uLL, 1uLL, original);
   }
   for ( int i = 0; i <= 49; ++i )
-    for ( int j = 0; j <= 7; ++j ) {
-      fputc(codedChar(j, v16[i] - 5, ptr), encoded);
+    for ( int n = 0; n <= 7; ++j ) {
+      fputc(codedChar(n, flagBytes[i] - 5, ptr), encoded);
       fread(&ptr, 1uLL, 1uLL, original);
     }
   while ( v6 == 1 ) {

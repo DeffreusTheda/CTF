@@ -11,13 +11,3 @@ with minor experience on Pwn and Forensics.
 > [!NOTE]
 > Solved challenges have `~` prefix in it's challenge directory<br>
 > Flags should be stored in `flag.txt` in their challenge directory
-||||||| parent of 1e906554 (TryHackMe)
-CTFs Writeups by Deffreus
-=======
-CTFs Writeups by Deffreus Theda, A.K.A. d3ffr3u5, vinni3
-
-I mainly play on the Reverse Engineering category,
-with minor experience on Pwn and Cryptography.
-
-> [!NOTE]
-> Solved challenges have `.` suffix in it's directory
