@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import numpy as np
 
+||||||| parent of bc8b86cc (Wed Aug 14 10:50:59 PM WIB 2024)
+=======
+>>>>>>> bc8b86cc (Wed Aug 14 10:50:59 PM WIB 2024)
 y = 128
 p = 210937689838198368221980206027505105331 # getPrime(y)
 x = 10
