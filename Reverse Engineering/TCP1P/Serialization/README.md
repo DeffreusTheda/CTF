@@ -1,9 +1,13 @@
 # Serialization Writeup by Deffreus - TCP1P Playground 365
 
+<<<<<<< HEAD
 Homemade serial number generator!
 I made the program generates serial number very long so that it's safe!
 or is it safe?
 
+||||||| parent of 9999d282 (mv Writeup.md README.md; picoCTF Forensics)
+=======
+>>>>>>> 9999d282 (mv Writeup.md README.md; picoCTF Forensics)
 ## Recon
 
 After unzipping `d04b9f8d64f85306b2eb3782a046d75081f1c84d06b890fe979f016e9f24572a.zip`, I got `dist/main` and `dist/output.txt`.
