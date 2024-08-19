@@ -82,24 +82,7 @@ Dump of assembler code for function win:
    0x00000000004011f2 <+28>:    call   0x401090 <puts@plt>
    0x00000000004011f7 <+33>:    lea    rsi,[rip+0xea4]        # 0x4020a2
    0x00000000004011fe <+40>:    lea    rdi,[rip+0xe9f]        # 0x4020a4
-   0x0000000000401205 <+47>:    call   0x4010e0 <fopen@plt>
-   0x000000000040120a <+52>:    mov    QWORD PTR [rbp-0x8],rax
-   0x000000000040120e <+56>:    cmp    QWORD PTR [rbp-0x8],0x0
-   0x0000000000401213 <+61>:    jne    0x401228 <win+82>
-   0x0000000000401215 <+63>:    lea    rdi,[rip+0xe94]        # 0x4020b0
-   0x000000000040121c <+70>:    mov    eax,0x0
-   0x0000000000401221 <+75>:    call   0x4010a0 <printf@plt>
-   0x0000000000401226 <+80>:    jmp    0x40124f <win+121>
-   0x0000000000401228 <+82>:    mov    rdx,QWORD PTR [rbp-0x8]
-   0x000000000040122c <+86>:    lea    rax,[rbp-0x110]
-   0x0000000000401233 <+93>:    mov    esi,0x100
-   0x0000000000401238 <+98>:    mov    rdi,rax
-   0x000000000040123b <+101>:   call   0x4010c0 <fgets@plt>
-   0x0000000000401240 <+106>:   lea    rax,[rbp-0x110]
-   0x0000000000401247 <+113>:   mov    rdi,rax
-   0x000000000040124a <+116>:   call   0x401090 <puts@plt>
-   0x000000000040124f <+121>:   leave  
-   0x0000000000401250 <+122>:   ret    
+<-----snip----->
 ```
 
 Look here:
@@ -118,6 +101,7 @@ void vuln() {
 
 `read` maximum input length is `0x200`, or 512, but the buffer is only 32 byte long.
 `vuln` are supposed to return to `main` at the `puts` function right next to where it's called, but we should be able to overwrite the return address to `win`'s address.
+That's [buffer overflow](https://ctf101.org/binary-exploitation/buffer-overflow/)!
 
 ```
 [ Legend: Modified register | Code | Heap | Stack | String ]
