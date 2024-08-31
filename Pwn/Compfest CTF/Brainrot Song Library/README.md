@@ -79,3 +79,4 @@ LAB_0040186c:
 ```
 
 Up to 3 `%s` can be sent.
+`songList` is at `0x404060`
