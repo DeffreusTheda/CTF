@@ -1,9 +1,4 @@
-<<<<<<< HEAD
- # Power Prime Writeup by Deffreus - CompfestCTF 16
-||||||| parent of 9999d282 (mv Writeup.md README.md; picoCTF Forensics)
-=======
 # Power Prime Writeup by Deffreus - CompfestCTF 16
->>>>>>> 9999d282 (mv Writeup.md README.md; picoCTF Forensics)
 
 ###### Author: swusjask
 

@@ -129,6 +129,7 @@ It's also interesting that `v8` is never used, but because it call `rand()`, it 
 
 ### Reverse Engineering
 
+<<<<<<< HEAD
 ```
 ~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  gdb dist/encrypt 
 GNU gdb (Fedora Linux) 14.2-1.fc39
@@ -237,3 +238,115 @@ $2 = 1829178470
  %                                                                                                                                           ~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  ./solve flag_enc_no-seed.txt 
 TCP1P{p53uDO_RANDOM_IS_NOt_R4ndOM_at_A11}<
 ```
+||||||| parent of 5191dd06 (${solved/#./~} | Sat Aug 31 07:27:21 AM WIB 2024)
+=======
+
+
+~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  gdb dist/encrypt 
+GNU gdb (Fedora Linux) 14.2-1.fc39
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from dist/encrypt...
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.fedoraproject.org/>
+Enable debuginfod for this session? (y or [n]) n
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+(No debugging symbols found in dist/encrypt)
+(gdb) p/x 0x
+Invalid number "0x".
+(gdb) p/x 0x1823
+$1 = 0x1823
+(gdb) p/x 0x1823412
+$2 = 0x1823412
+(gdb) p/x 0x18234
+$3 = 0x18234
+(gdb) x $esp
+Value can't be converted to integer.
+(gdb) q
+~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  xxd dist/flag_enc.txt 
+00000000: e958 d809 01ac cc6d 5390 7b58 a642 eca5  .X.....mS.{X.B..
+00000010: cf12 5dcd 8dbb 4e97 3411 f86f 4118 7cc3  ..]...N.4..oA.|.
+00000020: 2ae8 1eac ed82 3004 270a                 *.....0.'.
+~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  ls                   
+dist  encrypt.c  flag_enc_no-seed.txt  solve  solve.c  Writeup.md
+~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  diff dist/flag_enc.txt flag_enc_no-seed.txt 
+~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  ls                                         
+dist  encrypt.c  flag_enc_no-seed.txt  solve  solve.c  Writeup.md
+~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  gdb solve 
+GNU gdb (Fedora Linux) 14.2-1.fc39
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from solve...
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.fedoraproject.org/>
+Enable debuginfod for this session? (y or [n]) y
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+Downloading separate debug info for /home/vinnie/CTF/Reverse Engineering/TCP1P/Random XOR/solve
+(No debugging symbols found in solve)                                                                                                        
+(gdb) x 0x6d070c66
+0x6d070c66:	Cannot access memory at address 0x6d070c66
+(gdb) x 0x660c076d
+0x660c076d:	Cannot access memory at address 0x660c076d
+(gdb) info vari
+All defined variables:
+
+Non-debugging symbols:
+0x00000000004002e8  __abi_tag
+0x0000000000420000  _IO_stdin_used
+0x0000000000420008  __dso_handle
+0x000000000042002c  __GNU_EH_FRAME_HDR
+0x0000000000420148  __FRAME_END__
+0x000000000043fde8  __frame_dummy_init_array_entry
+0x000000000043fdf0  __do_global_dtors_aux_fini_array_entry
+0x000000000043fdf8  _DYNAMIC
+0x000000000043ffc8  _GLOBAL_OFFSET_TABLE_
+0x0000000000440070  __data_start
+0x0000000000440070  data_start
+0x0000000000440074  __bss_start
+0x0000000000440074  __bss_start__
+0x0000000000440074  _edata
+0x0000000000440074  completed
+0x0000000000440078  __TMC_END__
+0x0000000000440078  __bss_end__
+0x0000000000440078  __end__
+0x0000000000440078  _bss_end__
+0x0000000000440078  _end
+(gdb) p 0x660c076d
+$1 = 1712064365
+(gdb) p 0x6d070c66
+$2 = 1829178470
+(gdb) exit
+~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  nvim solve.c 
+~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  gcc solve.c -o solve
+ %                                                                                                                                           ~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  ./solve flag_enc_no-seed.txt 
+TCP1P{p53uDO_RANDOM_IS_NOt_R4ndOM_at_A11}<
+~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  echo 'TCP1P{p53uDO_RANDOM_IS_NOt_R4ndOM_at_A11
+>>>>>>> 5191dd06 (${solved/#./~} | Sat Aug 31 07:27:21 AM WIB 2024)

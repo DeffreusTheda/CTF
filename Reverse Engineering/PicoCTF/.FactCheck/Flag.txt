@@ -1,1 +1,0 @@
-picoCTF{wELF_d0N3_mate_1c496e73}
