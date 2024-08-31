@@ -1,5 +1,20 @@
 # Summarize Writeup by Deffreus - UIUCTF 2024
 
+###### Author: Nikhil
+
+> ![WARNING]
+> I get quite dirty with words here.<br>
+> Just saying...
+
+## Description
+
+All you have to do is find six numbers.
+How hard can that be?
+
+[summarize](https://uiuctf-2024-rctf-challenge-uploads.storage.googleapis.com/uploads/66e8392f3eaaf0ee279369f4bbdb61ca7ede335f802339359e67daaa171b4340/summarize)
+
+## Files
+
 ```$ file summarize
 summarize: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=a5c907b4b408b4a5c7b504432506d90a407886fb, for GNU/Linux 3.2.0, stripped
 ```
@@ -7,7 +22,27 @@ summarize: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically link
 16K	summarize
 ```
 
-I need to find 6 numbers to be the input to this program.
+## Solution
+
+```summarize.c
+puts("To get the flag, you must correctly enter six 9-digit positive integers: a, b, c, d, e, and f.");
+putchar(10);
+printf("a = ");
+__isoc99_scanf("%d", &v4);
+printf("b = ");
+__isoc99_scanf("%d", &v5);
+printf("c = ");
+__isoc99_scanf("%d", &v6);
+printf("d = ");
+__isoc99_scanf("%d", &v7);
+printf("e = ");
+__isoc99_scanf("%d", &v8);
+printf("f = ");
+__isoc99_scanf("%d", &v9);
+if ( check6Cardinals(v4, v5, v6, v7, v8, v9) )
+```
+
+I need to find 6 correct numbers to be the input to this program.
 Let's call these the Cardinals.
 
 I use [Decompiler Explorer](https://dogbolt.org/?id=8d09d83e-8514-464b-8722-515ca0f11d91#Hex-Rays=196) - Hex-Rays.
@@ -97,6 +132,31 @@ No time to beautify it, for now.
 
 ### Function: CrazyMeth
 
+Hey, after testing, out, I'm kinda pissed right now.
+It seems like this shit just add both arg:
+
+```output.txt
+1 1
+result: 2 
+1 2
+result: 3 
+1 9 
+result: 10 
+ 22 02
+result: 24 
+1000 1000
+result: 2000 
+1234 1234
+result: 2468
+```
+
+Cvnt.
+This just means `crazyMethButNegateArg2` is just 'arg1 - arg2'.
+I'm severely pissed of.
+This applies to all of the other function,
+I only figure out the function purpose after experimenting with it.
+Below is my take on this function before I realize this.
+
 This is the most ubiquitous functions:
 
 ```crazyMeth.c
@@ -147,29 +207,10 @@ It mean that either arg1 or arg2 has the bit length of 21.
 This applies to other calls of `crazyMeth` too.
 From this functions, we can know the minimum number of bits required to represent each arguments, deduced from `resX` variables.
 
-Hey, after testing, out, I'm kinda pissed right now.
-It seems like this shit just add both arg:
-
-```output.txt
-1 1
-result: 2 
-1 2
-result: 3 
-1 9 
-result: 10 
- 22 02
-result: 24 
-1000 1000
-result: 2000 
-1234 1234
-result: 2468
-```
-
-Cvnt.
-This just means `crazyMethButNegateArg2` is just 'arg1 - arg2'.
-I'm severely pissed of.
-
 ### Function: whileArg1OrArg2DoXor
+
+After testing this out, this just `arg1 ^ arg2` ffs.
+Below is my take on this function before I realize this.
 
 `res6 == 1279714` comes from this function with arg1=`a3` and arg2=`crazyMeth(a4, a6)`.
 The possible value for this case is '0x1CE628 * X + 1279714'.
@@ -195,9 +236,11 @@ long long whileArg1OrArg2DoXor(unsigned int a1, unsigned int a2) {
 }
 ```
 
-After testing this out, this just `arg1 ^ arg2` ffs.
-
 ### Function: tillArg1Is0DoMath
+
+Now that I tested it out, this function is just the equivalent of 'arg1 * arg2'.
+God dang it.
+Below is my take on this function before I realize this.
 
 "add 0 by a2 with bit's index shift left if bit is 1 for bit in arg1"
 The fact it can be explained briefly makes me relieved a bit.
@@ -222,12 +265,10 @@ What can be deduced from it?
 It's hard to put into words.
 Thankfully, it's only called twice and arg1 is hard coded: just `2u` and `3u`.
 Both result get `crazyMethButNegateArg2`ed, then moduled by `(unsigned int)whileArg1OrArg2DoXor(a1, a4)` and ends in `res3 == 556569677`.
-Now that I tested it out, this function is just the equivalent of 'arg1 * arg2'.
-God dang it.
 
 ### Function: whileArg1OrArg2DoAnd
 
-You know what, you've seen the trend already, summarize this shit.
+You know what, you've seen the trend already, *summarize* this shit.
 Just guess it, you'll be correct, I'm sure:
 
 ```whileArg1OrArg2DoAnd.c
@@ -330,60 +371,14 @@ SUMMARIZE!
 I don't know.
 `a5` is the least used (twice used), so it'll be the weak point.
 
-### Claude <3
+Here's well be using `z3` in Python,
+which allow use to solve (in)equations!
 
-Well, let my trusty Claude do some work:
+> ![NOTE]
+> So I was stuck with an error,
+> Dummy me took an hour to figure out that I just have some typo<br>
 
-#### Me:
-
-$(a5 - a6) % 17891586 == 17026895$
-$(a5 + a6) % 48498563 == 23769303$
-Is there any way I can 'add' these equation, as a6 - a6 basically cancel it?
-
-#### Claude:
-
-Absolutely! Your insight about adding these equations is a great approach. Let's work through this:
-
-1. We have: $(a5 - a6) % 17891586 == 17026895 (a5 + a6) % 48498563 == 23769303$
-2. While we can't directly add modular equations with different moduli, we can still use this approach to eliminate a6 and get information about a5. Let's start by considering these equations without the modulo operation: $a5 - a6 = 17026895 + 17891586k (where k is some integer)$<br>$a5 + a6 = 23769303 + 48498563m (where m is some integer)$
-3. Now, let's add these equations: $2a5 = (17026895 + 17891586k) + (23769303 + 48498563m)$<br>$2a5 = 40796198 + 17891586k + 48498563m$
-4. Dividing both sides by 2: $a5 = 20398099 + 8945793k + 24249281.5m$
-5. Since $a5$ must be an integer, $24249281.5m$ must be an integer. This is only possible if $m$ is even. Let's say $m = 2n$. Then: $a5 = 20398099 + 8945793k + 48498563n$
-6. Remember, we know that $100000000 < a5 <= 999999999$
-7. The smallest possible value for $a5$ is when $k = n = 0$, which gives: $a5 = 20398099$
-8. This is too small, so we need to increase k and n until we get into the correct range.
-9. After some trial and error (or using a simple program), we find that: When $k = 9$ and $n = 0$, $a5 = 20398099 + 8945793 * 9 = 100910136$
-
-This value of a5 satisfies both the original equations and the constraint of being a 9-digit number.
-
-To find a6, we can substitute this value of a5 back into either of the original equations. Let's use the first one:
-
-$(100910136 - a6) % 17891586 == 17026895
-
-Solving this, we get:
-
-$a6 = 83883241$
-
-You can verify that these values of a5 and a6 satisfy both original equations:
-
-$(100910136 - 83883241) % 17891586 == 17026895$
-$(100910136 + 83883241) % 48498563 == 23769303$
-
-So, we've successfully found:
-
-$a5 = 100910136$
-$a6 = 83883241$
-
-This demonstrates how combining equations can sometimes lead to a solution, even in modular arithmetic. For the remaining equations, similar techniques or computational methods would be needed to find the values of a1 through a4.
-
-#### Stepping back...
-
-Claude's answer isn't right, so he's done here.
-
-### Z3 ?!
-
-Yes please work I'm desperate now.
-Dummy me took an hour to figure out that I mistyped twice T-T
+`solve.py`:
 
 ```solve.py
 from z3 import *
@@ -419,7 +414,8 @@ solve(
     23769303 == urem((e + f), 0x2e16f8),
 )
 ```
-```$ python3 solve.py
+```
+$ python3 solve.py
 [d = 465893239,
  c = 341222189,
  a = 705965527,
@@ -429,6 +425,8 @@ solve(
 ```
 
 Thank god, please be correct !!
+
+`printFlag.py`:
 
 ```printFlag.py
 answer = [
@@ -443,14 +441,16 @@ answer = [
 for ans in answer:
     print(format(ans, 'x'),end='')
 ```
-```$ python3 printFlag.py
+```
+$ python3 printFlag.py
 2a142dd72e87fa9c1456a32d1bc4f77739975e5fcf5c6c0
 ```
 
 It's correct!
 YEAY!
-The flag is: `uiuctf{2a142dd72e87fa9c1456a32d1bc4f77739975e5fcf5c6c0}`
+
+FLAG: `uiuctf{2a142dd72e87fa9c1456a32d1bc4f77739975e5fcf5c6c0}`
 
 Sowwy, this Write-up isn't the most structured, but the fact that I wrote it as I go, without deleting much, kinda shows exactly how I solve this challenge.
 
-Overall, good challenge, hardest Rev I've solved, yet.
+Overall, good challenge, hardest Rev I've solved, yet. duh.
