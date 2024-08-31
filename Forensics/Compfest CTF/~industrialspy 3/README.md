@@ -18,4 +18,3 @@ If you have figured it out, submit your report to `nc challenges.ctf.compfest.id
 ```
 $ file
 ```
-
