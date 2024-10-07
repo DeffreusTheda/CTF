@@ -1,0 +1,113 @@
+from sdp import SdpStruct, SdpDataType
+import os
+import socket 
+import threading
+import random
+import hashlib
+
+import Crypto.Cipher.AES
+from Crypto.Util.number import bytes_to_long, getPrime
+from Crypto.Util.Padding import pad
+
+def random_string(length: int) -> str:
+    return ''.join(random.choices('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', k=length))
+
+def handler(c: socket.socket):
+    try:
+        p, q = getPrime(512), getPrime(512)
+        e = random.choice([13337, 65537])
+
+        n = p * q
+        d = pow(e, -1, (p-1)*(q-1))
+
+        print(f'p = {p}')
+        print(f'q = {q}')
+        print(f'e = {e}')
+        print(f'n = {n}')
+        print(f'd = {d}')
+
+        c.send(SdpStruct.pack(SdpStruct({
+            0: d,
+            1: n
+        })))
+
+        data = SdpStruct.unpack(c.recv(4096))
+        name = data.get(0)
+        sign = data.get(1)
+
+        if not isinstance(name, str) or not isinstance(sign, int):
+            return
+        
+        if not (pow(sign, e, n) == bytes_to_long(name.encode())):
+            raise ValueError('Invalid signature')
+        
+        flag = open('flag.txt', 'rb').read()
+
+        key = name + str(p) + str(q)
+        cipher = Crypto.Cipher.AES.new(hashlib.sha256(key.encode()).digest(), Crypto.Cipher.AES.MODE_ECB)
+        encrypted = cipher.encrypt(pad(flag, 16))
+
+        data = SdpStruct({})
+
+        done = False
+        tag = 0
+        flag_tag = 0
+        while True:
+            if not done:
+                if tag > 10:
+                    if random.random() < 0.1:
+                        data[tag] = encrypted
+                    flag_tag = tag
+                        tag += 1
+                        print('Flag Tag: ' + str(flag_tag))
+                        done = True
+                        continue
+            else:
+                if tag - flag_tag > 20:
+                    if random.random() < 0.1:
+                        break
+                    
+            random_type = random.choice([
+                SdpDataType.INTEGER_POSITIVE.value,
+                SdpDataType.INTEGER_NEGATIVE.value,
+                SdpDataType.DOUBLE.value,
+                SdpDataType.STRING.value
+            ])
+            if random_type == SdpDataType.INTEGER_POSITIVE.value:
+                random_value = random.randint(0, 2**64)
+            elif random_type == SdpDataType.INTEGER_NEGATIVE.value:
+                random_value = -random.randint(0, 2**64)
+            elif random_type == SdpDataType.DOUBLE.value:
+                random_value = random.random()
+            elif random_type == SdpDataType.STRING.value:
+                random_value = random_string(random.randint(50, 100))
+
+            data[tag] = random_value
+            tag += 1
+
+
+        c.send(SdpStruct.pack(data))
+    except Exception as e:
+        print(f'Error: {e}') 
+
+if __name__ == '__main__':
+    s = socket.socket()
+    host = '0.0.0.0'
+    port = 8888
+
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    s.bind((host, port))
+    s.listen(5)
+
+    print(f'Listening on {host}:{port}...')
+    while True:
+        try:
+            c, addr = s.accept()
+            print(f'Got connection from {addr}!')
+
+            th = threading.Thread(target=handler, args=(c,))
+            th.start()
+        except:
+            break
+
+    print('Server closed.')

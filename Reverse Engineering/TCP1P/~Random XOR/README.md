@@ -129,8 +129,7 @@ It's also interesting that `v8` is never used, but because it call `rand()`, it 
 
 ### Reverse Engineering
 
-
-
+```
 ~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  gdb dist/encrypt 
 GNU gdb (Fedora Linux) 14.2-1.fc39
 Copyright (C) 2023 Free Software Foundation, Inc.
@@ -237,4 +236,4 @@ $2 = 1829178470
 ~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  gcc solve.c -o solve
  %                                                                                                                                           ~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  ./solve flag_enc_no-seed.txt 
 TCP1P{p53uDO_RANDOM_IS_NOt_R4ndOM_at_A11}<
-~/CTF/Reverse Engineering/TCP1P/Random XOR (maint ✗)  echo 'TCP1P{p53uDO_RANDOM_IS_NOt_R4ndOM_at_A11
+```
