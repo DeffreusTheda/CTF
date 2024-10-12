@@ -72,7 +72,7 @@ int main()
 ## Solution
 
 The main vulnerability here is `read_val`, specifically, the `scanf`.
-It read a signed long integer (8 bytes) and write it to `lenght`, an signed integer (4 bytes).
+It read a signed long integer (8 bytes) and write it to `length`, an signed integer (4 bytes).
 As key and length are declared next to each other,
 When the extra 4 bytes overflow from `length`,
 they'll go to `key`!
@@ -82,7 +82,8 @@ Presumably, the flag is on the server.
 To do this, we need to use an input that'll overflow `key` with `0xDEADBEEF`.
 
 The input I got it working is: `-2401053092612145152`, or `0xDEADBEEF00000000`.
-The main play here is two's complement: `0xDEADBEEF` has `1` as it's most significant bit (`0xd` -> `0b1101`),
+How?
+This has something to do with two's complement: `0xDEADBEEF` has `1` as it's most significant bit (`0xd` -> `0b1101`),
 so technically `0xDEADBEEF` is a negative number.
 The last 4 bytes, `0x00000000` is used to pass `if (length < 0 || length >= BUF_SIZE)`,
 so we can reach the second if statement leading to the shell.
@@ -184,8 +185,7 @@ Emang boleh se-hengker ini...
 
 We can see that at `0x00007ffdd7da5b78` or `stack+0x008`,
 we have the value `0xDEADBEEF00000000`.
-If we continue from here, we should pass the `key` check!
-That output mean that we're correct!
+That output mean that we're correct, and if we continue from here, we should pass the `key` check!
 Now let's just do it on the real instance:
 
 ```
