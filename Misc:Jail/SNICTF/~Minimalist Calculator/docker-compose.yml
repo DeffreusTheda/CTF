@@ -1,0 +1,7 @@
+services:
+  minimalist-calculator:
+    build: .
+    ports:
+      - "14000:5000"
+    restart: always
+    read_only: true
