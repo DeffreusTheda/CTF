@@ -1,0 +1,7 @@
+services:
+  sspj:
+    build: .
+    container_name: "SSPJ"
+    ports:
+      - "0.0.0.0:1717:1717"
+    restart: unless-stopped
