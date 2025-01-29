@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dimasma0305/ctfify/refs/heads/master/function/template/templates/others/ctf-template/.gzctf/challenge.schema.yaml
+
+name: "Letter Times"
+author: ".effie"
+description: |
+  it's dead simple!!
+
+type: "StaticAttachment"
+value: 1000
+
+flags:
+  - "XMAS{G07_M0l3_pr08l3m5?__C4ll_Av094dr0_47_6.02_x_10^23}"
+
+provide: "./dist"

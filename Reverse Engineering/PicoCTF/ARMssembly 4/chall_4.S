@@ -170,19 +170,6 @@ main:
 	str	w0, [x29, 44]        ; &x29+44 = w0
 	ldr	w0, [x29, 44]        ; w0 = *x29+44
 	bl	func1                ; func1(*&x29+44, )
-	stp	x29, x30, [sp, -48]! ; store pair x29 x30 to offset -48 on the stack
-	; ! -> post-increment the stack pointer by 48 bytes
-	; [] -> dereference
-	add	x29, sp, 0           ; x29 = &sp
-	str	w0, [x29, 28]        ; w0 = *&x29+28
-	str	x1, [x29, 16]        ; x1 = *&x29+16
-	ldr	x0, [x29, 16]        ; x0 = *&x29+16
-	add	x0, x0, 8            ; x0 += 8
-	ldr	x0, [x0]             ; *x0 // dereference
-	bl	atoi                 ; atoi(*x0) // branch & link; "1215610622"
-	str	w0, [x29, 44]        ; &x29+44 = w0
-	ldr	w0, [x29, 44]        ; w0 = *x29+44
-	bl	func1                ; func1(*&x29+44, )
 	mov	w1, w0
 	adrp	x0, .LC0
 	add	x0, x0, :lo12:.LC0

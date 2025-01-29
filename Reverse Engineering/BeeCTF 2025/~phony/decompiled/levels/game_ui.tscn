@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=4 uid="uid://dpc13ucm0i8fg"]
+
+[ext_resource type="Script" uid="uid://bhkwc7gv0wbd6" path="res://levels/game_ui.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://ud3all3x1xuy" path="res://art/Atop-R99O3.ttf" id="2"]
+
+[node name="GameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="RichTextLabel" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 360.0
+offset_bottom = 71.0
+theme_override_constants/outline_size = 14
+theme_override_fonts/normal_font = ExtResource("2")
+theme_override_font_sizes/normal_font_size = 41
+text = " 0 pts"
+scroll_active = false
+
+[node name="ComboLabel" type="RichTextLabel" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 18.0
+offset_top = 72.0
+offset_right = 360.0
+offset_bottom = 125.0
+theme_override_constants/outline_size = 14
+theme_override_fonts/normal_font = ExtResource("2")
+theme_override_font_sizes/normal_font_size = 41
+text = " 0x combo "
+scroll_active = false

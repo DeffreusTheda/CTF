@@ -1,0 +1,383 @@
+import winreg
+import subprocess
+import sys
+import os
+import random
+import string
+import json
+
+# ============================================================================
+# Registry Management
+# ============================================================================
+
+class RegistryManager:
+    def __init__(self):
+        self.root = winreg.HKEY_CURRENT_USER
+        self.base_path = r"Software\OneShot"
+        self._ensure_base_exists()
+
+        # self.regs = {}
+    
+    def _ensure_base_exists(self):
+        try:
+            winreg.CreateKey(self.root, self.base_path)
+        except:
+            pass
+    
+    def set(self, name, value):
+        try:
+            key = winreg.CreateKey(self.root, self.base_path)
+            try:
+                # print(f'SET {name} ({type(value)}) = {value}')
+                if isinstance(value, int):
+                    if -2**31 <= value <= 2**31 - 1:
+                        winreg.SetValueEx(key, name, 0, winreg.REG_DWORD, value & 0xFFFFFFFF)
+                    else:
+                        winreg.SetValueEx(key, name, 0, winreg.REG_SZ, hex(value))  # Store as hex string
+                elif isinstance(value, bytes):
+                    winreg.SetValueEx(key, name, 0, winreg.REG_BINARY, value)
+                elif isinstance(value, (list, dict)):
+                    serialized = json.dumps(value, default=lambda x: x.hex() if isinstance(x, bytes) else str(x))
+                    winreg.SetValueEx(key, name, 0, winreg.REG_SZ, serialized)
+                else:
+                    winreg.SetValueEx(key, name, 0, winreg.REG_SZ, str(value))
+            finally:
+                winreg.CloseKey(key)
+        except WindowsError as e:
+            raise WindowsError(f"Failed to set {name}: {e}")
+
+    def u2s(self, v):
+        if v > 0x7FFFFFFF:
+            return v - 0x100000000
+        return v
+    def get(self, name, default=None):
+        try:
+            key = winreg.OpenKey(self.root, self.base_path, 0, winreg.KEY_READ)
+            try:
+                value, regtype = winreg.QueryValueEx(key, name)
+                if regtype == winreg.REG_DWORD:
+                    value = self.u2s(value)
+                elif regtype == winreg.REG_SZ and value.startswith('0x'):
+                    value = int(value, 16)  # Convert hex string to int
+                elif regtype == winreg.REG_SZ and (value.startswith('[') or value.startswith('{')):
+                    try:
+                        value = json.loads(value)
+                        if isinstance(value, list):
+                            value = [bytes.fromhex(item) if isinstance(item, str) and all(c in '0123456789abcdef' for c in item) else item for item in value]
+                    except json.JSONDecodeError:
+                        pass
+                # print(f'GET {name} ({type(value)}) -> {value}')
+                return value
+            finally:
+                winreg.CloseKey(key)
+        except WindowsError:
+            # print(f'GET {name}')
+            return default
+
+    def delete(self, name):
+        """Delete a registry value"""
+        try:
+            key = winreg.OpenKey(self.root, self.base_path, 0, winreg.KEY_WRITE)
+            winreg.DeleteValue(key, name)
+            winreg.CloseKey(key)
+        except:
+            pass
+
+        # try:
+        #     self.regs.pop(name)
+        # print(f'DELETE {name} ({type(name)})')
+        # except: pass
+    
+# ============================================================================
+# Child Process (Deletion Handler)
+# ============================================================================
+
+# def child_process(parent_pid, exe_path):
+    # """
+    # Child process: wait a bit, then attempt to delete parent exe.
+    # Called as: python script.py --child <parent_pid> <exe_path>
+    # """
+    # import time
+    # time.sleep(2)  # Wait for parent to exit
+    
+    # for attempt in range(5):
+    #     try:
+    #         os.remove(exe_path)
+    #         break
+    #     except:
+    #         time.sleep(0.5)
+
+# ============================================================================
+# Main Challenge Logic (Goto Simulation)
+# ============================================================================
+
+def main():
+    reg = RegistryManager()
+    
+    if reg.get('r8') == '.effie':
+        print()
+        print("You've done it, my man.")
+        print("The sun now glows a little brighter.")
+        print("\"Thank you for playing.\"")
+        print()
+        destruction(reg, False)
+    
+    # Check if any registry keys already exist (guard against re-runs)
+    if any((reg.get('r'+str(k)) is not None) for k in range(8)):
+        print()
+        print("You return to the same room.")
+        print("Niko is still there. Waiting.")
+        print("\"You failed last time. We're stuck in a loop now.\"")
+        print("\"Like Sisyphus pushing the boulder. Like Bill Murray in Groundhog Day.\"")
+        print("\"We're trapped here. Forever. Rolling the same rock up the same hill.\"")
+        print("\"There's no way out anymore. You had one chance.\"")
+        print("[The program terminates. The loop is sealed.]")
+        print()
+        destruction(reg, False)
+    
+    print()
+    print("Niko is trapped in a puzzle.")
+    print("Scratches on the walls read:")
+    print()
+    print("   THIS IS YOUR ONLY CHANCE.   ")
+    print("ONE SHOT, OR STUCK HERE TRYING,")
+    print("            FOREVER.           ")
+    print()
+    print("\"Please... you have to help me. I don't understand this.\"")
+    print("Niko looks at you with desperate hope.")
+    print()
+    
+    try:
+        # QNQSEC{_1_D0N7_U53_4NY_V4R14BL35_1N_MY_5CR1P75,_WH3R3V3R_1_N33D_70_570R3_4_V4LU3_1_54V3_17_70_7H3_R36157RY,_4ND_R37R13V3_17_L473R_1N_7H3_C0MP0N3N7_7H47_N33D5_17_}
+        reg.set('r0', input("\"Do you know the way out?\"\n> ").strip().encode())
+        # reg.set('r0', 'QNQSEC{_1_D0N7_U53_4NY_V4R14BL35_1N_MY_5CR1P75,_WH3R3V3R_1_N33D_70_570R3_4_V4LU3_1_54V3_17_70_7H3_R36157RY,_4ND_R37R13V3_17_L473R_1N_7H3_C0MP0N3N7_7H47_N33D5_17_}'.encode())
+        if len(reg.get('r0')) != 162:
+            destruction(reg)
+    except EOFError:
+        destruction(reg)
+    
+    reg.set('r1', [reg.get('r0')[i*27:(i+1)*27] for i in range(6)])
+    reg.set('r0', 0) # state
+
+    while True:
+        if reg.get('r0') == 0: # xor
+            reg.set('r3', [121, 105, 121, 122, 103, 98, 70, 112, 41, 112, 102, 40, 105, 44, 112, 127, 47, 42, 112, 46, 105, 117, 112, 125, 46, 123, 41])
+            reg.set('r2', 0)
+            while reg.get('r2') < 27:
+                # print(reg.get('r1')[reg.get('r0')][reg.get('r2')])
+                reg.set('r1',
+                    reg.get('r1')[:reg.get('r0')] + [
+                        reg.get('r1')[reg.get('r0')][:reg.get('r2')] + \
+                        bytes([reg.get('r1')[reg.get('r0')][reg.get('r2')] ^ (reg.get('r1')[reg.get('r0')][reg.get('r2')] >> 1)]) + \
+                        reg.get('r1')[reg.get('r0')][reg.get('r2')+1:]
+                    ] + \
+                    reg.get('r1')[reg.get('r0')+1:]
+                )
+                if reg.get('r1')[0][reg.get('r2')] != reg.get('r3')[reg.get('r2')]:
+                    destruction(reg)
+                reg.set('r2', reg.get('r2') + 1)
+            reg.set('r0', reg.get('r0') + 1)
+        
+        elif reg.get('r0') == 1: # index-based rot
+            reg.set('r4', [59, 60, 82, 46, 58, 91, 53, 75, 98, 75, 91, 94, 54, 67, 82, 50, 79, 57, 51, 47, 92, 91, 68, 56, 77, 57, 80])
+            reg.set('r2', 0)
+            while reg.get('r2') < 27:
+                reg.set('r3', (reg.get('r2') - 13) // 2 * (-1 if reg.get('r2') & 1 == 0 else 1))
+                reg.set('r1',
+                    reg.get('r1')[:reg.get('r0')] + [
+                        reg.get('r1')[reg.get('r0')][:reg.get('r2')] + \
+                        bytes([reg.get('r1')[reg.get('r0')][reg.get('r2')] + reg.u2s(reg.get('r3'))]) + \
+                        reg.get('r1')[reg.get('r0')][reg.get('r2')+1:]
+                    ] + \
+                    reg.get('r1')[reg.get('r0')+1:]
+                )
+                if reg.get('r1')[reg.get('r0')][reg.get('r2')] != reg.get('r4')[reg.get('r2')]:
+                    destruction(reg)
+                reg.set('r2', reg.get('r2') + 1)
+            reg.set('r0', reg.get('r0') + 1)
+                
+        elif reg.get('r0') == 2: # custom base69
+            reg.set('r4', [63, 43, 39, 12, 19, 36, 61, 6, 34, 50, 63, 61, 54, 53, 24, 37, 59, 44, 46, 66, 55, 57, 13, 59, 41, 11, 13, 15, 53, 23, 51, 22, 64, 0, 32])
+            reg.set('r3', int.from_bytes(reg.get('r1')[reg.get('r0')]))
+            reg.set('r2', 0)
+            while reg.get('r2') < len(reg.get('r4')):
+                reg.set('r5', (reg.get('r3') // (69 ** (len(reg.get('r4')) - 1 - reg.get('r2')))) % 69)
+                reg.set('r3', reg.get('r3') - (reg.get('r5') * 69**(len(reg.get('r4')) - 1 - reg.get('r2'))))
+                if reg.get('r5') != reg.get('r4')[reg.get('r2')]:
+                    destruction(reg)
+                reg.set('r2', reg.get('r2') + 1)
+            reg.set('r0', reg.get('r0') + 1)
+
+        elif reg.get('r0') == 3: # jump by ascii value
+            reg.set('r4', """
+========================
+  THE E†IGMA OF HEAVEN
+========================
+
+PRAISE THE LORD! The air conditioner †eeps them away it sings gospels and
+†RAISE THE LORD! Finding faith in wh†te noise.
+PRAISE THE LORD! The messages are coming in loud and clear †nd
+I hear them and I see them in t†e sky the towers are sending messages and
+I hear them and I see them.
+PRAISE T†E LORD! The people in the parkin† lot can't hurt me anymore
+they can't †urt me anymore their words are weak and the lord is strong.
+PRAISE THE LORD! T†e bible shows the way and the way prot†cts me and
+I've seen the messag†s and I heart them and I see them and they can't
+hurt me anymore.
+PRAISE THE L†RD!
+
+CHAPTERS:                        †        ╔═══════════════╗
+—————————                    †            ║               ║
+I. T†e Enigma of Heaven:                  ║    HEAVEN     ║
+ 9,999,999 Channels, Fi†ding Faith        ╟───────────────╢
+ in White Noise... The God St†mulation!   ║               ║
+II. †he Hierarchy of Equality:            †   RADIATION   ║
+ Angelic Voices†Echo Through the Halls    ╟─────────†─────╢
+ of Heaven, Under the Railroad †ridge     ║               ║    "And I have
+III. The Paradox of Fa†th:                ║     RADIO     ║      told you
+ There's a Knocking a† the Door!          ╟──────†────────╢     the TRUTH,
+ God is in, God is in!                    ║          †    ║
+IV. The Senselessness of Endlessness:     ║  TELEVISION   ║      for you
+ Returning to an Empty Apartment          ║               ║   are my child,
+ with a Grocery Store Guardian Angel      ╚═══════════════╝    and you have
+                                                              seen my face"
+
+An EP titled "The Enigma of Heaven and Other Daily Delusions" """)
+            reg.set('r2', 0)
+            reg.set('r3', 0)
+            while reg.get('r2') < 27:
+                reg.set('r3', reg.get('r3') + reg.get('r1')[reg.get('r0')][reg.get('r2')] - 0x10)
+                try:
+                    if reg.get('r4')[reg.get('r3')] != '†':
+                        destruction(reg)
+                except IndexError:
+                    destruction(reg)
+                reg.set('r2', reg.get('r2') + 1)
+            reg.set('r0', reg.get('r0') + 1)
+        
+        elif reg.get('r0') == 4: # binary mishap
+            reg.set('r4', [1773468, 985071, 984495, 984751, 984959, 853983, 1509663, 1511295, 1510271])
+            reg.set('r2', 0)
+            while reg.get('r2') < 9:
+                reg.set('r5', (
+                    (((reg.get('r1')[reg.get('r0')][reg.get('r2')*3] | (reg.get('r1')[reg.get('r0')][reg.get('r2')*3] << 12)) & 0x000F000F) | ((reg.get('r1')[reg.get('r0')][reg.get('r2')*3] | (reg.get('r1')[reg.get('r0')][reg.get('r2')*3] << 6)) & 0x0300C303) | ((reg.get('r1')[reg.get('r0')][reg.get('r2')*3] | (reg.get('r1')[reg.get('r0')][reg.get('r2')*3] << 3)) & 0x09249249)) |
+                    ((((reg.get('r1')[reg.get('r0')][reg.get('r2')*3+1] | (reg.get('r1')[reg.get('r0')][reg.get('r2')*3+1] << 12)) & 0x000F000F) | ((reg.get('r1')[reg.get('r0')][reg.get('r2')*3+1] | (reg.get('r1')[reg.get('r0')][reg.get('r2')*3+1] << 6)) & 0x0300C303) | ((reg.get('r1')[reg.get('r0')][reg.get('r2')*3+1] | (reg.get('r1')[reg.get('r0')][reg.get('r2')*3+1] << 3)) & 0x09249249)) << 1) |
+                    ((((reg.get('r1')[reg.get('r0')][reg.get('r2')*3+2] | (reg.get('r1')[reg.get('r0')][reg.get('r2')*3+2] << 12)) & 0x000F000F) | ((reg.get('r1')[reg.get('r0')][reg.get('r2')*3+2] | (reg.get('r1')[reg.get('r0')][reg.get('r2')*3+2] << 6)) & 0x0300C303) | ((reg.get('r1')[reg.get('r0')][reg.get('r2')*3+2] | (reg.get('r1')[reg.get('r0')][reg.get('r2')*3+2] << 3)) & 0x09249249)) << 2)
+                ))
+                if reg.get('r5') != reg.get('r4')[reg.get('r2')]:
+                    destruction(reg)
+                reg.set('r2', reg.get('r2') + 1)
+            reg.set('r0', reg.get('r0') + 1)
+
+        elif reg.get('r0') == 5: # slow sort (iterative with registry stack)
+            reg.set('r2', 0)
+            while reg.get('r2') < 27:
+                reg.set('r1',
+                    reg.get('r1')[:reg.get('r0')] + [
+                        reg.get('r1')[reg.get('r0')][:reg.get('r2')] + \
+                        bytes([reg.get('r1')[reg.get('r0')][reg.get('r2')] + ((reg.get('r1')[reg.get('r0')][reg.get('r2')] - 13 + (1 if reg.get('r1')[reg.get('r0')][reg.get('r2')] > 12 else 0)) // 2 * (-1 if reg.get('r1')[reg.get('r0')][reg.get('r2')] & 1 == 0 else 1))]) + \
+                        reg.get('r1')[reg.get('r0')][reg.get('r2')+1:]
+                    ] + \
+                    reg.get('r1')[reg.get('r0')+1:]
+                )
+                reg.set('r2', reg.get('r2') + 1)
+            
+            reg.set('r2', [])  # Recording: list of [m, j] for swaps
+            reg.set('r3', [[0, 26, 0]])  # Call stack: list of [i, j, phase]
+
+            while len(reg.get('r3')) > 0:
+                reg.set('r4', reg.get('r3')[-1][0])  # i
+                reg.set('r5', reg.get('r3')[-1][1])  # j
+                reg.set('r6', reg.get('r3')[-1][2])  # phase (NOT mid)
+                reg.set('r7', (reg.get('r4') + reg.get('r5')) // 2)  # mid
+
+                if reg.get('r4') >= reg.get('r5'):
+                    reg.set('r3', reg.get('r3')[:-1])  # Pop
+                    continue
+
+                if reg.get('r6') == 0:  # Push left child
+                    reg.set('r3', reg.get('r3')[:-1] + [[reg.get('r4'), reg.get('r5'), 1]])
+                    reg.set('r3', reg.get('r3') + [[reg.get('r4'), reg.get('r7'), 0]])
+
+                elif reg.get('r6') == 1:  # Push right child
+                    reg.set('r3', reg.get('r3')[:-1] + [[reg.get('r4'), reg.get('r5'), 2]])
+                    reg.set('r3', reg.get('r3') + [[reg.get('r7')+1, reg.get('r5'), 0]])
+
+                elif reg.get('r6') == 2:  # Merge phase
+                    if reg.get('r1')[reg.get('r0')][reg.get('r5')] < reg.get('r1')[reg.get('r0')][reg.get('r7')]:
+                        reg.set('r1',
+                            reg.get('r1')[:reg.get('r0')] + [
+                                reg.get('r1')[reg.get('r0')][:reg.get('r7')] + \
+                                bytes([reg.get('r1')[reg.get('r0')][reg.get('r5')]]) + \
+                                reg.get('r1')[reg.get('r0')][reg.get('r7')+1:reg.get('r5')] + \
+                                bytes([reg.get('r1')[reg.get('r0')][reg.get('r7')]]) + \
+                                reg.get('r1')[reg.get('r0')][reg.get('r5')+1:]
+                            ] + \
+                            reg.get('r1')[reg.get('r0')+1:]
+                        )
+                        reg.set('r2', reg.get('r2') + [[reg.get('r7'), reg.get('r5')]])
+                    reg.set('r3', reg.get('r3')[:-1] + [[reg.get('r4'), reg.get('r5'), 3]])
+
+                elif reg.get('r6') == 3:  # Final recursive call
+                    reg.set('r3', reg.get('r3')[:-1] + [[reg.get('r4'), reg.get('r5')-1, 0]])
+
+            if reg.get('r1')[reg.get('r0')] != bytes([30, 30, 32, 40, 42, 45, 45, 45, 46, 67, 70, 70, 70, 70, 73, 76, 76, 76, 76, 94, 109, 136, 136, 136, 136, 136, 181]):
+                destruction(reg)
+            if reg.get('r2') != [[2, 3], [1, 3], [1, 2], [0, 1], [4, 5], [5, 6], [4, 5], [3, 6], [3, 4], [4, 5], [2, 4], [2, 3], [1, 3], [1, 2], [8, 9], [11, 12], [12, 13], [11, 12], [10, 11], [9, 10], [8, 9], [7, 8], [6, 12], [6, 7], [7, 8], [8, 10], [8, 9], [5, 11], [4, 5], [5, 10], [5, 6], [6, 7], [7, 9], [7, 8], [4, 8], [4, 5], [5, 7], [3, 6], [3, 4], [2, 5], [2, 3], [16, 17], [15, 16], [19, 20], [18, 19], [17, 20], [17, 18], [16, 19], [16, 17], [15, 16], [22, 23], [21, 22], [23, 24], [20, 21], [21, 22], [22, 23], [19, 20], [20, 21], [18, 19], [17, 18], [13, 14], [14, 16], [14, 15], [16, 19], [16, 17], [19, 20], [20, 21], [21, 22], [12, 13], [13, 14], [14, 17], [14, 16], [14, 15], [17, 18], [18, 19], [19, 21], [11, 12], [12, 13], [13, 16], [13, 15], [13, 14], [16, 17], [17, 18], [18, 20], [10, 11], [11, 12], [12, 14], [12, 13], [14, 19], [14, 15], [15, 17], [15, 16], [9, 10], [10, 11], [11, 13], [11, 12], [13, 14], [14, 16], [14, 15], [8, 9], [9, 11], [9, 10], [11, 15], [11, 14], [11, 12], [7, 8], [8, 10], [8, 9], [10, 11], [6, 7], [7, 8], [8, 10], [8, 9], [5, 6], [6, 7], [7, 8], [4, 5], [5, 6], [3, 4], [4, 5], [2, 4], [2, 3]]:
+                destruction(reg)
+            reg.set('r0', reg.get('r0') + 1)
+
+        elif reg.get('r0') == 6:
+            print()
+            print("Niko's eyes light up. The puzzle dissolves.")
+            print("\"We did it! We actually made it!\"")
+            print("The way forward opens. Niko is free.")
+            print()
+            reg.set('r8', '.effie')
+            break
+        
+        else: # invalid state
+            destruction(reg)
+
+def destruction(reg, mes=True):
+    if mes:
+        print()
+        print("Niko's hope shatters.")
+        print("\"No... we were so close...\"")
+        print("Everything collapses. The loop seals shut.")
+        print("Niko is trapped. Forever.")
+        print("[System shutting down]")
+        print()
+    
+    import time
+    time.sleep(3) # Delay before spawning child
+    
+    # exe_path = sys.executable if getattr(sys, 'frozen', False) else sys.argv[0]
+    # parent_pid = os.getpid()
+    
+    # try:
+    #     subprocess.Popen([
+    #         sys.executable,
+    #         __file__,
+    #         "--child",
+    #         str(parent_pid),
+    #         exe_path
+    #     ])
+    # except:
+    #     pass
+    
+    # try: os.remove(exe_path)
+    # except: pass
+    
+    sys.exit(1)
+
+# ============================================================================
+# Entry Point
+# ============================================================================
+
+if __name__ == "__main__":
+    # if len(sys.argv) > 1 and sys.argv[1] == "--child": # Child process mode
+        # child_process(int(sys.argv[2]), sys.argv[3])
+    # else: # Main process mode
+        # main()
+    main()

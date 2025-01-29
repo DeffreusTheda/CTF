@@ -1,0 +1,31 @@
+a srix A friw
+B gurvonts
+C weugvyts
+d figthors
+e strowun 
+f tegxwrs F foyuts
+G xugfytis
+H twofer
+I tefygoxwir
+k geft K vufigs
+l wextis L hires
+M wigy
+P vefuyir
+q wifs Q i
+r frigxusy
+S fevgts
+U guntr
+V guwtiny
+w fsngtwr 
+Y vritf
+Z et
+2 runs
+3 sew
+4 gewsix
+6 sixe
+8 wots
+9 xogwits
+  wotur
+aBCdefGHIklMPqrSUVwYZ234689
+
+int(''.join([hex(ord(x))[2:] for x in input('target: ')]), 16)

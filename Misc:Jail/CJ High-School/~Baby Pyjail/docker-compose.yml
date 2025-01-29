@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  baby-pyjail:
+    build: .
+    restart: on-failure
+    privileged: true
+    ports:
+      - 7041:5000

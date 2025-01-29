@@ -1,0 +1,7 @@
+- [Dynamsoft Barcode Decoder](https://www.dynamsoft.com/barcode-reader/barcode-types/)
+- URL Shortener
+	- shorturl.at/{}
+- [what3words](https://what3words.com/waffle.files.pancakes?redirect=true)
+- Morse
+	- https://morsecode.world/international/decoder/audio-decoder-adaptive.html
+		- Decode morse code from audio (e.g. .wav)

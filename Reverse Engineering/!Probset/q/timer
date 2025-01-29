@@ -1,0 +1,96 @@
+usleep(2.22 * 500); fprintf(stderr, "Hello"); // 00.02,22
+usleep(0.38 * 500); fprintf(stderr, ", welcome."); // 00.02,60
+usleep(1.53 * 500); fprintf(stderr, " I'm"); // 00.04,14
+usleep(0.34 * 500); fprintf(stderr, " glad"); // 00.04,48
+usleep(0.46 * 500); fprintf(stderr, " you're"); // 00.04,95
+usleep(0.46 * 500); fprintf(stderr, " here."); // 00.05,42
+usleep(1.50 * 500); fprintf(stderr, " To"); // 00.06,92
+usleep(0.35 * 500); fprintf(stderr, "night's"); // 00.07,27
+usleep(0.39 * 500); fprintf(stderr, " ser"); // 00.07,67
+usleep(0.43 * 500); fprintf(stderr, "mon"); // 00.08,10
+usleep(0.51 * 500); fprintf(stderr, " will"); // 00.08,62
+usleep(0.33 * 500); fprintf(stderr, " be"); // 00.08,95
+usleep(0.29 * 500); fprintf(stderr, " a"); // 00.09,25
+usleep(0.28 * 500); fprintf(stderr, " spe"); // 00.09,53
+usleep(0.30 * 500); fprintf(stderr, "cial"); // 00.09,84
+usleep(0.34 * 500); fprintf(stderr, "one."); // 00.10,18
+usleep(1.51 * 500); fprintf(stderr, " There"); // 00.11,70
+usleep(0.31 * 500); fprintf(stderr, " will"); // 00.12,02
+usleep(0.36 * 500); fprintf(stderr, " be"); // 00.12,38
+usleep(0.33 * 500); fprintf(stderr, " mu"); // 00.12,72
+usleep(0.42 * 500); fprintf(stderr, " sic"); // 00.13,14
+usleep(0.29 * 500); fprintf(stderr, " and"); // 00.13,43
+usleep(0.33 * 500); fprintf(stderr, " joy"); // 00.13,77
+usleep(0.46 * 500); fprintf(stderr, " and"); // 00.14,24
+usleep(0.46 * 500); fprintf(stderr, " sound"); // 00.14,70
+usleep(0.51 * 500); fprintf(stderr, " and"); // 00.15,22
+usleep(0.51 * 500); fprintf(stderr, " praise"); // 00.15,74
+usleep(0.58 * 500); fprintf(stderr, " and"); // 00.16,32
+usleep(0.45 * 500); fprintf(stderr, " notes"); // 00.16,78
+usleep(0.38 * 500); fprintf(stderr, " and"); // 00.17,17
+usleep(0.48 * 500); fprintf(stderr, " chords"); // 00.17,65
+usleep(0.51 * 500); fprintf(stderr, " and"); // 00.18,17
+usleep(0.61 * 500); fprintf(stderr, " faith"); // 00.18,79
+usleep(0.56 * 500); fprintf(stderr, " and"); // 00.19,35
+usleep(0.42 * 500); fprintf(stderr, " joy"); // 00.19,77
+usleep(0.45 * 500); fprintf(stderr, " and"); // 00.20,22
+usleep(0.54 * 500); fprintf(stderr, " praise"); // 00.20,77
+usleep(0.71 * 500); fprintf(stderr, " and"); // 00.21,48
+usleep(0.43 * 500); fprintf(stderr, " notes"); // 00.21,92
+usleep(0.46 * 500); fprintf(stderr, " and"); // 00.22,38
+usleep(0.38 * 500); fprintf(stderr, " faith"); // 00.22,77
+usleep(0.63 * 500); fprintf(stderr, " and"); // 00.23,40
+usleep(0.46 * 500); fprintf(stderr, " joy"); // 00.23,87
+usleep(0.53 * 500); fprintf(stderr, " and"); // 00.24,40
+usleep(0.43 * 500); fprintf(stderr, " joy"); // 00.24,84
+usleep(0.53 * 500); fprintf(stderr, " and-"); // 00.25,37
+usleep(0.45 * 500); fprintf(stderr, ""); // 00.25,82
+usleep(0.50 * 500); fprintf(stderr, ""); // 00.26,32
+usleep(1.39 * 500); fprintf(stderr, " Je"); // 00.27,72
+usleep(0.43 * 500); fprintf(stderr, "sus."); // 00.28,15
+usleep(1.52 * 500); fprintf(stderr, " Je"); // 00.29,67
+usleep(0.39 * 500); fprintf(stderr, "sus!"); // 00.30,07
+usleep(1.36 * 500); fprintf(stderr, " Yes."); // 00.31,44
+usleep(1.44 * 500); fprintf(stderr, " J"); // 00.32,88
+usleep(0.51 * 500); fprintf(stderr, "-E"); // 00.33,40
+usleep(0.46 * 500); fprintf(stderr, "-SUS."); // 00.33,87
+usleep(1.84 * 500); fprintf(stderr, " We"); // 00.35,72
+usleep(1.68 * 500); fprintf(stderr, " will"); // 00.37,40
+usleep(0.43 * 500); fprintf(stderr, " begin"); // 00.37,83
+usleep(0.43 * 500); fprintf(stderr, " short"); // 00.38,27
+usleep(0.46 * 500); fprintf(stderr, "ly."); // 00.38,73
+usleep(1.90 * 500); fprintf(stderr, " Please,"); // 00.40,64
+usleep(1.20 * 500); fprintf(stderr, " keep"); // 00.41,84
+usleep(0.39 * 500); fprintf(stderr, " your"); // 00.42,24
+usleep(0.40 * 500); fprintf(stderr, " heart"); // 00.42,64
+usleep(0.61 * 500); fprintf(stderr, " quiet"); // 00.43,25
+usleep(1.14 * 500); fprintf(stderr, ", or"); // 00.44,40
+usleep(0.33 * 500); fprintf(stderr, " they"); // 00.44,74
+usleep(0.34 * 500); fprintf(stderr, " will"); // 00.45,08
+usleep(0.38 * 500); fprintf(stderr, " get"); // 00.45,47
+usleep(0.33 * 500); fprintf(stderr, " angry."); // 00.45,80
+usleep(1.51 * 500); fprintf(stderr, " Just"); // 00.47,32
+usleep(0.58 * 500); fprintf(stderr, " stay"); // 00.47,90
+usleep(0.56 * 500); fprintf(stderr, " quiet."); // 00.48,47
+usleep(1.76 * 500); fprintf(stderr, " Just"); // 00.50,24
+usleep(0.41 * 500); fprintf(stderr, " don't"); // 00.50,65
+usleep(0.39 * 500); fprintf(stderr, " talk"); // 00.51,05
+usleep(1.48 * 500); fprintf(stderr, ", or"); // 00.52,54
+usleep(0.34 * 500); fprintf(stderr, " they'll"); // 00.52,89
+usleep(0.34 * 500); fprintf(stderr, " hear"); // 00.53,23
+usleep(0.51 * 500); fprintf(stderr, " us."); // 00.53,75
+usleep(1.35 * 500); fprintf(stderr, " Yes."); // 00.55,10
+usleep(1.36 * 500); fprintf(stderr, " NOW."); // 00.56,47
+usleep(1.70 * 500); fprintf(stderr, " Now"); // 00.58,17
+usleep(0.37 * 500); fprintf(stderr, " we"); // 00.58,55
+usleep(0.26 * 500); fprintf(stderr, " be"); // 00.58,82
+usleep(0.31 * 500); fprintf(stderr, "gin."); // 00.59,13
+usleep(1.74 * 500); fprintf(stderr, " It's"); // 01.00,88
+usleep(0.38 * 500); fprintf(stderr, " star"); // 01.01,27
+usleep(0.35 * 500); fprintf(stderr, "ting."); // 01.01,62
+usleep(1.34 * 500); fprintf(stderr, " Lis"); // 01.02,97
+usleep(0.41 * 500); fprintf(stderr, "ten."); // 01.03,38
+usleep(1.25 * 500); fprintf(stderr, " Care"); // 01.04,64
+usleep(0.31 * 500); fprintf(stderr, "ful"); // 01.04,95
+usleep(0.29 * 500); fprintf(stderr, "ly."); // 01.05,25
+usleep(3.24 * 500); fprintf(stderr, ""); // 01.08,50

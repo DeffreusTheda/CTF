@@ -1,1 +1,0 @@
-[Decompiler Explorer](https://dogbolt.org/?id=677796fc-ceb8-44bf-ae41-0623bd44e167)

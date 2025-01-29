@@ -1,0 +1,6 @@
+[submodule "Reverse Engineering/!Probset/chain/VolistiK"]
+	path = Reverse Engineering/!Probset/chain/VolistiK
+	url = https://github.com/DeffreusTheda/VolistiK/
+[submodule "Reverse Engineering/!Probset/genetic fallacy/src/cpython"]
+	path = Reverse Engineering/!Probset/genetic fallacy/src/cpython
+	url = https://github.com/python/cpython

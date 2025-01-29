@@ -1,0 +1,14 @@
+#!/bin/env python3
+
+code = """
+print('hello world')
+"""
+
+f = open('invis', 'wb')
+for c in code:
+    b = bin(ord(c))[2:].rjust(8, '0')
+    # print(b)
+    for i in range(0,len(b),2):
+        f.write(b'\xE2\x80' + (0x8C + int(b[i:i+2], 2)).to_bytes())
+
+# \frac{m}{n} + m = 6; sqrt{\frac{m + mn - 2}{n}} = 2

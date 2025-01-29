@@ -1,0 +1,55 @@
+00000000000011a9 <check>:
+11a9: endbr64
+11ad: push   rbp
+11ae: mov    rbp,rsp
+11b1: mov    DWORD PTR [rbp-0x14],edi
+11b4: mov    DWORD PTR [rbp-0xc],0x100000
+11bb: mov    DWORD PTR [rbp-0x8],0x82
+11c2: mov    DWORD PTR [rbp-0x4],0x3
+11c9: mov    edx,DWORD PTR [rbp-0x8]
+11cc: mov    eax,DWORD PTR [rbp-0x4]
+11cf: add    eax,edx
+11d1: imul   eax,DWORD PTR [rbp-0xc]
+11d5: cmp    DWORD PTR [rbp-0x14],eax
+11d8: sete   al
+11db: pop    rbp
+11dc: ret
+
+00000000000011dd <main>:
+11dd: endbr64
+11e1: push   rbp
+11e2: mov    rbp,rsp
+11e5: sub    rsp,0x10
+11e9: mov    rax,QWORD PTR fs:0x28
+11f0:
+11f2: mov    QWORD PTR [rbp-0x8],rax
+11f6: xor    eax,eax
+11f8: lea    rax,[rbp-0xc]
+11fc: mov    rsi,rax
+11ff: lea    rax,[rip+0xdfe]        # 2004 <_IO_stdin_used+0x4>
+1206: mov    rdi,rax
+1209: mov    eax,0x0
+120e: call   10b0 <__isoc99_scanf@plt>
+1213: mov    eax,DWORD PTR [rbp-0xc]
+1216: mov    edi,eax
+1218: call   11a9 <check>
+121d: test   al,al
+121f: je     123c <main+0x5f>
+1221: mov    eax,DWORD PTR [rbp-0xc]
+1224: mov    esi,eax
+1226: lea    rax,[rip+0xdda]        # 2007 <_IO_stdin_used+0x7>
+122d: mov    rdi,rax
+1230: mov    eax,0x0
+1235: call   10a0 <printf@plt>
+123a: jmp    124b <main+0x6e>
+123c: lea    rax,[rip+0xdcc]        # 200f <_IO_stdin_used+0xf>
+1243: mov    rdi,rax
+1246: call   1080 <puts@plt>
+124b: mov    eax,0x0
+1250: mov    rdx,QWORD PTR [rbp-0x8]
+1254: sub    rdx,QWORD PTR fs:0x28
+125b:
+125d: je     1264 <main+0x87>
+125f: call   1090 <__stack_chk_fail@plt>
+1264: leave
+1265: ret

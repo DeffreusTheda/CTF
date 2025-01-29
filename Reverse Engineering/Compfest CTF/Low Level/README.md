@@ -27,11 +27,3 @@ Noo, I don't think this is reversible without running it...
 
 - RawVec reserve_for_push: https://github.com/rust-lang/rust/pull/91352
   - Just normal push, but with optimization.
-
-1. filter ip.dest=.1
-2. It has pattern, and it seems like the password is `changeme`, cuz it stopped there.
-3. see from table, check what hash it's, and crack it.
-4. see from the sql, the only non-`SELECT` query
-5. employee_id=6 -> see on the table
-
-FLAG: `COMPFEST16{h3lla_ez_DF1R_t4sK_f0r_4n_1nt3rN_b96818fd79}`

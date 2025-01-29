@@ -1,0 +1,12 @@
+[BUG]: no found input "revenge.py"
+
+## Command Line
+C:\Users\vinnie\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts\pyarmor gen -O arm .\revenge.py
+
+## Environments
+Python 3.13.9
+Pyarmor 9.1.9 (trial), 000000, non-profits
+Platform windows.aarch64
+Native windows.arm64
+Home C:\Users\vinnie\.pyarmor
+

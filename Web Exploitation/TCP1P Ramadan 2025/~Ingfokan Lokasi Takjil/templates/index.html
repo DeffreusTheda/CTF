@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/static.css">
+    <title>Ingfokan lokasi takjil</title>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            Selamat datang di platform digital pembagi lokasi takjil
+        </h1>
+        <p>
+            berikut adalah postingan lokasi lokasi takjil terbaru
+        </p>
+    </div>
+    <div class="list-locations">
+        {% for post in postdata %}
+        <div class="postlink">
+            <a href="/post/{{post[0]}}">{{post[1]}}</a>
+            <p>
+                Author: {{post[2]}}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+    <img src="/static/max_letsgocaritakjil.png" width="400px">
+</body>
+</html>

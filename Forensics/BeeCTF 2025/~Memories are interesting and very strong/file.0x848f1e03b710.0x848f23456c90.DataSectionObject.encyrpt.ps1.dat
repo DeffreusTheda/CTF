@@ -1,0 +1,25 @@
+Add-Type -AssemblyName System.Security
+$key = [Text.Encoding]::UTF8.GetBytes("REDACTED")
+$iv = [Text.Encoding]::UTF8.GetBytes("REDACTED")
+$desktop = [Environment]::GetFolderPath("Desktop")
+$inPath = Join-Path $desktop "thisisimportant.txt"
+$outPath = Join-Path $desktop "thisisimportant.enc"
+$plaintext = [System.IO.File]::ReadAllBytes($inPath)
+$aes = [System.Security.Cryptography.AesManaged]::new()
+$aes.Mode = [System.Security.Cryptography.CipherMode]::ECB
+$aes.Padding = [System.Security.Cryptography.PaddingMode]::None
+$encryptor = $aes.CreateEncryptor($key, (New-Object byte[] ($aes.BlockSize/8)))
+$counter = $iv.Clone()
+$encrypted = New-Object byte[] $plaintext.Length
+for ($i=0; $i -lt $plaintext.Length; $i+=$aes.BlockSize/8) {
+    $block = New-Object byte[] ($aes.BlockSize/8)
+    $encryptor.TransformBlock($counter,0,$counter.Length,$block,0) | Out-Null
+    for ($j=0; $j -lt ($aes.BlockSize/8) -and ($i+$j) -lt $plaintext.Length; $j++) {
+        $encrypted[$i+$j] = $plaintext[$i+$j] -bxor $block[$j]
+    }
+    for ($k=$counter.Length-1; $k -ge 0; $k--) {
+        if (++$counter[$k] -ne 0) { break }
+    }
+}
+$base64 = [Convert]::ToBase64String($encrypted)
+[System.IO.File]::WriteAllText($outPath, $base64)

@@ -1,0 +1,40 @@
+GDRE Tools v2.0.0-beta.5
+macOS 15.5.0, Apple M1, opengl3
+Opening file: ~/CTF/Reverse Engineering/BeeCTF 2025/phony/phony.exe
+Loaded 24 imported files
+Detected Engine Version: 4.4.1
+Detected Bytecode Revision: 4.3.0-stable (77af6ca)
+Verified 54 files, no errors detected!
+ERROR: Failed to load image. Error 15
+   at: load_from_file (core/io/image.cpp:2548)
+ERROR: Invalid image: null
+   at: create_from_image (scene/resources/image_texture.cpp:76)
+Extracted 54 files, no errors detected!
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     8
+Failed scripts:                         0
+Imported resources for export session:  24
+Successfully converted:                 24
+Lossy:                                  6
+Rewrote metadata:                       9
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.4.1 to edit the project.
+Note: the project may be using a custom version of Godot. Detection for this has not been implemented yet.
+If you find that you have many non-import errors upon opening the project 
+(i.e. scripts or shaders have many errors), use the original game's binary as the export template.
+
+*******************************************************************************
+

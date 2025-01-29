@@ -1,0 +1,1 @@
+Small file. White background. Probably, everything is hidden in white :)

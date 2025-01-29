@@ -1,0 +1,8 @@
+[package]
+name = "LoveLetter"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "LoveLetter"
+path = "main.rs"

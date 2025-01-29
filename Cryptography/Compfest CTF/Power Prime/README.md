@@ -1,4 +1,4 @@
-# Power Prime Writeup by Deffreus - CompfestCTF 16
+ # Power Prime Writeup by Deffreus - CompfestCTF 16
 
 ###### Author: swusjask
 

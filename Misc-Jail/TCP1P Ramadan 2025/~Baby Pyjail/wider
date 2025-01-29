@@ -1,0 +1,29 @@
+#!/opt/homebrew/bin/python3
+"""
+Turns normal alphabet characters to its wide char equivalent!
+"""
+import sys
+import re
+
+def denormalize(str):
+    ret = ""
+    for c in str:
+        if c >= "a" and c <= "z":
+            # https://www.compart.com/en/unicode/U+FF41
+            # weird fullwidth a
+            # the first of a sequence of codepoints compatible with ASCII letters
+            weird_a = 0xff41
+            offset = ord(c) - ord("a")
+            ret += chr(weird_a + offset)
+        else:
+            ret += c
+
+    # replace all underscores that are not at the beginning of an identifier with
+    # https://www.compart.com/en/unicode/U+FF3F
+    # fullwidth underscore
+    ret = re.sub(r"(?<![\.\[\( ])_", chr(0xff3f), ret)
+
+    print(ret)
+
+if __name__ == "__main__":
+	denormalize(sys.argv[1])

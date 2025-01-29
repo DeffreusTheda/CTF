@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dimasma0305/ctfify/refs/heads/master/function/template/templates/others/ctf-template/.gzctf/challenge.schema.yaml
+
+name: "Python3.15"
+author: ".effie"
+description: |
+  Finally, a flag checker type challenge from .effie :>
+  Run the challenge with `./python3.15 chall.pyc`!
+
+type: "StaticAttachment"
+value: 1000
+
+flags:
+  - "XMAS{merry_}"
+
+provide: "./dist"

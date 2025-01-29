@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dimasma0305/ctfify/refs/heads/master/function/template/templates/others/ctf-template/.gzctf/challenge.schema.yaml
+
+name: "NMTE-4667"
+author: ".effie"
+description: |
+  every single operation & equations counts (>ᴗ•)!
+  (if you solve this chall you're 100% a rev master fr fr real)
+
+type: "StaticAttachment"
+value: 1000
+
+flags:
+  - "XMAS{50_73LL_M3,_H0W_Y0U_F33L_WH3N_Y0U_W4LK_0N_W473R?}"
+
+provide: "./dist"

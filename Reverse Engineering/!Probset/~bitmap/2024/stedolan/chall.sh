@@ -1,0 +1,12 @@
+echo '514e515345' | ./chall >0.pbm
+echo '437b5f4352' | ./chall >1.pbm
+echo '334431375f' | ./chall >2.pbm
+echo '37305f3537' | ./chall >3.pbm
+echo '335048334e' | ./chall >4.pbm
+echo '5f44304c34' | ./chall >5.pbm
+echo '4e215f3130' | ./chall >6.pbm
+echo '4343433238' | ./chall >7.pbm
+echo '5f2d5f4233' | ./chall >8.pbm
+echo '35375f304e' | ./chall >9.pbm
+echo '335f4c314e' | ./chall >a.pbm
+echo '3352215f7d' | ./chall >b.pbm

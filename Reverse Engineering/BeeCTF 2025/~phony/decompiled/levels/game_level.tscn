@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=4 uid="uid://b8f1ign6hpicr"]
+
+[ext_resource type="Texture2D" uid="uid://dlkgqrkm05kis" path="res://art/wall.jpg" id="1"]
+[ext_resource type="Texture2D" uid="uid://ceej6m0qbc7ph" path="res://art/bg.jpg" id="2"]
+[ext_resource type="VideoStream" uid="uid://bdn6kuj11y6wh" path="res://art/output.ogv" id="3"]
+[ext_resource type="Script" uid="uid://bal7spqboqpht" path="res://levels/video_stream_player.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://dfdglmltorqae" path="res://objects/key_listener.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://dpc13ucm0i8fg" path="res://levels/game_ui.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://coqj034dvvbeu" path="res://objects/level_editor.tscn" id="7"]
+[ext_resource type="Script" uid="uid://eo4ip2x6grmq" path="res://levels/node.gd" id="8"]
+
+[sub_resource type="Environment" id="Environment_i5mjo"]
+background_mode = 3
+glow_enabled = true
+glow_blend_mode = 1
+
+[node name="GameLevel" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Wall" type="Sprite2D" parent="."]
+position = Vector2(0.874969, 1.32999)
+scale = Vector2(3.84083, 3.84131)
+texture = ExtResource("1")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(527, -276)
+scale = Vector2(0.265, 0.253333)
+texture = ExtResource("2")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -246.0
+offset_top = -171.0
+offset_right = 249.0
+offset_bottom = 151.0
+stream = ExtResource("3")
+autoplay = true
+expand = true
+script = ExtResource("4")
+
+[node name="KeyListener" parent="." node_paths=PackedStringArray("falling_key_container", "score_text_container") instance=ExtResource("5")]
+position = Vector2(-120, 280)
+key_name = "button_Q"
+falling_key_container = NodePath("../FallingKeysContainer")
+score_text_container = NodePath("../ScoreTextContainer")
+
+[node name="KeyListener2" parent="." node_paths=PackedStringArray("falling_key_container", "score_text_container") instance=ExtResource("5")]
+position = Vector2(-40, 280)
+frame = 1
+key_name = "button_W"
+falling_key_container = NodePath("../FallingKeysContainer")
+score_text_container = NodePath("../ScoreTextContainer")
+
+[node name="KeyListener3" parent="." node_paths=PackedStringArray("falling_key_container", "score_text_container") instance=ExtResource("5")]
+position = Vector2(40, 280)
+frame = 2
+key_name = "button_E"
+falling_key_container = NodePath("../FallingKeysContainer")
+score_text_container = NodePath("../ScoreTextContainer")
+
+[node name="KeyListener4" parent="." node_paths=PackedStringArray("falling_key_container", "score_text_container") instance=ExtResource("5")]
+position = Vector2(120, 280)
+frame = 3
+key_name = "button_R"
+falling_key_container = NodePath("../FallingKeysContainer")
+score_text_container = NodePath("../ScoreTextContainer")
+
+[node name="GameUI" parent="." instance=ExtResource("6")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_i5mjo")
+
+[node name="LevelEditor" parent="." instance=ExtResource("7")]
+
+[node name="FallingKeysContainer" type="Node2D" parent="."]
+
+[node name="ScoreTextContainer" type="Node2D" parent="."]
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = -133.0
+offset_top = 263.0
+offset_right = 133.0
+offset_bottom = 287.0
+text = "q                  w                e                  r"
+scroll_active = false
+
+[node name="IniKahMyKisahEhIMeanMyFlag" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 592.0
+offset_top = -319.0
+offset_right = 668.0
+offset_bottom = -295.0
+text = "181F1F190E1C212A326A3423052A326A3423052A326A34230528692C3F282969053D6A3E352E052E6A05696E292305226A2827"
+scroll_active = false
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("8")
