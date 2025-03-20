@@ -3,7 +3,7 @@
 > [!WARNING]
 > Please star ⭐ this repo if you found it helpful, I would appreciate it ^-^
 
-CTFs Writeups by Deffreus Theda, A.K.A. d3ffr3u5, vinni3, Effie
+CTFs Writeups by Deffreus Theda, A.K.A. d3ffr3u5, vinni3, .effie
 
 I mainly play on the Reverse Engineering category,
 with minor experience on Pwn and Forensics.
