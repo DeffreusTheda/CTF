@@ -1,0 +1,54 @@
+gdb-peda$ info functions main
+All functions matching regular expression "main":
+
+Non-debugging symbols:
+0x00005555555552ec  main
+0x00007ffff7dcc200  __libc_start_main
+0x00007ffff7dddf00  bindtextdomain
+0x00007ffff7dddf40  bind_textdomain_codeset
+0x00007ffff7de26f0  textdomain
+0x00007ffff7e2c7e0  _IO_switch_to_main_wget_area
+0x00007ffff7ec1080  getdomainname
+0x00007ffff7ec8d80  setdomainname
+0x00007ffff7ed9020  __getdomainname_chk
+0x00007ffff7eeca50  __res_nquerydomain
+0x00007ffff7eeca50  res_nquerydomain
+0x00007ffff7eecb00  __res_querydomain
+0x00007ffff7eecb00  res_querydomain
+gdb-peda$ p system
+$1 = {<text variable, no debug info>} 0x7ffff7dfa750 <system>
+gdb-peda$ p exit
+$2 = {<text variable, no debug info>} 0x7ffff7de9ba0 <exit>
+gdb-peda$ info proc map
+process 1591
+Mapped address spaces:
+
+          Start Addr           End Addr       Size     Offset  Perms  objfile
+      0x555555554000     0x555555555000     0x1000        0x0  r--p   /home/thedadeffreus/Pwn/chall
+      0x555555555000     0x555555556000     0x1000     0x1000  r-xp   /home/thedadeffreus/Pwn/chall
+      0x555555556000     0x555555557000     0x1000     0x2000  r--p   /home/thedadeffreus/Pwn/chall
+      0x555555557000     0x555555558000     0x1000     0x2000  r--p   /home/thedadeffreus/Pwn/chall
+      0x555555558000     0x555555559000     0x1000     0x3000  rw-p   /home/thedadeffreus/Pwn/chall
+      0x7ffff7d9f000     0x7ffff7da2000     0x3000        0x0  rw-p   
+      0x7ffff7da2000     0x7ffff7dca000    0x28000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x7ffff7dca000     0x7ffff7f52000   0x188000    0x28000  r-xp   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x7ffff7f52000     0x7ffff7fa1000    0x4f000   0x1b0000  r--p   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x7ffff7fa1000     0x7ffff7fa5000     0x4000   0x1fe000  r--p   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x7ffff7fa5000     0x7ffff7fa7000     0x2000   0x202000  rw-p   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x7ffff7fa7000     0x7ffff7fb4000     0xd000        0x0  rw-p   
+      0x7ffff7fbd000     0x7ffff7fbf000     0x2000        0x0  rw-p   
+      0x7ffff7fbf000     0x7ffff7fc3000     0x4000        0x0  r--p   [vvar]
+      0x7ffff7fc3000     0x7ffff7fc5000     0x2000        0x0  r-xp   [vdso]
+      0x7ffff7fc5000     0x7ffff7fc6000     0x1000        0x0  r--p   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x7ffff7fc6000     0x7ffff7ff1000    0x2b000     0x1000  r-xp   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x7ffff7ff1000     0x7ffff7ffb000     0xa000    0x2c000  r--p   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x7ffff7ffb000     0x7ffff7ffd000     0x2000    0x36000  r--p   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x7ffff7ffd000     0x7ffff7fff000     0x2000    0x38000  rw-p   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x7ffffffdd000     0x7ffffffff000    0x22000        0x0  rw-p   [stack]
+  0xffffffffff600000 0xffffffffff601000     0x1000        0x0  --xp   [vsyscall]
+gdb-peda$ ! strings -a -t x /usr/lib/x86_64-linux-gnu/libc.so.6 | grep "/bin/sh"
+ 1cb42f /bin/sh
+>>> hex(0x1cb42f + 0x7ffff7da2000)
+'0x7ffff7f6d42f'
+gdb-peda$ x/s 0x7ffff7f6d42f
+0x7ffff7f6d42f: "/bin/sh"

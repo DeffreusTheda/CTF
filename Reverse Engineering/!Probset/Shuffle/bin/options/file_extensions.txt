@@ -1,0 +1,12 @@
+cmp:o>cmp:cl>.obj
+cmp:o>cmp:clang>.o
+cmp:o>cmp:gcc>.o
+
+asm:o>asm:ml64>.obj
+
+exe>os:windows>.exe
+dll>os:windows>.dll
+dll>os:linux>.so
+dll>os:mac>.so
+
+

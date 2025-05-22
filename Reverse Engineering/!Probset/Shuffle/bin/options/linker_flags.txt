@@ -1,0 +1,53 @@
+###### MSVC ###################################################################
+link:msvc>-nologo
+link:msvc>-DEFAULTLIB:libcmt
+link:msvc>-OPT:REF
+link:msvc>-INCREMENTAL:NO
+link:msvc>-DEBUG
+link:msvc>arch:x64>-MACHINE:X64
+link:msvc>console>-SUBSYSTEM:CONSOLE
+link:msvc>console_graphical>-SUBSYSTEM:CONSOLE
+link:msvc>graphical>-SUBSYSTEM:WINDOWS
+link:msvc>dll>-DLL
+
+###### Clang ##################################################################
+link:clang>mode:debug>-g
+link:clang>dll>-shared
+
+###### Windows ################################################################
+
+link:msvc>os:windows>Winmm.lib
+link:msvc>os:windows>Userenv.lib
+link:msvc>os:windows>Advapi32.lib
+link:msvc>os:windows>User32.lib
+link:msvc>os:windows>graphical>Gdi32.lib
+link:msvc>os:windows>graphical>Dwmapi.lib
+link:msvc>os:windows>console_graphical>Gdi32.lib
+link:msvc>os:windows>console_graphical>Dwmapi.lib
+link:msvc>os:windows>audio>Ole32.lib
+link:msvc>os:windows>audio>onecore.lib
+link:msvc>os:windows>audio>Avrt.lib
+
+link:clang>os:windows>-lWinmm.lib
+link:clang>os:windows>-lUserenv.lib
+link:clang>os:windows>-lAdvapi32.lib
+link:clang>os:windows>-lUser32.lib
+link:clang>os:windows>graphical>-lGdi32.lib
+link:clang>os:windows>graphical>-lDwmapi.lib
+link:clang>os:windows>console_graphical>-lGdi32.lib
+link:clang>os:windows>console_graphical>-lDwmapi.lib
+link:clang>os:windows>audio>-lOle32.lib
+link:clang>os:windows>audio>-lonecore.lib
+link:clang>os:windows>audio>-lAvrt.lib
+
+link:msvc>freetype>freetype.lib
+link:clang>freetype>-lfreetype.lib
+
+spall>base_profiling_by_spall.o
+
+###### Sanitizer ##############################################################
+
+link:clang>sanitizer>-fsanitize=address
+link:clang>sanitizer>-fsanitize=undefined
+link:clang>os:linux>sanitizer>-fsanitize=safe-stack
+link:clang>fuzzer>-fsanitize=fuzzer

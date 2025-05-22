@@ -1,0 +1,1 @@
+ENSEC_CTF{praise_the_queen}

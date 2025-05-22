@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+*/TBTL CTF/
+
+.idea/
+Forensics/SNICTF/pf-ing/dump.rar
+ghidra_11.2_PUBLIC/
+Notes/
+IDA\ Debug\ Server/
+.obsidian

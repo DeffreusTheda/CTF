@@ -1,0 +1,1248 @@
+sdp.pyc (Python 3.12)
+[Code]
+    File Name: sdp.py
+    Object Name: <module>
+    Qualified Name: <module>
+    Arg Count: 0
+    Pos Only Arg Count: 0
+    KW Only Arg Count: 0
+    Stack Size: 5
+    Flags: 0x00000000
+    [Names]
+        'struct'
+        'enum'
+        'Enum'
+        'typing'
+        'SdpDataType'
+        'SdpStruct'
+    [Locals+Names]
+    [Constants]
+        0
+        None
+        (
+            'Enum'
+        )
+        (
+            '*'
+        )
+        [Code]
+            File Name: sdp.py
+            Object Name: SdpDataType
+            Qualified Name: SdpDataType
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 1
+            Flags: 0x00000000
+            [Names]
+                '__name__'
+                '__module__'
+                '__qualname__'
+                'INTEGER_POSITIVE'
+                'INTEGER_NEGATIVE'
+                'FLOAT'
+                'DOUBLE'
+                'STRING'
+                'LIST'
+                'DICT'
+                'STRUCT_BEGIN'
+                'STRUCT_END'
+            [Locals+Names]
+            [Constants]
+                'SdpDataType'
+                0
+                1
+                2
+                3
+                4
+                5
+                6
+                7
+                8
+                None
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_NAME                       0: __name__
+                4       STORE_NAME                      1: __module__
+                6       LOAD_CONST                      0: 'SdpDataType'
+                8       STORE_NAME                      2: __qualname__
+                10      LOAD_CONST                      1: 0
+                12      STORE_NAME                      3: INTEGER_POSITIVE
+                14      LOAD_CONST                      2: 1
+                16      STORE_NAME                      4: INTEGER_NEGATIVE
+                18      LOAD_CONST                      3: 2
+                20      STORE_NAME                      5: FLOAT
+                22      LOAD_CONST                      4: 3
+                24      STORE_NAME                      6: DOUBLE
+                26      LOAD_CONST                      5: 4
+                28      STORE_NAME                      7: STRING
+                30      LOAD_CONST                      6: 5
+                32      STORE_NAME                      8: LIST
+                34      LOAD_CONST                      7: 6
+                36      STORE_NAME                      9: DICT
+                38      LOAD_CONST                      8: 7
+                40      STORE_NAME                      10: STRUCT_BEGIN
+                42      LOAD_CONST                      9: 8
+                44      STORE_NAME                      11: STRUCT_END
+                46      RETURN_CONST                    10: None
+        'SdpDataType'
+        [Code]
+            File Name: sdp.py
+            Object Name: SdpStruct
+            Qualified Name: SdpStruct
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 10
+            Flags: 0x00000000
+            [Names]
+                '__name__'
+                '__module__'
+                '__qualname__'
+                'Dict'
+                'int'
+                'Any'
+                '__init__'
+                '__getitem__'
+                '__setitem__'
+                '__delitem__'
+                'str'
+                '__repr__'
+                'bool'
+                '__eq__'
+                '__iter__'
+                '__len__'
+                '__contains__'
+                '__json__'
+                'get'
+                'items'
+                'staticmethod'
+                'bytes'
+                '_pack_number'
+                'tuple'
+                '_unpack_number'
+                'classmethod'
+                '_pack_value'
+                'pack'
+                '_unpack_value'
+                'unpack'
+            [Locals+Names]
+            [Constants]
+                'SdpStruct'
+                None
+                'data'
+                [Code]
+                    File Name: sdp.py
+                    Object Name: __init__
+                    Qualified Name: SdpStruct.__init__
+                    Arg Count: 2
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 2
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        '_data'
+                    [Locals+Names]
+                        'self'
+                        'data'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_FAST                       1: data
+                        4       COPY                            1
+                        6       POP_JUMP_IF_TRUE                2 (to 12)
+                        8       POP_TOP                         
+                        10      BUILD_MAP                       0
+                        12      LOAD_FAST                       0: self
+                        14      STORE_ATTR                      0: _data
+                        24      RETURN_CONST                    0: None
+                'key'
+                'return'
+                [Code]
+                    File Name: sdp.py
+                    Object Name: __getitem__
+                    Qualified Name: SdpStruct.__getitem__
+                    Arg Count: 2
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 2
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        '_data'
+                    [Locals+Names]
+                        'self'
+                        'key'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_FAST                       0: self
+                        4       LOAD_ATTR                       0: _data
+                        24      LOAD_FAST                       1: key
+                        26      BINARY_SUBSCR                   
+                        30      RETURN_VALUE                    
+                'value'
+                [Code]
+                    File Name: sdp.py
+                    Object Name: __setitem__
+                    Qualified Name: SdpStruct.__setitem__
+                    Arg Count: 3
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 3
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        '_data'
+                    [Locals+Names]
+                        'self'
+                        'key'
+                        'value'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_FAST                       2: value
+                        4       LOAD_FAST                       0: self
+                        6       LOAD_ATTR                       0: _data
+                        26      LOAD_FAST                       1: key
+                        28      STORE_SUBSCR                    
+                        32      RETURN_CONST                    0: None
+                [Code]
+                    File Name: sdp.py
+                    Object Name: __delitem__
+                    Qualified Name: SdpStruct.__delitem__
+                    Arg Count: 2
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 2
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        '_data'
+                    [Locals+Names]
+                        'self'
+                        'key'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_FAST                       0: self
+                        4       LOAD_ATTR                       0: _data
+                        24      LOAD_FAST                       1: key
+                        26      DELETE_SUBSCR                   
+                        28      RETURN_CONST                    0: None
+                [Code]
+                    File Name: sdp.py
+                    Object Name: __repr__
+                    Qualified Name: SdpStruct.__repr__
+                    Arg Count: 1
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 1
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        '_data'
+                    [Locals+Names]
+                        'self'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_FAST                       0: self
+                        4       LOAD_ATTR                       0: _data
+                        24      FORMAT_VALUE                    0 (FVC_NONE)
+                        26      RETURN_VALUE                    
+                'other'
+                [Code]
+                    File Name: sdp.py
+                    Object Name: __eq__
+                    Qualified Name: SdpStruct.__eq__
+                    Arg Count: 2
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 4
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        'isinstance'
+                        'SdpStruct'
+                        '_data'
+                    [Locals+Names]
+                        'self'
+                        'other'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_GLOBAL                     1: NULL + isinstance
+                        12      LOAD_FAST                       1: other
+                        14      LOAD_GLOBAL                     2: SdpStruct
+                        24      CALL                            2
+                        32      COPY                            1
+                        34      POP_JUMP_IF_FALSE               25 (to 86)
+                        36      POP_TOP                         
+                        38      LOAD_FAST                       0: self
+                        40      LOAD_ATTR                       4: _data
+                        60      LOAD_FAST                       1: other
+                        62      LOAD_ATTR                       4: _data
+                        82      COMPARE_OP                      40 (==)
+                        86      RETURN_VALUE                    
+                [Code]
+                    File Name: sdp.py
+                    Object Name: __iter__
+                    Qualified Name: SdpStruct.__iter__
+                    Arg Count: 1
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 3
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        'iter'
+                        '_data'
+                    [Locals+Names]
+                        'self'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_GLOBAL                     1: NULL + iter
+                        12      LOAD_FAST                       0: self
+                        14      LOAD_ATTR                       2: _data
+                        34      CALL                            1
+                        42      RETURN_VALUE                    
+                [Code]
+                    File Name: sdp.py
+                    Object Name: __len__
+                    Qualified Name: SdpStruct.__len__
+                    Arg Count: 1
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 3
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        'len'
+                        '_data'
+                    [Locals+Names]
+                        'self'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_GLOBAL                     1: NULL + len
+                        12      LOAD_FAST                       0: self
+                        14      LOAD_ATTR                       2: _data
+                        34      CALL                            1
+                        42      RETURN_VALUE                    
+                [Code]
+                    File Name: sdp.py
+                    Object Name: __contains__
+                    Qualified Name: SdpStruct.__contains__
+                    Arg Count: 2
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 2
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        '_data'
+                    [Locals+Names]
+                        'self'
+                        'key'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_FAST                       1: key
+                        4       LOAD_FAST                       0: self
+                        6       LOAD_ATTR                       0: _data
+                        26      CONTAINS_OP                     0 (in)
+                        28      RETURN_VALUE                    
+                [Code]
+                    File Name: sdp.py
+                    Object Name: __json__
+                    Qualified Name: SdpStruct.__json__
+                    Arg Count: 1
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 1
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        '_data'
+                    [Locals+Names]
+                        'self'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_FAST                       0: self
+                        4       LOAD_ATTR                       0: _data
+                        24      RETURN_VALUE                    
+                [Code]
+                    File Name: sdp.py
+                    Object Name: get
+                    Qualified Name: SdpStruct.get
+                    Arg Count: 3
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 4
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        '_data'
+                        'get'
+                    [Locals+Names]
+                        'self'
+                        'key'
+                        'default'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_FAST                       0: self
+                        4       LOAD_ATTR                       0: _data
+                        24      LOAD_ATTR                       3: get
+                        44      LOAD_FAST                       1: key
+                        46      LOAD_FAST                       2: default
+                        48      CALL                            2
+                        56      RETURN_VALUE                    
+                [Code]
+                    File Name: sdp.py
+                    Object Name: items
+                    Qualified Name: SdpStruct.items
+                    Arg Count: 1
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 2
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        '_data'
+                        'items'
+                    [Locals+Names]
+                        'self'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_FAST                       0: self
+                        4       LOAD_ATTR                       0: _data
+                        24      LOAD_ATTR                       3: items
+                        44      CALL                            0
+                        52      RETURN_VALUE                    
+                [Code]
+                    File Name: sdp.py
+                    Object Name: _pack_number
+                    Qualified Name: SdpStruct._pack_number
+                    Arg Count: 1
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 4
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        'bytearray'
+                        'append'
+                        'bytes'
+                    [Locals+Names]
+                        'value'
+                        'result'
+                    [Constants]
+                        None
+                        127
+                        128
+                        7
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_GLOBAL                     1: NULL + bytearray
+                        12      CALL                            0
+                        20      STORE_FAST                      1: result
+                        22      LOAD_FAST                       0: value
+                        24      LOAD_CONST                      1: 127
+                        26      COMPARE_OP                      68 (>)
+                        30      POP_JUMP_IF_FALSE               34 (to 100)
+                        32      LOAD_FAST                       1: result
+                        34      LOAD_ATTR                       3: append
+                        54      LOAD_FAST                       0: value
+                        56      LOAD_CONST                      1: 127
+                        58      BINARY_OP                       1 (&)
+                        62      LOAD_CONST                      2: 128
+                        64      BINARY_OP                       7 (|)
+                        68      CALL                            1
+                        76      POP_TOP                         
+                        78      LOAD_FAST                       0: value
+                        80      LOAD_CONST                      3: 7
+                        82      BINARY_OP                       22 (>>=)
+                        86      STORE_FAST                      0: value
+                        88      LOAD_FAST                       0: value
+                        90      LOAD_CONST                      1: 127
+                        92      COMPARE_OP                      68 (>)
+                        96      POP_JUMP_IF_FALSE               1 (to 100)
+                        98      JUMP_BACKWARD                   34 (to 32)
+                        100     LOAD_FAST                       1: result
+                        102     LOAD_ATTR                       3: append
+                        122     LOAD_FAST                       0: value
+                        124     CALL                            1
+                        132     POP_TOP                         
+                        134     LOAD_GLOBAL                     5: NULL + bytes
+                        144     LOAD_FAST                       1: result
+                        146     CALL                            1
+                        154     RETURN_VALUE                    
+                'offset'
+                [Code]
+                    File Name: sdp.py
+                    Object Name: _unpack_number
+                    Qualified Name: SdpStruct._unpack_number
+                    Arg Count: 2
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 1
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        'NotImplementedError'
+                    [Locals+Names]
+                        'data'
+                        'offset'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_GLOBAL                     0: NotImplementedError
+                        12      RAISE_VARARGS                   1
+                'tag'
+                [Code]
+                    File Name: sdp.py
+                    Object Name: _pack_value
+                    Qualified Name: SdpStruct._pack_value
+                    Arg Count: 3
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 6
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        'isinstance'
+                        'int'
+                        'SdpDataType'
+                        'INTEGER_POSITIVE'
+                        'INTEGER_NEGATIVE'
+                        'value'
+                        'bytes'
+                        '_pack_number'
+                        'abs'
+                        'float'
+                        'DOUBLE'
+                        'struct'
+                        'pack'
+                        'str'
+                        'STRING'
+                        'encode'
+                        'len'
+                        'list'
+                        'LIST'
+                        '_pack_value'
+                        'dict'
+                        'DICT'
+                        'items'
+                        'SdpStruct'
+                        'STRUCT_BEGIN'
+                        'STRUCT_END'
+                        'ValueError'
+                        'type'
+                    [Locals+Names]
+                        'cls'
+                        'tag'
+                        'value'
+                        'type_'
+                        'header'
+                        'result'
+                        'encoded'
+                        'item'
+                        'k'
+                        'v'
+                        'sub_tag'
+                        'sub_value'
+                    [Constants]
+                        None
+                        0
+                        4
+                        15
+                        'd'
+                        'utf-8'
+                        'Unsupported type: '
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_GLOBAL                     1: NULL + isinstance
+                        12      LOAD_FAST                       2: value
+                        14      LOAD_GLOBAL                     2: int
+                        24      CALL                            2
+                        32      POP_JUMP_IF_FALSE               130 (to 294)
+                        34      LOAD_FAST                       2: value
+                        36      LOAD_CONST                      1: 0
+                        38      COMPARE_OP                      92 (>=)
+                        42      POP_JUMP_IF_FALSE               16 (to 76)
+                        44      LOAD_GLOBAL                     4: SdpDataType
+                        54      LOAD_ATTR                       6: INTEGER_POSITIVE
+                        74      JUMP_FORWARD                    15 (to 106)
+                        76      LOAD_GLOBAL                     4: SdpDataType
+                        86      LOAD_ATTR                       8: INTEGER_NEGATIVE
+                        106     STORE_FAST                      3: type_
+                        108     LOAD_FAST                       3: type_
+                        110     LOAD_ATTR                       10: value
+                        130     LOAD_CONST                      2: 4
+                        132     BINARY_OP                       3 (<<)
+                        136     LOAD_FAST                       1: tag
+                        138     LOAD_CONST                      3: 15
+                        140     COMPARE_OP                      2 (<)
+                        144     POP_JUMP_IF_FALSE               2 (to 150)
+                        146     LOAD_FAST                       1: tag
+                        148     JUMP_FORWARD                    1 (to 152)
+                        150     LOAD_CONST                      3: 15
+                        152     BINARY_OP                       7 (|)
+                        156     STORE_FAST                      4: header
+                        158     LOAD_GLOBAL                     13: NULL + bytes
+                        168     LOAD_FAST                       4: header
+                        170     BUILD_LIST                      1
+                        172     CALL                            1
+                        180     STORE_FAST                      5: result
+                        182     LOAD_FAST                       1: tag
+                        184     LOAD_CONST                      3: 15
+                        186     COMPARE_OP                      92 (>=)
+                        190     POP_JUMP_IF_FALSE               20 (to 232)
+                        192     LOAD_FAST                       5: result
+                        194     LOAD_FAST                       0: cls
+                        196     LOAD_ATTR                       15: _pack_number
+                        216     LOAD_FAST                       1: tag
+                        218     CALL                            1
+                        226     BINARY_OP                       13 (+=)
+                        230     STORE_FAST                      5: result
+                        232     LOAD_FAST                       5: result
+                        234     LOAD_FAST                       0: cls
+                        236     LOAD_ATTR                       15: _pack_number
+                        256     LOAD_GLOBAL                     17: NULL + abs
+                        266     LOAD_FAST                       2: value
+                        268     CALL                            1
+                        276     CALL                            1
+                        284     BINARY_OP                       13 (+=)
+                        288     STORE_FAST                      5: result
+                        290     LOAD_FAST                       5: result
+                        292     RETURN_VALUE                    
+                        294     LOAD_GLOBAL                     1: NULL + isinstance
+                        304     LOAD_FAST                       2: value
+                        306     LOAD_GLOBAL                     18: float
+                        316     CALL                            2
+                        324     POP_JUMP_IF_FALSE               105 (to 536)
+                        326     LOAD_GLOBAL                     4: SdpDataType
+                        336     LOAD_ATTR                       20: DOUBLE
+                        356     STORE_FAST                      3: type_
+                        358     LOAD_FAST                       3: type_
+                        360     LOAD_ATTR                       10: value
+                        380     LOAD_CONST                      2: 4
+                        382     BINARY_OP                       3 (<<)
+                        386     LOAD_FAST                       1: tag
+                        388     LOAD_CONST                      3: 15
+                        390     COMPARE_OP                      2 (<)
+                        394     POP_JUMP_IF_FALSE               2 (to 400)
+                        396     LOAD_FAST                       1: tag
+                        398     JUMP_FORWARD                    1 (to 402)
+                        400     LOAD_CONST                      3: 15
+                        402     BINARY_OP                       7 (|)
+                        406     STORE_FAST                      4: header
+                        408     LOAD_GLOBAL                     13: NULL + bytes
+                        418     LOAD_FAST                       4: header
+                        420     BUILD_LIST                      1
+                        422     CALL                            1
+                        430     STORE_FAST                      5: result
+                        432     LOAD_FAST                       1: tag
+                        434     LOAD_CONST                      3: 15
+                        436     COMPARE_OP                      92 (>=)
+                        440     POP_JUMP_IF_FALSE               20 (to 482)
+                        442     LOAD_FAST                       5: result
+                        444     LOAD_FAST                       0: cls
+                        446     LOAD_ATTR                       15: _pack_number
+                        466     LOAD_FAST                       1: tag
+                        468     CALL                            1
+                        476     BINARY_OP                       13 (+=)
+                        480     STORE_FAST                      5: result
+                        482     LOAD_FAST                       5: result
+                        484     LOAD_GLOBAL                     23: NULL + struct
+                        494     LOAD_ATTR                       24: pack
+                        514     LOAD_CONST                      4: 'd'
+                        516     LOAD_FAST                       2: value
+                        518     CALL                            2
+                        526     BINARY_OP                       13 (+=)
+                        530     STORE_FAST                      5: result
+                        532     LOAD_FAST                       5: result
+                        534     RETURN_VALUE                    
+                        536     LOAD_GLOBAL                     1: NULL + isinstance
+                        546     LOAD_FAST                       2: value
+                        548     LOAD_GLOBAL                     26: str
+                        558     CALL                            2
+                        566     POP_JUMP_IF_TRUE                16 (to 600)
+                        568     LOAD_GLOBAL                     1: NULL + isinstance
+                        578     LOAD_FAST                       2: value
+                        580     LOAD_GLOBAL                     12: bytes
+                        590     CALL                            2
+                        598     POP_JUMP_IF_FALSE               147 (to 894)
+                        600     LOAD_GLOBAL                     4: SdpDataType
+                        610     LOAD_ATTR                       28: STRING
+                        630     STORE_FAST                      3: type_
+                        632     LOAD_FAST                       3: type_
+                        634     LOAD_ATTR                       10: value
+                        654     LOAD_CONST                      2: 4
+                        656     BINARY_OP                       3 (<<)
+                        660     LOAD_FAST                       1: tag
+                        662     LOAD_CONST                      3: 15
+                        664     COMPARE_OP                      2 (<)
+                        668     POP_JUMP_IF_FALSE               2 (to 674)
+                        670     LOAD_FAST                       1: tag
+                        672     JUMP_FORWARD                    1 (to 676)
+                        674     LOAD_CONST                      3: 15
+                        676     BINARY_OP                       7 (|)
+                        680     STORE_FAST                      4: header
+                        682     LOAD_GLOBAL                     13: NULL + bytes
+                        692     LOAD_FAST                       4: header
+                        694     BUILD_LIST                      1
+                        696     CALL                            1
+                        704     STORE_FAST                      5: result
+                        706     LOAD_FAST                       1: tag
+                        708     LOAD_CONST                      3: 15
+                        710     COMPARE_OP                      92 (>=)
+                        714     POP_JUMP_IF_FALSE               20 (to 756)
+                        716     LOAD_FAST                       5: result
+                        718     LOAD_FAST                       0: cls
+                        720     LOAD_ATTR                       15: _pack_number
+                        740     LOAD_FAST                       1: tag
+                        742     CALL                            1
+                        750     BINARY_OP                       13 (+=)
+                        754     STORE_FAST                      5: result
+                        756     LOAD_GLOBAL                     1: NULL + isinstance
+                        766     LOAD_FAST                       2: value
+                        768     LOAD_GLOBAL                     26: str
+                        778     CALL                            2
+                        786     POP_JUMP_IF_FALSE               17 (to 822)
+                        788     LOAD_FAST                       2: value
+                        790     LOAD_ATTR                       31: encode
+                        810     LOAD_CONST                      5: 'utf-8'
+                        812     CALL                            1
+                        820     JUMP_FORWARD                    1 (to 824)
+                        822     LOAD_FAST                       2: value
+                        824     STORE_FAST                      6: encoded
+                        826     LOAD_FAST                       5: result
+                        828     LOAD_FAST                       0: cls
+                        830     LOAD_ATTR                       15: _pack_number
+                        850     LOAD_GLOBAL                     33: NULL + len
+                        860     LOAD_FAST                       6: encoded
+                        862     CALL                            1
+                        870     CALL                            1
+                        878     LOAD_FAST                       6: encoded
+                        880     BINARY_OP                       0 (+)
+                        884     BINARY_OP                       13 (+=)
+                        888     STORE_FAST                      5: result
+                        890     LOAD_FAST                       5: result
+                        892     RETURN_VALUE                    
+                        894     LOAD_GLOBAL                     1: NULL + isinstance
+                        904     LOAD_FAST                       2: value
+                        906     LOAD_GLOBAL                     34: list
+                        916     CALL                            2
+                        924     POP_JUMP_IF_FALSE               137 (to 1200)
+                        926     LOAD_GLOBAL                     4: SdpDataType
+                        936     LOAD_ATTR                       36: LIST
+                        956     STORE_FAST                      3: type_
+                        958     LOAD_FAST                       3: type_
+                        960     LOAD_ATTR                       10: value
+                        980     LOAD_CONST                      2: 4
+                        982     BINARY_OP                       3 (<<)
+                        986     LOAD_FAST                       1: tag
+                        988     LOAD_CONST                      3: 15
+                        990     COMPARE_OP                      2 (<)
+                        994     POP_JUMP_IF_FALSE               2 (to 1000)
+                        996     LOAD_FAST                       1: tag
+                        998     JUMP_FORWARD                    1 (to 1002)
+                        1000    LOAD_CONST                      3: 15
+                        1002    BINARY_OP                       7 (|)
+                        1006    STORE_FAST                      4: header
+                        1008    LOAD_GLOBAL                     13: NULL + bytes
+                        1018    LOAD_FAST                       4: header
+                        1020    BUILD_LIST                      1
+                        1022    CALL                            1
+                        1030    STORE_FAST                      5: result
+                        1032    LOAD_FAST                       1: tag
+                        1034    LOAD_CONST                      3: 15
+                        1036    COMPARE_OP                      92 (>=)
+                        1040    POP_JUMP_IF_FALSE               20 (to 1082)
+                        1042    LOAD_FAST                       5: result
+                        1044    LOAD_FAST                       0: cls
+                        1046    LOAD_ATTR                       15: _pack_number
+                        1066    LOAD_FAST                       1: tag
+                        1068    CALL                            1
+                        1076    BINARY_OP                       13 (+=)
+                        1080    STORE_FAST                      5: result
+                        1082    LOAD_FAST                       5: result
+                        1084    LOAD_FAST                       0: cls
+                        1086    LOAD_ATTR                       15: _pack_number
+                        1106    LOAD_GLOBAL                     33: NULL + len
+                        1116    LOAD_FAST                       2: value
+                        1118    CALL                            1
+                        1126    CALL                            1
+                        1134    BINARY_OP                       13 (+=)
+                        1138    STORE_FAST                      5: result
+                        1140    LOAD_FAST                       2: value
+                        1142    GET_ITER                        
+                        1144    FOR_ITER                        23 (to 1192)
+                        1148    STORE_FAST                      7: item
+                        1150    LOAD_FAST                       5: result
+                        1152    LOAD_FAST                       0: cls
+                        1154    LOAD_ATTR                       39: _pack_value
+                        1174    LOAD_CONST                      1: 0
+                        1176    LOAD_FAST                       7: item
+                        1178    CALL                            2
+                        1186    BINARY_OP                       13 (+=)
+                        1190    STORE_FAST                      5: result
+                        1192    JUMP_BACKWARD                   25 (to 1144)
+                        1194    END_FOR                         
+                        1196    LOAD_FAST                       5: result
+                        1198    RETURN_VALUE                    
+                        1200    LOAD_GLOBAL                     1: NULL + isinstance
+                        1210    LOAD_FAST                       2: value
+                        1212    LOAD_GLOBAL                     40: dict
+                        1222    CALL                            2
+                        1230    POP_JUMP_IF_FALSE               175 (to 1582)
+                        1232    LOAD_GLOBAL                     4: SdpDataType
+                        1242    LOAD_ATTR                       42: DICT
+                        1262    STORE_FAST                      3: type_
+                        1264    LOAD_FAST                       3: type_
+                        1266    LOAD_ATTR                       10: value
+                        1286    LOAD_CONST                      2: 4
+                        1288    BINARY_OP                       3 (<<)
+                        1292    LOAD_FAST                       1: tag
+                        1294    LOAD_CONST                      3: 15
+                        1296    COMPARE_OP                      2 (<)
+                        1300    POP_JUMP_IF_FALSE               2 (to 1306)
+                        1302    LOAD_FAST                       1: tag
+                        1304    JUMP_FORWARD                    1 (to 1308)
+                        1306    LOAD_CONST                      3: 15
+                        1308    BINARY_OP                       7 (|)
+                        1312    STORE_FAST                      4: header
+                        1314    LOAD_GLOBAL                     13: NULL + bytes
+                        1324    LOAD_FAST                       4: header
+                        1326    BUILD_LIST                      1
+                        1328    CALL                            1
+                        1336    STORE_FAST                      5: result
+                        1338    LOAD_FAST                       1: tag
+                        1340    LOAD_CONST                      3: 15
+                        1342    COMPARE_OP                      92 (>=)
+                        1346    POP_JUMP_IF_FALSE               20 (to 1388)
+                        1348    LOAD_FAST                       5: result
+                        1350    LOAD_FAST                       0: cls
+                        1352    LOAD_ATTR                       15: _pack_number
+                        1372    LOAD_FAST                       1: tag
+                        1374    CALL                            1
+                        1382    BINARY_OP                       13 (+=)
+                        1386    STORE_FAST                      5: result
+                        1388    LOAD_FAST                       5: result
+                        1390    LOAD_FAST                       0: cls
+                        1392    LOAD_ATTR                       15: _pack_number
+                        1412    LOAD_GLOBAL                     33: NULL + len
+                        1422    LOAD_FAST                       2: value
+                        1424    CALL                            1
+                        1432    CALL                            1
+                        1440    BINARY_OP                       13 (+=)
+                        1444    STORE_FAST                      5: result
+                        1446    LOAD_FAST                       2: value
+                        1448    LOAD_ATTR                       45: items
+                        1468    CALL                            0
+                        1476    GET_ITER                        
+                        1478    FOR_ITER                        47 (to 1574)
+                        1482    UNPACK_SEQUENCE                 2
+                        1486    STORE_FAST                      8: k
+                        1488    STORE_FAST                      9: v
+                        1490    LOAD_FAST                       5: result
+                        1492    LOAD_FAST                       0: cls
+                        1494    LOAD_ATTR                       39: _pack_value
+                        1514    LOAD_CONST                      1: 0
+                        1516    LOAD_FAST                       8: k
+                        1518    CALL                            2
+                        1526    BINARY_OP                       13 (+=)
+                        1530    STORE_FAST                      5: result
+                        1532    LOAD_FAST                       5: result
+                        1534    LOAD_FAST                       0: cls
+                        1536    LOAD_ATTR                       39: _pack_value
+                        1556    LOAD_CONST                      1: 0
+                        1558    LOAD_FAST                       9: v
+                        1560    CALL                            2
+                        1568    BINARY_OP                       13 (+=)
+                        1572    STORE_FAST                      5: result
+                        1574    JUMP_BACKWARD                   49 (to 1478)
+                        1576    END_FOR                         
+                        1578    LOAD_FAST                       5: result
+                        1580    RETURN_VALUE                    
+                        1582    LOAD_GLOBAL                     1: NULL + isinstance
+                        1592    LOAD_FAST                       2: value
+                        1594    LOAD_GLOBAL                     46: SdpStruct
+                        1604    CALL                            2
+                        1612    POP_JUMP_IF_FALSE               167 (to 1948)
+                        1614    LOAD_GLOBAL                     4: SdpDataType
+                        1624    LOAD_ATTR                       48: STRUCT_BEGIN
+                        1644    STORE_FAST                      3: type_
+                        1646    LOAD_FAST                       3: type_
+                        1648    LOAD_ATTR                       10: value
+                        1668    LOAD_CONST                      2: 4
+                        1670    BINARY_OP                       3 (<<)
+                        1674    LOAD_FAST                       1: tag
+                        1676    LOAD_CONST                      3: 15
+                        1678    COMPARE_OP                      2 (<)
+                        1682    POP_JUMP_IF_FALSE               2 (to 1688)
+                        1684    LOAD_FAST                       1: tag
+                        1686    JUMP_FORWARD                    1 (to 1690)
+                        1688    LOAD_CONST                      3: 15
+                        1690    BINARY_OP                       7 (|)
+                        1694    STORE_FAST                      4: header
+                        1696    LOAD_GLOBAL                     13: NULL + bytes
+                        1706    LOAD_FAST                       4: header
+                        1708    BUILD_LIST                      1
+                        1710    CALL                            1
+                        1718    STORE_FAST                      5: result
+                        1720    LOAD_FAST                       1: tag
+                        1722    LOAD_CONST                      3: 15
+                        1724    COMPARE_OP                      92 (>=)
+                        1728    POP_JUMP_IF_FALSE               20 (to 1770)
+                        1730    LOAD_FAST                       5: result
+                        1732    LOAD_FAST                       0: cls
+                        1734    LOAD_ATTR                       15: _pack_number
+                        1754    LOAD_FAST                       1: tag
+                        1756    CALL                            1
+                        1764    BINARY_OP                       13 (+=)
+                        1768    STORE_FAST                      5: result
+                        1770    LOAD_FAST                       2: value
+                        1772    LOAD_ATTR                       45: items
+                        1792    CALL                            0
+                        1800    GET_ITER                        
+                        1802    FOR_ITER                        26 (to 1856)
+                        1806    UNPACK_SEQUENCE                 2
+                        1810    STORE_FAST                      10: sub_tag
+                        1812    STORE_FAST                      11: sub_value
+                        1814    LOAD_FAST                       5: result
+                        1816    LOAD_FAST                       0: cls
+                        1818    LOAD_ATTR                       39: _pack_value
+                        1838    LOAD_FAST                       10: sub_tag
+                        1840    LOAD_FAST                       11: sub_value
+                        1842    CALL                            2
+                        1850    BINARY_OP                       13 (+=)
+                        1854    STORE_FAST                      5: result
+                        1856    JUMP_BACKWARD                   28 (to 1802)
+                        1858    END_FOR                         
+                        1860    LOAD_FAST                       5: result
+                        1862    LOAD_GLOBAL                     13: NULL + bytes
+                        1872    LOAD_GLOBAL                     4: SdpDataType
+                        1882    LOAD_ATTR                       50: STRUCT_END
+                        1902    LOAD_ATTR                       10: value
+                        1922    LOAD_CONST                      2: 4
+                        1924    BINARY_OP                       3 (<<)
+                        1928    BUILD_LIST                      1
+                        1930    CALL                            1
+                        1938    BINARY_OP                       13 (+=)
+                        1942    STORE_FAST                      5: result
+                        1944    LOAD_FAST                       5: result
+                        1946    RETURN_VALUE                    
+                        1948    LOAD_GLOBAL                     53: NULL + ValueError
+                        1958    LOAD_CONST                      6: 'Unsupported type: '
+                        1960    LOAD_GLOBAL                     55: NULL + type
+                        1970    LOAD_FAST                       2: value
+                        1972    CALL                            1
+                        1980    FORMAT_VALUE                    0 (FVC_NONE)
+                        1982    BUILD_STRING                    2
+                        1984    CALL                            1
+                        1992    RAISE_VARARGS                   1
+                [Code]
+                    File Name: sdp.py
+                    Object Name: pack
+                    Qualified Name: SdpStruct.pack
+                    Arg Count: 1
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 6
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        'bytes'
+                        'SdpDataType'
+                        'STRUCT_BEGIN'
+                        'value'
+                        'sorted'
+                        '_data'
+                        'items'
+                        '_pack_value'
+                        'STRUCT_END'
+                    [Locals+Names]
+                        'self'
+                        'result'
+                        'tag'
+                        'value'
+                    [Constants]
+                        None
+                        4
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_GLOBAL                     1: NULL + bytes
+                        12      LOAD_GLOBAL                     2: SdpDataType
+                        22      LOAD_ATTR                       4: STRUCT_BEGIN
+                        42      LOAD_ATTR                       6: value
+                        62      LOAD_CONST                      1: 4
+                        64      BINARY_OP                       3 (<<)
+                        68      BUILD_LIST                      1
+                        70      CALL                            1
+                        78      STORE_FAST                      1: result
+                        80      LOAD_GLOBAL                     9: NULL + sorted
+                        90      LOAD_FAST                       0: self
+                        92      LOAD_ATTR                       10: _data
+                        112     LOAD_ATTR                       13: items
+                        132     CALL                            0
+                        140     CALL                            1
+                        148     GET_ITER                        
+                        150     FOR_ITER                        26 (to 204)
+                        154     UNPACK_SEQUENCE                 2
+                        158     STORE_FAST                      2: tag
+                        160     STORE_FAST                      3: value
+                        162     LOAD_FAST                       1: result
+                        164     LOAD_FAST                       0: self
+                        166     LOAD_ATTR                       15: _pack_value
+                        186     LOAD_FAST                       2: tag
+                        188     LOAD_FAST                       3: value
+                        190     CALL                            2
+                        198     BINARY_OP                       13 (+=)
+                        202     STORE_FAST                      1: result
+                        204     JUMP_BACKWARD                   28 (to 150)
+                        206     END_FOR                         
+                        208     LOAD_FAST                       1: result
+                        210     LOAD_GLOBAL                     1: NULL + bytes
+                        220     LOAD_GLOBAL                     2: SdpDataType
+                        230     LOAD_ATTR                       16: STRUCT_END
+                        250     LOAD_ATTR                       6: value
+                        270     LOAD_CONST                      1: 4
+                        272     BINARY_OP                       3 (<<)
+                        276     BUILD_LIST                      1
+                        278     CALL                            1
+                        286     BINARY_OP                       13 (+=)
+                        290     STORE_FAST                      1: result
+                        292     LOAD_FAST                       1: result
+                        294     RETURN_VALUE                    
+                [Code]
+                    File Name: sdp.py
+                    Object Name: _unpack_value
+                    Qualified Name: SdpStruct._unpack_value
+                    Arg Count: 3
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 1
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        'NotImplementedError'
+                    [Locals+Names]
+                        'cls'
+                        'data'
+                        'offset'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_GLOBAL                     0: NotImplementedError
+                        12      RAISE_VARARGS                   1
+                [Code]
+                    File Name: sdp.py
+                    Object Name: unpack
+                    Qualified Name: SdpStruct.unpack
+                    Arg Count: 2
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 1
+                    Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+                    [Names]
+                        'NotImplementedError'
+                    [Locals+Names]
+                        'cls'
+                        'data'
+                    [Constants]
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_GLOBAL                     0: NotImplementedError
+                        12      RAISE_VARARGS                   1
+                (
+                    None
+                )
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_NAME                       0: __name__
+                4       STORE_NAME                      1: __module__
+                6       LOAD_CONST                      0: 'SdpStruct'
+                8       STORE_NAME                      2: __qualname__
+                10      LOAD_CONST                      27: (None,)
+                12      LOAD_CONST                      2: 'data'
+                14      LOAD_NAME                       3: Dict
+                16      LOAD_NAME                       4: int
+                18      LOAD_NAME                       5: Any
+                20      BUILD_TUPLE                     2
+                22      BINARY_SUBSCR                   
+                26      BUILD_TUPLE                     2
+                28      LOAD_CONST                      3: <CODE> __init__
+                30      MAKE_FUNCTION                   5
+                32      STORE_NAME                      6: __init__
+                34      LOAD_CONST                      4: 'key'
+                36      LOAD_NAME                       4: int
+                38      LOAD_CONST                      5: 'return'
+                40      LOAD_NAME                       5: Any
+                42      BUILD_TUPLE                     4
+                44      LOAD_CONST                      6: <CODE> __getitem__
+                46      MAKE_FUNCTION                   4
+                48      STORE_NAME                      7: __getitem__
+                50      LOAD_CONST                      4: 'key'
+                52      LOAD_NAME                       4: int
+                54      LOAD_CONST                      7: 'value'
+                56      LOAD_NAME                       5: Any
+                58      LOAD_CONST                      5: 'return'
+                60      LOAD_CONST                      1: None
+                62      BUILD_TUPLE                     6
+                64      LOAD_CONST                      8: <CODE> __setitem__
+                66      MAKE_FUNCTION                   4
+                68      STORE_NAME                      8: __setitem__
+                70      LOAD_CONST                      4: 'key'
+                72      LOAD_NAME                       4: int
+                74      LOAD_CONST                      5: 'return'
+                76      LOAD_CONST                      1: None
+                78      BUILD_TUPLE                     4
+                80      LOAD_CONST                      9: <CODE> __delitem__
+                82      MAKE_FUNCTION                   4
+                84      STORE_NAME                      9: __delitem__
+                86      LOAD_CONST                      5: 'return'
+                88      LOAD_NAME                       10: str
+                90      BUILD_TUPLE                     2
+                92      LOAD_CONST                      10: <CODE> __repr__
+                94      MAKE_FUNCTION                   4
+                96      STORE_NAME                      11: __repr__
+                98      LOAD_CONST                      11: 'other'
+                100     LOAD_CONST                      0: 'SdpStruct'
+                102     LOAD_CONST                      5: 'return'
+                104     LOAD_NAME                       12: bool
+                106     BUILD_TUPLE                     4
+                108     LOAD_CONST                      12: <CODE> __eq__
+                110     MAKE_FUNCTION                   4
+                112     STORE_NAME                      13: __eq__
+                114     LOAD_CONST                      13: <CODE> __iter__
+                116     MAKE_FUNCTION                   0
+                118     STORE_NAME                      14: __iter__
+                120     LOAD_CONST                      14: <CODE> __len__
+                122     MAKE_FUNCTION                   0
+                124     STORE_NAME                      15: __len__
+                126     LOAD_CONST                      15: <CODE> __contains__
+                128     MAKE_FUNCTION                   0
+                130     STORE_NAME                      16: __contains__
+                132     LOAD_CONST                      16: <CODE> __json__
+                134     MAKE_FUNCTION                   0
+                136     STORE_NAME                      17: __json__
+                138     LOAD_CONST                      27: (None,)
+                140     LOAD_CONST                      17: <CODE> get
+                142     MAKE_FUNCTION                   1
+                144     STORE_NAME                      18: get
+                146     LOAD_CONST                      18: <CODE> items
+                148     MAKE_FUNCTION                   0
+                150     STORE_NAME                      19: items
+                152     LOAD_NAME                       20: staticmethod
+                154     LOAD_CONST                      7: 'value'
+                156     LOAD_NAME                       4: int
+                158     LOAD_CONST                      5: 'return'
+                160     LOAD_NAME                       21: bytes
+                162     BUILD_TUPLE                     4
+                164     LOAD_CONST                      19: <CODE> _pack_number
+                166     MAKE_FUNCTION                   4
+                168     CALL                            0
+                176     STORE_NAME                      22: _pack_number
+                178     LOAD_NAME                       20: staticmethod
+                180     LOAD_CONST                      2: 'data'
+                182     LOAD_NAME                       21: bytes
+                184     LOAD_CONST                      20: 'offset'
+                186     LOAD_NAME                       4: int
+                188     LOAD_CONST                      5: 'return'
+                190     LOAD_NAME                       23: tuple
+                192     LOAD_NAME                       4: int
+                194     LOAD_NAME                       4: int
+                196     BUILD_TUPLE                     2
+                198     BINARY_SUBSCR                   
+                202     BUILD_TUPLE                     6
+                204     LOAD_CONST                      21: <CODE> _unpack_number
+                206     MAKE_FUNCTION                   4
+                208     CALL                            0
+                216     STORE_NAME                      24: _unpack_number
+                218     LOAD_NAME                       25: classmethod
+                220     LOAD_CONST                      22: 'tag'
+                222     LOAD_NAME                       4: int
+                224     LOAD_CONST                      7: 'value'
+                226     LOAD_NAME                       5: Any
+                228     LOAD_CONST                      5: 'return'
+                230     LOAD_NAME                       21: bytes
+                232     BUILD_TUPLE                     6
+                234     LOAD_CONST                      23: <CODE> _pack_value
+                236     MAKE_FUNCTION                   4
+                238     CALL                            0
+                246     STORE_NAME                      26: _pack_value
+                248     LOAD_CONST                      5: 'return'
+                250     LOAD_NAME                       21: bytes
+                252     BUILD_TUPLE                     2
+                254     LOAD_CONST                      24: <CODE> pack
+                256     MAKE_FUNCTION                   4
+                258     STORE_NAME                      27: pack
+                260     LOAD_NAME                       25: classmethod
+                262     LOAD_CONST                      2: 'data'
+                264     LOAD_NAME                       21: bytes
+                266     LOAD_CONST                      20: 'offset'
+                268     LOAD_NAME                       4: int
+                270     LOAD_CONST                      5: 'return'
+                272     LOAD_NAME                       23: tuple
+                274     LOAD_NAME                       4: int
+                276     LOAD_NAME                       5: Any
+                278     LOAD_NAME                       4: int
+                280     BUILD_TUPLE                     3
+                282     BINARY_SUBSCR                   
+                286     BUILD_TUPLE                     6
+                288     LOAD_CONST                      25: <CODE> _unpack_value
+                290     MAKE_FUNCTION                   4
+                292     CALL                            0
+                300     STORE_NAME                      28: _unpack_value
+                302     LOAD_NAME                       25: classmethod
+                304     LOAD_CONST                      2: 'data'
+                306     LOAD_NAME                       21: bytes
+                308     LOAD_CONST                      5: 'return'
+                310     LOAD_CONST                      0: 'SdpStruct'
+                312     BUILD_TUPLE                     4
+                314     LOAD_CONST                      26: <CODE> unpack
+                316     MAKE_FUNCTION                   4
+                318     CALL                            0
+                326     STORE_NAME                      29: unpack
+                328     RETURN_CONST                    1: None
+        'SdpStruct'
+    [Disassembly]
+        0       RESUME                          0
+        2       LOAD_CONST                      0: 0
+        4       LOAD_CONST                      1: None
+        6       IMPORT_NAME                     0: struct
+        8       STORE_NAME                      0: struct
+        10      LOAD_CONST                      0: 0
+        12      LOAD_CONST                      2: ('Enum',)
+        14      IMPORT_NAME                     1: enum
+        16      IMPORT_FROM                     2: Enum
+        18      STORE_NAME                      2: Enum
+        20      POP_TOP                         
+        22      LOAD_CONST                      0: 0
+        24      LOAD_CONST                      3: ('*',)
+        26      IMPORT_NAME                     3: typing
+        28      CALL_INTRINSIC_1                2 (INTRINSIC_IMPORT_STAR)
+        30      POP_TOP                         
+        32      PUSH_NULL                       
+        34      LOAD_BUILD_CLASS                
+        36      LOAD_CONST                      4: <CODE> SdpDataType
+        38      MAKE_FUNCTION                   0
+        40      LOAD_CONST                      5: 'SdpDataType'
+        42      LOAD_NAME                       2: Enum
+        44      CALL                            3
+        52      STORE_NAME                      4: SdpDataType
+        54      PUSH_NULL                       
+        56      LOAD_BUILD_CLASS                
+        58      LOAD_CONST                      6: <CODE> SdpStruct
+        60      MAKE_FUNCTION                   0
+        62      LOAD_CONST                      7: 'SdpStruct'
+        64      CALL                            2
+        72      STORE_NAME                      5: SdpStruct
+        74      RETURN_CONST                    1: None
+

@@ -1,0 +1,191 @@
+#include "types-and-globals.h"
+#include "helpers.h"
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100000000_Code_aarch64(void) {
+}
+
+_ABI(raw_aarch64)
+void function_0x100002c64_Code_aarch64(generic64_t register_x0 _REG(x0_aarch64)) {
+  struct _PACKED struct_29 {
+    uint8_t padding_at_0[1];
+  } _stack;
+  *((generic8_t *) &_stack) = (number8_t) register_x0;
+  (__builtin_bit_cast(struct_3, unreserved___PAGEZERO)).offset_280 = (__builtin_bit_cast(struct_3, unreserved___PAGEZERO)).offset_280 + 1;
+  *((generic8_t *) ((pointer_or_number64_t) ((__builtin_bit_cast(struct_3, unreserved___PAGEZERO)).offset_280 + 1) + ((pointer_or_number64_t) &__builtin_bit_cast(struct_3, unreserved___PAGEZERO) + 152))) = (number8_t) register_x0;
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100002c94_Code_aarch64(void) {
+  struct _PACKED struct_30 {
+    generic64_t offset_0;
+    uint8_t padding_at_8[56];
+  } _stack;
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 56))) = __init_lr();
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 40))) = (pointer_or_number64_t) &unreserved___PAGEZERO + 27;
+  _stack.offset_0 = (pointer_or_number64_t) &unreserved___PAGEZERO + 27;
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 8))) = (pointer_or_number64_t) &unreserved___PAGEZERO + 27;
+  function_0x100003dc4_Code_aarch64((generic64_t) function_0x100003e18_Code_aarch64);
+}
+
+_ABI(raw_aarch64)
+void function_0x100002d28_Code_aarch64(generic64_t register_x0 _REG(x0_aarch64), generic64_t *register_x1 _REG(x1_aarch64)) {
+  struct _PACKED struct_31 {
+    generic64_t *offset_0;
+    uint8_t padding_at_8[8];
+  } _stack;
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 8))) = register_x0;
+  _stack.offset_0 = register_x1;
+  if (*((generic8_t *) (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 8))) + (*register_x1 - 1))) == '\n') {
+    *register_x1 = *register_x1 - 1;
+    *((generic8_t *) (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 8))) + (*register_x1 - 1))) = '\000';
+  }
+}
+
+_ABI(raw_aarch64)
+generic64_t function_0x100002d80_Code_aarch64(generic64_t register_x0 _REG(x0_aarch64)) {
+  struct _PACKED struct_32 {
+    uint8_t padding_at_0[1];
+  } _stack;
+  *((generic8_t *) &_stack) = (number8_t) register_x0;
+  return _llvm_fshl_i8((number8_t) register_x0, (number8_t) register_x0, '\004');
+}
+
+_ABI(raw_aarch64)
+generic64_t function_0x100002da4_Code_aarch64(generic64_t register_x0 _REG(x0_aarch64), generic64_t register_x1 _REG(x1_aarch64)) {
+  struct _PACKED struct_33 {
+    uint8_t padding_at_0[32];
+  } _stack;
+  generic64_t _var_0;
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 24))) = __init_lr();
+  *((generic8_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 15))) = (number8_t) register_x0;
+  *((generic8_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 14))) = (number8_t) register_x1;
+  _var_0 = function_0x100002d80_Code_aarch64(*((generic8_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 15))));
+  return (*((generic8_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 14))) ^ (number8_t) _var_0) + (*((generic8_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 14))) > (uint8_t) -'a');
+}
+
+_ABI(raw_aarch64)
+void function_0x100002dec_Code_aarch64(generic64_t register_x0 _REG(x0_aarch64), generic64_t register_x1 _REG(x1_aarch64), generic64_t register_x2 _REG(x2_aarch64), generic64_t register_x3 _REG(x3_aarch64)) {
+  struct _PACKED struct_34 {
+    uint8_t padding_at_0[80];
+  } _stack;
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 72))) = __init_lr();
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 56))) = register_x0;
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 48))) = register_x1;
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 40))) = register_x2;
+  *((generic32_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 36))) = (number32_t) register_x3;
+  *((struct_0 **) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 24))) = &unreserved___PAGEZERO;
+  if (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 40))) != (pointer_or_number64_t) &unreserved___PAGEZERO) {
+    *((generic8_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 23))) = *((generic8_t *) *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 48))));
+    function_0x100003df4_Code_aarch64(*((generic8_t *) *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 48)))));
+  }
+}
+
+_ABI(raw_aarch64)
+void function_0x100002f54_Code_aarch64(generic64_t register_x0 _REG(x0_aarch64), generic64_t register_x1 _REG(x1_aarch64)) {
+  struct _PACKED struct_35 {
+    generic64_t offset_0;
+    uint8_t padding_at_8[16];
+  } _stack;
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 16))) = register_x0;
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 8))) = register_x1;
+  _stack.offset_0 = (pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 1;
+  if (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 8))) < 1 || *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 8))) > 4) {
+    generic64_t _var_0;
+    generic64_t _var_1;
+    _var_1 = (pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 1;
+    _var_0 = *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 8)));
+    do {
+      *((generic8_t *) (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 16))) + (_var_0 + ~_var_1))) = *((generic8_t *) (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 16))) + _var_1)) ^ *((generic8_t *) (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 16))) + (_var_0 + ~_var_1)));
+      *((generic8_t *) (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 16))) + _stack.offset_0)) = *((generic8_t *) (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 16))) + (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 8))) + ~_stack.offset_0))) ^ *((generic8_t *) (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 16))) + _stack.offset_0));
+      *((generic8_t *) (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 16))) + (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 8))) + ~_stack.offset_0))) = *((generic8_t *) (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 16))) + _stack.offset_0)) ^ *((generic8_t *) (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 16))) + (*((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 8))) + ~_stack.offset_0)));
+      _var_1 = _stack.offset_0 + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 1);
+      _stack.offset_0 = _var_1;
+      _var_0 = *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 8)));
+    } while (_var_1 < (_var_0 - 1) >> ((pointer_or_number64_t) &__builtin_bit_cast(struct_0, unreserved___DATA_CONST) + 1));
+  }
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x10000303c_Code_aarch64(void) {
+  struct _PACKED struct_36 {
+    uint8_t padding_at_0[66336];
+  } _stack;
+  generic64_t _var_0;
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 66328))) = __init_lr();
+  _var_0 = ((rawfunction_24 *) unreserved___DATA_CONST.offset_0)((pointer_or_number64_t) &unreserved___PAGEZERO + 66304, _undef_generic64_t());
+  *((generic64_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 48))) = (pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 192);
+  *((generic32_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 44))) = 262500646;
+  *((generic64_t *) (_var_0 - 24)) = *unreserved___DATA_CONST.offset_16;
+  *((generic32_t *) ((pointer_or_number64_t) &_stack + ((pointer_or_number64_t) &unreserved___PAGEZERO + 236))) = 0;
+  function_0x100002c94_Code_aarch64();
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003d88_Code_aarch64(void) {
+  __abort("A longjmp was taken");
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003d94_Code_aarch64(void) {
+  __abort("A longjmp was taken");
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003da0_Code_aarch64(void) {
+  __abort("A longjmp was taken");
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003dac_Code_aarch64(void) {
+  __abort("A longjmp was taken");
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003db8_Code_aarch64(void) {
+  __abort("A longjmp was taken");
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003dc4_Code_aarch64(generic64_t register_x0 _REG(x0_aarch64)) {
+  __abort("A longjmp was taken");
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003dd0_Code_aarch64(void) {
+  __abort("A longjmp was taken");
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003ddc_Code_aarch64(void) {
+  __abort("A longjmp was taken");
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003de8_Code_aarch64(void) {
+  __abort("A longjmp was taken");
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003df4_Code_aarch64(generic64_t register_x0 _REG(x0_aarch64)) {
+  __abort("A longjmp was taken");
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003e00_Code_aarch64(void) {
+  __abort("A longjmp was taken");
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003e0c_Code_aarch64(void) {
+  __abort("A longjmp was taken");
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003e18_Code_aarch64(void) {
+}
+
+_ABI(raw_aarch64) _Noreturn
+void function_0x100003f88_Code_aarch64(void) {
+}
+

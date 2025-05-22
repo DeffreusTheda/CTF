@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dimasma0305/ctfify/refs/heads/master/function/template/templates/others/ctf-template/.gzctf/challenge.schema.yaml
+
+name: "Raw Diary"
+author: ".effie"
+description: |
+  I put a digital sign on this diary ^-^
+
+type: "StaticAttachment"
+value: 1000
+
+flags:
+  - "RAMADAN{1_60nn4_b3_m3}"
+
+provide: "./dist"

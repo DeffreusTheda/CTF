@@ -1,0 +1,9 @@
+cargo:rustc-env=RUSTFLAGS=-C link-arg=-Wl,--no-strip
+cargo:rustc-env=RUSTFLAGS=-C debuginfo=2
+cargo:rerun-if-env-changed=TAURI_CONFIG
+cargo:rerun-if-changed=tauri.conf.json
+cargo:rustc-check-cfg=cfg(desktop)
+cargo:rustc-cfg=desktop
+cargo:rustc-check-cfg=cfg(mobile)
+cargo:rustc-check-cfg=cfg(dev)
+cargo:rustc-env=MACOSX_DEPLOYMENT_TARGET=10.13

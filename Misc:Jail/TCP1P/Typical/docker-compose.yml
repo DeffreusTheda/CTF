@@ -1,0 +1,6 @@
+services:
+  typical:
+    build: .
+    restart: on-failure
+    ports:
+      - 25767:5000

@@ -1,0 +1,3 @@
+cargo:rustc-check-cfg=cfg(gmp_limb_bits_32)
+cargo:rustc-check-cfg=cfg(gmp_limb_bits_64)
+cargo:rustc-cfg=gmp_limb_bits_64

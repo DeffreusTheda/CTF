@@ -1,0 +1,43 @@
+[package]
+name = "mytrick"
+version = "0.1.0"
+description = "I date you to solve this with a GDC"
+authors = [".effie"]
+license = ""
+repository = ""
+edition = "2021"
+rust-version = "1.57"
+
+[profile.release]
+# No optimizations for easier reverse engineering
+opt-level = 0
+# Keep debug symbols
+debug = true
+# Disable link time optimization
+lto = false
+# Disable code stripping
+strip = false
+# Disable panic = "abort" to keep backtraces
+panic = "unwind"
+# Include file paths in the binary
+debug-assertions = true
+# No codegen-units optimization
+codegen-units = 1
+# Disable incremental compilation optimization
+incremental = false
+
+[build-dependencies]
+tauri-build = { version = "1.2", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+tauri = { version = "1.2", features = ["api-all"] }
+rand = "0.8.5"
+
+[features]
+# by default Tauri runs in production mode
+# when `tauri dev` runs it is executed with `cargo run --no-default-features` if `devPath` is an URL
+default = ["custom-protocol"]
+# this feature is used for production builds where `devPath` points to the filesystem
+custom-protocol = ["tauri/custom-protocol"]

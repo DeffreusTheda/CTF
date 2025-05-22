@@ -1,0 +1,13 @@
+[package]
+name = "rusty_vault"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[profile.release]
+lto = true           # Link Time Optimization - makes it harder
+strip = true         # Strip symbols - makes it much harder
+opt-level = 'z'      # Optimize for size - can sometimes create harder-to-read assembly
+codegen-units = 1    # Maximize optimization opportunities
+panic = 'abort'      # No unwind info - smaller binary, harder RE

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/nest"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/otpEditText"
+        android:layout_width="212dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="325dp"
+        android:layout_marginBottom="325dp"
+        android:hint="Enter 6-digit OTP"
+        android:maxLength="6"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:inputType="number"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+    <Button
+        android:id="@+id/verifyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="250dp"
+        android:text="Verify OTP"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="125dp"
+        android:layout_marginEnd="125dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:layout_below="@+id/verifyButton"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

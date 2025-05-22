@@ -1,0 +1,59 @@
+{
+  "build": {
+    "beforeDevCommand": "",
+    "beforeBuildCommand": "",
+    "devPath": "../src",
+    "distDir": "../src",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "mytrick",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true
+    },
+    "bundle": {
+      "active": true,
+      "icon": [],
+      "identifier": "com.deffreus.mytrick",
+      "targets": "all",
+      "externalBin": [],
+      "resources": [],
+      "copyright": "",
+      "category": "DeveloperTool",
+      "shortDescription": "This is rust D:",
+      "longDescription": "This is tauri :O",
+      "deb": {
+        "depends": []
+      },
+      "appimage": {
+        "bundleMediaFramework": true
+      }
+    },
+    "security": {
+      "csp": null,
+      "dangerousRemoteDomainIpcAccess": [
+        {
+          "domain": "*",
+          "windows": ["*"],
+          "plugins": ["*"]
+        }
+      ]
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "MyTrick",
+        "width": 800,
+        "height": 600,
+        "visible": true
+      }
+    ]
+  }
+}

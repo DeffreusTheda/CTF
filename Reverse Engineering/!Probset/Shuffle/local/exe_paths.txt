@@ -1,0 +1,6 @@
+link:link>/c/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/link.exe
+
+## The MSVC linker has been known to reside at this/these location(s)
+## in some installations
+# /c/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/link.exe
+

@@ -1,0 +1,41 @@
+###### Include Paths ##########################################################
+-I/c/mr4th/mr4th/src
+-I/c/mr4th/mr4th/src/dependencies
+freetype>-I/c/mr4th/mr4th/src/dependencies/freetype-2.12.1/include
+
+
+###### CL #####################################################################
+cmp:cl>-nologo
+cmp:cl>-FC
+cmp:cl>-GR-
+cmp:cl>-EHa
+
+cmp:cl>sanitizer>-fsanitize=address
+
+cmp:cl>dll>-LD
+
+###### Clang ##################################################################
+cmp:clang>-Wno-writable-strings
+cmp:clang>-Wno-switch
+cmp:clang>-Wno-deprecated-declarations
+
+cmp:clang>sanitizer>-fsanitize=address
+cmp:clang>sanitizer>-fsanitize=undefined
+cmp:clang>os:linux>sanitizer>-fsanitize=safe-stack
+cmp:clang>fuzzer>-fsanitize=fuzzer
+
+# TODO: DLL support
+
+###### Debug ##################################################################
+mode:debug>-DMR4TH_ASSERTS=1
+mode:release>-DMR4TH_ASSERTS=0
+cmp:cl>mode:debug>-Zi
+cmp:clang>mode:debug>-g
+
+sanitizer>-DMR4TH_SANITIZER=1
+
+###### Profiling ##############################################################
+manualprofile>-DMR4TH_PROFILING_MANUAL=1
+
+autoprofile>-DMR4TH_PROFILING_AUTO=1
+cmp:clang>autoprofile>-finstrument-functions

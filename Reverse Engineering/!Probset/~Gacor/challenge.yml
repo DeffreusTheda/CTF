@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dimasma0305/ctfify/refs/heads/master/function/template/templates/others/ctf-template/.gzctf/challenge.schema.yaml
+
+name: "Gacor"
+author: ".effie"
+description: |
+  i did not have gaming relation with that balatro
+
+type: "StaticAttachment"
+value: 1000
+
+flags:
+  - "RAMADAN{n3x7_71m3_b1k1n_ch4ll_UNO_k4l1_y4_wkwkwkwk_7h4nk5_f0r_9l4y1n6_heart_heart}"
+
+provide: "./dist"

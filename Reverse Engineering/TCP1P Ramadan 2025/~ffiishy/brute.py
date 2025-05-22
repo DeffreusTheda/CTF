@@ -1,0 +1,927 @@
+#!/Users/vinnie/CTF/venv/bin/python3
+from z3 import solve, BitVec
+
+def calc(string,i2):
+    mm = {0:calc0,1:calc1,2:calc2,3:calc3,4:calc4,5:calc5,6:calc6,7:calc7,8:calc8,9:calc9,10:calc10,11:calc11,12:calc12,13:calc13,14:calc14,15:calc15,16:calc16,17:calc17,18:calc18,19:calc19,20:calc20,21:calc21,22:calc22,23:calc23,24:calc24,25:calc25,26:calc26,27:calc27,28:calc28,29:calc29,30:calc30,31:calc31,32:calc32,33:calc33,34:calc34,35:calc35,36:calc36,37:calc37,38:calc38,39:calc39,40:calc40,41:calc41,42:calc42,43:calc43,44:calc44,45:calc45,46:calc46,47:calc47,48:calc48,49:calc49,50:calc50,51:calc51,52:calc52,53:calc53,54:calc54,55:calc55,56:calc56,57:calc57,58:calc58,59:calc59,60:calc60,61:calc61,62:calc62,63:calc63,64:calc64,65:calc65,66:calc66,67:calc67,68:calc68,69:calc69,70:calc70,71:calc71,72:calc72,73:calc73,74:calc74,75:calc75,76:calc76,77:calc77,78:calc78,79:calc79,80:calc80,81:calc81,82:calc82,83:calc83,84:calc84,85:calc85,86:calc86,87:calc87,88:calc88,89:calc89,90:calc90,91:calc91,92:calc92,93:calc93,94:calc94,95:calc95,96:calc96,97:calc97,98:calc98,99:calc99,100:calc100,101:calc101,102:calc102,103:calc103,104:calc104,105:calc105,106:calc106,107:calc107,108:calc108,109:calc109,110:calc110,111:calc111,112:calc112,113:calc113,114:calc114,115:calc115,116:calc116,117:calc117,118:calc118,119:calc119,120:calc120,121:calc121,122:calc122,123:calc123,124:calc124,125:calc125,126:calc126,127:calc127,128:calc128,129:calc129,130:calc130,131:calc131,132:calc132,133:calc133,134:calc134,135:calc135,136:calc136,137:calc137,138:calc138,139:calc139,140:calc140,141:calc141,142:calc142,143:calc143,144:calc144,145:calc145,146:calc146,147:calc147,148:calc148,149:calc149,150:calc150,151:calc151,152:calc152,153:calc153,154:calc154,155:calc155,156:calc156,157:calc157,158:calc158,159:calc159,160:calc160,161:calc161,162:calc162,163:calc163,164:calc164,165:calc165,166:calc166,167:calc167,168:calc168,169:calc169,170:calc170,171:calc171,172:calc172,173:calc173,174:calc174,175:calc175,176:calc176,177:calc177,178:calc178,179:calc179,180:calc180,181:calc181,182:calc182,183:calc183,184:calc184,185:calc185,186:calc186,187:calc187,188:calc188,189:calc189,190:calc190,191:calc191,192:calc192,193:calc193,194:calc194,195:calc195,196:calc196,197:calc197,198:calc198,199:calc199,200:calc200,201:calc201,202:calc202,203:calc203,204:calc204,205:calc205,206:calc206,207:calc207,208:calc208,209:calc209,210:calc210,211:calc211,212:calc212,213:calc213,214:calc214,215:calc215,216:calc216,217:calc217,218:calc218,219:calc219,220:calc220,221:calc221,222:calc222,223:calc223,224:calc224,225:calc225,226:calc226,227:calc227,228:calc228,229:calc229,230:calc230,231:calc231,232:calc232,233:calc233,234:calc234,235:calc235,236:calc236,237:calc237,238:calc238,239:calc239,240:calc240,241:calc241,242:calc242,243:calc243,244:calc244,245:calc245,246:calc246,247:calc247,248:calc248,249:calc249,250:calc250,251:calc251,252:calc252,253:calc253,254:calc254,255:calc255,256:calc256,257:calc257,258:calc258,259:calc259,260:calc260,261:calc261,262:calc262,263:calc263,264:calc264,265:calc265,266:calc266,267:calc267,268:calc268,269:calc269,270:calc270,271:calc271,272:calc272,273:calc273,274:calc274,275:calc275,276:calc276,277:calc277,278:calc278,279:calc279,280:calc280,281:calc281,282:calc282,283:calc283,284:calc284,285:calc285,286:calc286,287:calc287,288:calc288,289:calc289,290:calc290,291:calc291,292:calc292,293:calc293,294:calc294,295:calc295,296:calc296,297:calc297,298:calc298}
+    if i2 in mm.keys():
+        return mm[i2](string,i2)
+    solve(string == 133713371337)
+    
+def subtract(a, b):
+    return b - a
+def xor(a, b):
+    return b ^ a
+def mult(a, b):
+    return b * a
+def divide(a, b):
+    return b / a
+def add(a, b):
+    return a + b
+
+def calc0(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(18846681827743754117695903626016774037204453128592171638568885579103176130988517184888839259731107, string), i2 + 64)
+def calc1(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(145, string), 62)
+def calc10(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(7, string), 11)
+def calc100(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(89276614921411072008047868341670359461716503789083195986754112934464482270681519399762967374809707, string), i2 + 62)
+def calc101(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(135, string), 164)
+def calc102(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(94089383465991654500049564555226213993304464262174114950508481613923092401112440317122569767795430, string), i2 - 56)
+def calc103(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(248, string), 284)
+def calc104(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(81, string), 45)
+def calc105(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(146, string), i2 + 1)
+def calc106(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(146, string), i2 + 61)
+def calc107(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(50620847299065435425499237144303219800429529976807281599626974600144869838510434222042075370220776, string), 228)
+def calc108(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(116, string), 289)
+def calc109(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(83941982345151455602113818021500466447043018922745760899931680826271183175492129448090620721805240, string), 50)
+def calc11(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-304808406082448761709519241097356738516861238798416873631249327480292464886945770644218907226960255, string), i2 + 61)
+def calc110(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(74038075697623571010543166700939165710617406295247282028127887791680735621692201721140795393363611, string), 111)
+def calc111(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(76249223104991782531604821149986559557742010421597579729920467278925237387189760478858313064390623, string), i2 + 61)
+def calc112(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(54618668777928645727596136195048152088024756809677014407356898366160545385143880446245068019327730, string), i2 + 121)
+def calc113(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(3, string), 294)
+def calc114(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-1692100511397145781170088542662214724797938898143305663771844424155004958623275220924706472683922070, string), i2 - 59)
+def calc115(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(79395897087230474114234135158915231371996971991555291821472963545312257226173679925278693284404585, string), 177)
+def calc116(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(8, string), i2 + 4)
+def calc117(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(190, string), 238)
+def calc118(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(204371373370997392728245146936443967625360717235971279213721466907199546013828529373652048890322469, string), i2 + 132)
+def calc119(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(12, string), 61)
+def calc12(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(210, string), i2 + 121)
+def calc120(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-1909534754731534353970372862718317135817046195505187487869653918529834950577645036159499391572945928, string), 182)
+def calc121(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(35633744726153120496644054370607256078236597537102985774864313060509874582830152772979918117979752, string), 8)
+def calc122(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-649074186532604871026883311551832923663028416559845854319662443481604800957852683425475535094043380, string), 127)
+def calc123(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(14976683344058192657818968402853972223071484873579655085917660182771661881034925832629998787961572, string), 4)
+def calc124(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(29857067293746581058619686015482074587435674608403643721274329301243355942797453638184093449502058, string), i2 - 59)
+def calc125(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(2, string), i2 + 1)
+def calc126(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(222, string), 187)
+def calc127(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(5, string), 248)
+def calc128(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(9, string), i2 - 119)
+def calc129(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(72, string), i2 - 59)
+def calc13(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(213, string), 194)
+def calc130(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(235, string), i2 + 1)
+def calc131(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(235, string), i2 + 61)
+def calc132(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(45783519821751670273139562516126012721303924188169710071963453315803419918556030176223657724328451, string), i2 + 2)
+def calc133(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(85966858207748282446540282203350471548282778952419604170572354876584845609519182198741855601763417, string), 255)
+def calc134(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(90061429289751204836505471267240218229925115744110948949472902054974518026472307207167818073055966, string), 75)
+def calc135(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(8, string), i2 + 1)
+def calc136(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-1126561165793093931463110836068898550965759677153561652874416302487914675864464870948010547623683256, string), 197)
+def calc137(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(2, string), 139)
+def calc138(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(33268191635811673882770764773536657396990800068975091611285260293537317719334098103171161432345859, string), i2 + 122)
+def calc139(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-153329344986218091117316104409247154797419474976091594696503140103533847416838176020242591372728592, string), i2 + 124)
+def calc14(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(107346522620783263593862712469270276940950198526963312244640369882595017014928311058364450417750963, string), i2 + 3)
+def calc140(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(176730473695331843035267653590281497186188545570180333293078081932766490372097407096700651505272090, string), i2 + 1)
+def calc141(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(86, string), 202)
+def calc142(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(4938302259913032242020889619209123319491932039977258289309821210325608608991375405254549960722141, string), 85)
+def calc143(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(73177659060743331497580240612949313496798274841958646711780831061302953744565906702672051547262202, string), 24)
+def calc144(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(8790514040066467741240295335350993970917693531711651676533298978283379357207839941886633995362518, string), 149)
+def calc145(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(191176087269377919858937741824548799913711396960862506971568924971085374268905521744103440081070878, string), i2 + 1)
+def calc146(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(63, string), 207)
+def calc147(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(68191738711621763297653172545738919207132178976792787815446176504649682670502444908975383072773173, string), i2 + 121)
+def calc148(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(20098104219423767004777799498613685920934346376801937032774845133129522390100676138015964933376823, string), 276)
+def calc149(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(34, string), 273)
+def calc15(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(87993924572785387150028885014956857847635308947697371659947707262753942835988162954556533938119053, string), 16)
+def calc150(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(3, string), i2 + 1)
+def calc151(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(133, string), 212)
+def calc152(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(96844240229795072598790410290079698817117860132191982887760148051079013731366923843536647008486047, string), i2 + 126)
+def calc153(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(3, string), i2 - 119)
+def calc154(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(141054433590527780235955120137387118412716431091117604814821744645700569539109783591955457643776133, string), i2 - 59)
+def calc155(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(106813809584652977768169599179836393668393612975071595830571937872419761691403452267007126095517905, string), i2 + 1)
+def calc156(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(172, string), 217)
+def calc157(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(4, string), i2 + 2)
+def calc158(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(3985024649985234578163181653269310669120333815638660399922726226807774394693562362164933199556339, string), i2 - 119)
+def calc159(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(135, string), i2 - 58)
+def calc16(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(70943964792452441986037668940660371001300041923732251584549380613452812180725155975470909064681290, string), i2 + 182)
+def calc160(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(163624430908331448426249978692044502094104867156106223183786877576699088254472915801866472614917245, string), 161)
+def calc161(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(2, string), 222)
+def calc162(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(35073112330891560795702458996176009885068273640851457365028875202796706609096948866043583456669644, string), 283)
+def calc163(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(75279589748079754547598288525032071574895818404754626275540942411415001300919048627922866416926475, string), i2 - 119)
+def calc164(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(184532767961583047352672466989547924025127446683444999698174820517420396068898424347049349882232959, string), 105)
+def calc165(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(137, string), i2 + 1)
+def calc166(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(601251288056313289116552786121776005528597561029463131979369133335909768961304752066740128052372188, string), i2 + 61)
+def calc167(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(1937136307658149782455693999480857761406105427559571833985582763073622721812879592441027683437611, string), 288)
+def calc168(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(29797449058972638764729381630135387361972398013941640539904952925788135160086889274978899810628066, string), i2 - 119)
+def calc169(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(15010703356796987885214573265027147816327978994024755653271231776741975296607032620560706099978113, string), i2 - 59)
+def calc17(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(7908341114284137056367701320366190200186303021210672496628604524847266131653860031116545215757620, string), i2 + 121)
+def calc170(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(56, string), 171)
+def calc171(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(1123225945590635317668090928347412296735693109025333448805763983943194265780917621886189217532564, string), i2 + 61)
+def calc172(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(52765963390816281467137250937722391354646367186600375321378002742012216332895982983095263885983762, string), i2 + 2)
+def calc173(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(32484909356849907358636795504225367396324209224208402780455080680161670407954854607779102568754585, string), 54)
+def calc174(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(15124543743300338601309715220430903013824889180309817576003979937222860139711511070510028428796849, string), 115)
+def calc175(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(213, string), i2 + 1)
+def calc176(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(219896990926281491535394265696273931084257301667676653194284056388096363269972557714413037366753171, string), i2 + 61)
+def calc177(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(17954127640731398264531311185622598384630907129545185925496132108355206489922609428887136540797981, string), 298)
+def calc178(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(9052798208634818805290322917317490646251808519316220228945099766229514672376490893814383219984075, string), 0)
+def calc179(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(76595066945442719396434454462162329504572881961609746765358896684584392991724551922652540136243176, string), i2 - 58)
+def calc18(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(195, string), 199)
+def calc180(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(10, string), 181)
+def calc181(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-345095565501498728689811144900788326407838734708242717357688147925406141995858163032457744948024600, string), i2 + 61)
+def calc182(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(8, string), i2 - 179)
+def calc183(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(249, string), i2 - 177)
+def calc184(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-231214159941373381565154126937693020233156185427801123937507226758786212095141088445167626564951742, string), i2 - 59)
+def calc185(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(6036484293797524118214696477123119962732168204788163459286669969312814709765272252904636681889927242, string), 186)
+def calc186(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(233, string), i2 + 61)
+def calc187(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(222, string), 189)
+def calc188(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(5532029665723885485065237865500741881814450644508100494365763195056767207649457883682043640191286, string), i2 - 119)
+def calc189(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(1257040049907781621582717791700847545868173147815487772953386620686399728365870605875412713431685, string), i2 - 59)
+def calc19(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(2857389287946721606860110818267911388760736810720783517729225108766620294364494372370830149329175, string), 261)
+def calc190(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-99559936211656516859789160624562880525597011292013544091875604068863437809355001516455630838733116, string), 191)
+def calc191(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(2, string), 252)
+def calc192(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(198192980434250571647164247802283146693350229642060730828676269930440042083783759606435199347354246, string), i2 - 179)
+def calc193(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(80, string), 74)
+def calc194(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(213, string), i2 - 59)
+def calc195(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(177, string), i2 + 1)
+def calc196(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(21596154178232578532681590940863960492241829909789014602551187894074122350023954550688315165312572, string), 257)
+def calc197(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(8, string), i2 - 179)
+def calc198(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(55344230674602940104679386759719891261903866157213603066499765986886926789020152986425088068530400, string), 79)
+def calc199(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(195, string), 140)
+def calc2(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(170, string), 123)
+def calc20(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(3444529119932052920018930024684664437024665082159968301319329796981597602809384500213302785588555, string), 21)
+def calc200(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(161, string), 201)
+def calc201(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(5, string), 262)
+def calc202(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(86, string), i2 - 179)
+def calc203(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(40301381730846142455780828018848894174922348089193590675231644641079753445345696616818765250178668, string), i2 - 178)
+def calc204(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(34, string), i2 - 59)
+def calc205(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(175, string), i2 + 1)
+def calc206(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(170316816114574191516556300684647398564221554477197791265098888227441459134284173605611778110316300, string), i2 + 61)
+def calc207(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(63, string), 28)
+def calc208(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(244, string), 31)
+def calc209(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-189502634513289937022727028926780650510985129174793128420550092292210834848685495925109694703828226, string), i2 - 59)
+def calc21(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(42168310444770834010646307767327573339146867857122969636607732284538557773742188779511019296278230, string), 203)
+def calc210(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(112, string), 211)
+def calc211(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(112, string), 272)
+def calc212(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(133, string), 33)
+def calc213(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(234, string), i2 - 177)
+def calc214(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(56, string), 155)
+def calc215(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(136, string), i2 + 1)
+def calc216(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(136, string), i2 + 61)
+def calc217(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(172, string), i2 - 179)
+def calc218(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(81562675968698883532752822060631240528352853617958343112651020532784969071664439683674044035746369, string), 99)
+def calc219(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(16, string), 160)
+def calc22(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-1652353570798114968728412867575735277848117707613865368760469608850656497046882510557787669281174400, string), 265)
+def calc220(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(7, string), i2 + 1)
+def calc221(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-262988674002682519932068418152079291663258684138324514811943108188859236693265819678092410434959868, string), i2 + 61)
+def calc222(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-94692883416079562164645710088975795510838591279513243247551385160739752250560460733271109170713010, string), i2 - 179)
+def calc223(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(10, string), 104)
+def calc224(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(137, string), 165)
+def calc225(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(198, string), i2 + 1)
+def calc226(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(198, string), 287)
+def calc227(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(196, string), 48)
+def calc228(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(92708197549662180438572746249117727774055183980626557469361210906711236930973269110695000289940676, string), i2 - 119)
+def calc229(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(56, string), 170)
+def calc23(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(34, string), i2 + 181)
+def calc230(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(178, string), 231)
+def calc231(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(178, string), i2 + 61)
+def calc232(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(158, string), 53)
+def calc233(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(86526243020165166739337118103969069780005878549970651504138921042675167662798014710057907334283628, string), i2 - 173)
+def calc234(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(213, string), i2 - 59)
+def calc235(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(3, string), 236)
+def calc236(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(172, string), 297)
+def calc237(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(116538226509575053804336636723003004515335595102706596626712982595775262022531378826606099169382400, string), 58)
+def calc238(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(12, string), i2 - 119)
+def calc239(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(223, string), i2 - 59)
+def calc24(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(37971773265514036056639728678185276598390509011939617227326695862045411043412919665408197764186979, string), 266)
+def calc240(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(77, string), 241)
+def calc241(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(170, string), i2 - 239)
+def calc242(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(10, string), i2 - 179)
+def calc243(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(26839067568104998210251927491572426267627083462296182521504645982709731224951808856769421163661610, string), 124)
+def calc244(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(6036484293797524118214696477123119962732168204788163459286669969312814709765272252904636681889927242, string), i2 - 59)
+def calc245(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(28, string), 246)
+def calc246(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(9, string), i2 - 239)
+def calc247(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(51, string), i2 - 179)
+def calc248(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(72, string), 129)
+def calc249(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(2, string), 190)
+def calc25(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(17671038873953628595267082120169363298406307512573154088693515584881317949414311689847050377273028, string), i2 + 1)
+def calc250(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(77, string), i2 - 10)
+def calc251(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(210, string), i2 - 239)
+def calc252(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(153, string), i2 - 179)
+def calc253(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(75, string), 76)
+def calc254(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(177, string), 195)
+def calc255(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(212, string), 256)
+def calc256(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(212, string), 19)
+def calc257(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(19, string), i2 - 179)
+def calc258(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(48570931981170300409456123085158251994071895149694941717957841650541581362130408971711761738110990, string), i2 - 178)
+def calc259(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(161, string), 200)
+def calc26(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(16292443113480790239940259772589926367593835006267941441698613545506044798004910431281986070931750, string), 89)
+def calc260(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(37410762375370866680039976653448042296793949196909923057953014257398582749095362572179964964370355, string), 143)
+def calc261(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(10, string), i2 - 239)
+def calc262(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-660198183862505341511594879946865014928617904887447002688692224594007370769805191573090104219705415, string), i2 - 179)
+def calc263(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(2, string), 144)
+def calc264(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(175, string), i2 - 59)
+def calc265(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(10, string), 29)
+def calc266(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(23430016315541318261945731461077153720966573969616285158282693046314506111928175458959048371512414, string), 27)
+def calc267(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(101, string), 88)
+def calc268(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(3683752049282886645385432029904285303123667466611114094276997096224226395591544727455249044861679, string), 90)
+def calc269(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(296112992226422000356275579050499352663117351471241199740060633991660037064754658621864664015530157, string), 210)
+def calc27(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(52641748380937653478240052797738477977180812414063311432131479744024354689157186757506869077790308, string), 148)
+def calc270(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(106, string), 271)
+def calc271(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(3, string), 32)
+def calc272(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(76, string), i2 - 179)
+def calc273(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(34, string), i2 - 119)
+def calc274(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(88976132919819010983353319952082975093953955371479624065623742468771068933767410244013102515529821, string), 215)
+def calc275(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(124, string), i2 - 233)
+def calc276(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(34128066604326124331965803847344401336642830471915312102098274093038969710919427175309808838864895, string), i2 - 239)
+def calc277(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(99383753916674992958446106254526919665066310160743677995007109260382304293773671121461207165487149, string), i2 - 179)
+def calc278(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(22884354952696232201029734725053092812039374216790951143104991335366055381805373104312557299356446, string), i2 - 178)
+def calc279(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(58, string), i2 - 59)
+def calc28(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(3, string), 209)
+def calc280(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(6672208811115576616688857243774286006696094495401443807260476190557239949874755065735026934854702, string), 281)
+def calc281(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(94343975004664939459647383320508028123767150049148578236836547980271017105357377081080518423903474, string), i2 - 118)
+def calc282(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(7, string), i2 - 179)
+def calc283(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(24809212552352931239055977205039952697511889307793871973075266786529471114738079736086061689295656, string), i2 - 114)
+def calc284(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(248, string), i2 - 59)
+def calc285(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(121673778552345443351474757425441015750817226644706969402782131290518007975837258173795913207732644, string), 286)
+def calc286(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(81, string), i2 - 239)
+def calc287(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(204969622457779499442027465754478289496112813802029557271859544256763290664923964930962042700306623, string), 108)
+def calc288(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(111, string), i2 + 5)
+def calc289(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(116, string), i2 - 59)
+def calc29(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(106, string), 270)
+def calc290(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(198, string), 296)
+def calc291(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(58011293969735045549499083866553758833182508959349683190745491006252006620623507416927891552803083, string), i2 - 239)
+def calc292(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(58938563511984916402374232162534901569020430979809811305987854794547653708894569350546858211154934, string), 113)
+def calc293(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(111, string), i2 - 177)
+def calc294(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-246012199660056665175476740429056665416380096011674950264737732460651556864867132090288909379516199, string), 235)
+def calc295(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(70759962770835493466364333024431310037489511623663146374630251414915287216371826864889648865299878, string), 57)
+def calc296(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(198, string), i2 - 237)
+def calc297(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(172, string), 118)
+def calc298(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(96250678013859121166456402288629597169223991724849972640628753871175000618092852826974023683378275, string), i2 - 119)
+def calc299(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(171, string), i2 + 1)
+def calc3(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(2, string), i2 + 181)
+def calc30(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(47259135189376087349491683929270283606270894727260098523254926245700613442392495760044864537953852, string), i2 + 62)
+def calc31(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(244, string), 213)
+def calc32(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-620063099934433197052532705184191590071494293579145679072896515945755121213209318430457372431797243, string), 153)
+def calc33(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(56, string), i2 + 181)
+def calc34(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(6308863598824166685180948363160085665520962348705022144803538016151801612055496163410986708079397, string), 275)
+def calc35(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(16286272698366059083414413760025454635514974211468398270732532488148724387589422449699387244522875, string), i2 + 62)
+def calc36(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(234, string), 40)
+def calc37(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(98024553838055545752347436734907039877804317110253913033889631878847530608979962970594146760168921, string), 158)
+def calc38(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(16, string), i2 + 181)
+def calc39(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(5407075716509477299429397509549768287685023741509647120743354086153729489669490570219740568401273, string), 280)
+def calc4(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(28, string), 245)
+def calc40(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(10, string), i2 + 1)
+def calc41(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-1553135536409365343950538325666253780237890396370574984001050731299493710917046034977342072692143120, string), i2 + 182)
+def calc42(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(124, string), 285)
+def calc43(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(2, string), 224)
+def calc44(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(45274963825538123220732202479749108964004296897261320997984896318975553086142398144578815804776806, string), i2 + 124)
+def calc45(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(81, string), 51)
+def calc46(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(99385402113679331358108493077646727476904991809670569946387599938025702254850044902848596909483131, string), i2 + 61)
+def calc47(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(81, string), 290)
+def calc48(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(196, string), i2 + 181)
+def calc49(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(78927920664259075607209065963126803697640234329284826187050112117819274041887969040910091130468789, string), i2 + 242)
+def calc5(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(14768648924452395978215825047581620770008029437332115060117377319817638142034070336511305667280449, string), 67)
+def calc50(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(39926983636962528233052277943874228772141668381291563195862059033837558658034215461855248024154831, string), 112)
+def calc51(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(10, string), i2 + 63)
+def calc52(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(47101266867521596718467791717599888809701196366861515135447397369086336634682112267768295396638448, string), 173)
+def calc53(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(158, string), i2 + 181)
+def calc54(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(57486497875231915600663281643127946591189309587597125719888541496393741312645277584876486612598167, string), i2 + 241)
+def calc55(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(10, string), i2 + 1)
+def calc56(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(190, string), 117)
+def calc57(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(97369290894998088744739522633692400276859749518614538078815414703096163368694037924190043570110359, string), 178)
+def calc58(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(223, string), 239)
+def calc59(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(339684124813164677409663550455803534976226516258325126103985240190252702412200556193851780205142141, string), 1)
+def calc6(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(249, string), 10)
+def calc60(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(7318701862961009362940495579174886148690070698869433851994648166878875607989935894134573298798221, string), i2 + 183)
+def calc61(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(5, string), 122)
+def calc62(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(145, string), i2 + 121)
+def calc63(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(233, string), 244)
+def calc64(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(106316835519490288697888666071201944657233717175584395765900862591508310972105745230769196945603302, string), i2 - 59)
+def calc65(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(10071887985642637193506131208232152854765978585400657487968759492577108421809187691112519805298127, string), i2 + 1)
+def calc66(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(91213577996723234481340782853475744802843751313799584623346347080636524859986617605991695454290260, string), i2 + 5)
+def calc67(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(69427809879995527081290711627524483432591196929042691013914253729117660396055712866544334834792343, string), 188)
+def calc68(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(51, string), 249)
+def calc69(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(15730779278823072537370861008452248581275856199684970979119683272438980083552615531917268362838116, string), 15)
+def calc7(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-849502460417209203587761403722232731337691060484977808632142627801435129361280922100459529868913874, string), i2 + 121)
+def calc70(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(7818321089121585096311309968091536969372289135257420175220411323233521209524443458406223218472902, string), i2 + 183)
+def calc71(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(3952125086744809981246785389443825379693092877244528264563674770032586785266029829539640232246011, string), i2 + 61)
+def calc72(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(7, string), 193)
+def calc73(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(153, string), i2 + 181)
+def calc74(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(80, string), i2 + 3)
+def calc75(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(42228777310630980247048579972956146316454801988646265042442758241182278945576898515519800121336118, string), 258)
+def calc76(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(75, string), 137)
+def calc77(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(140082849862566174735555775969090728524606147515632456681627918151573583584492464958649774089049040, string), i2 + 5)
+def calc78(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(19, string), i2 + 181)
+def calc79(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(65898723468358596425111420999463908905073240206792584473276337988915965904652149758399044038067298, string), 20)
+def calc8(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(42450395791845320068324193356549227831964482118465683640796583669541025751101124201929457460524883, string), i2 + 292)
+def calc80(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(9640798777531786618491046588382392611493066346224559186720996174597183266395796431918382090889767, string), 81)
+def calc81(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(52903853811057458034783094731172411608077727964756963050510972409979951527449555548715303602886076, string), 142)
+def calc82(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(2, string), i2 + 2)
+def calc83(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(5, string), 264)
+def calc84(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(-89379069284824182409854527519436892153892594896300127391252055317505105735414637824543026790023368, string), 87)
+def calc85(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(68780807511811684372633979559090454738133028133926056790942444561904716140574583794738960497209412, string), 86)
+def calc86(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(106327686279889017921596102061803712757742751428877073369693412586239234580405849806896413508052880, string), i2 + 61)
+def calc87(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(divide(2, string), i2 + 121)
+def calc88(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(101, string), i2 + 181)
+def calc89(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(73816452134218668816910327666900667560019881611879007689750051181797846367817329948534151953686488, string), 30)
+def calc9(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(171, string), 299)
+def calc90(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(88525627039160571706842335772241979043913941750315561096272162264362646417170021502594435422461864, string), i2 + 1)
+def calc91(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(104757523890638400144279986600674147487698145899226498665578189142144265585586730146861531944955900, string), i2 + 61)
+def calc92(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(49772847609741420065362423852847981425954401657174193608071696971611487727815878730150079404504396, string), i2 + 2)
+def calc93(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(76, string), i2 + 181)
+def calc94(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(96848267032304039905448502410887565751820665247876416723932800066872164261341535976317547004047806, string), i2 - 59)
+def calc95(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(subtract(32445589369097989988663372741932026825624633263960886255849421132514832329575014719140985874307128, string), 96)
+def calc96(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(4, string), i2 + 61)
+def calc97(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(mult(14980935723811528251428558338730992320072463914967120476219439774641938218769209210467597347616983, string), i2 + 121)
+def calc98(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(xor(58, string), i2 + 181)
+def calc99(string, i2): 
+    print(end=f'{i2:3} --> ')
+    return calc(add(68326917495868338931930879215996621431332335974388155954300708648540888321472626847235090830351146, string), i2 + 3)
+
+mm = {0:calc0,1:calc1,2:calc2,3:calc3,4:calc4,5:calc5,6:calc6,7:calc7,8:calc8,9:calc9,10:calc10,11:calc11,12:calc12,13:calc13,14:calc14,15:calc15,16:calc16,17:calc17,18:calc18,19:calc19,20:calc20,21:calc21,22:calc22,23:calc23,24:calc24,25:calc25,26:calc26,27:calc27,28:calc28,29:calc29,30:calc30,31:calc31,32:calc32,33:calc33,34:calc34,35:calc35,36:calc36,37:calc37,38:calc38,39:calc39,40:calc40,41:calc41,42:calc42,43:calc43,44:calc44,45:calc45,46:calc46,47:calc47,48:calc48,49:calc49,50:calc50,51:calc51,52:calc52,53:calc53,54:calc54,55:calc55,56:calc56,57:calc57,58:calc58,59:calc59,60:calc60,61:calc61,62:calc62,63:calc63,64:calc64,65:calc65,66:calc66,67:calc67,68:calc68,69:calc69,70:calc70,71:calc71,72:calc72,73:calc73,74:calc74,75:calc75,76:calc76,77:calc77,78:calc78,79:calc79,80:calc80,81:calc81,82:calc82,83:calc83,84:calc84,85:calc85,86:calc86,87:calc87,88:calc88,89:calc89,90:calc90,91:calc91,92:calc92,93:calc93,94:calc94,95:calc95,96:calc96,97:calc97,98:calc98,99:calc99,100:calc100,101:calc101,102:calc102,103:calc103,104:calc104,105:calc105,106:calc106,107:calc107,108:calc108,109:calc109,110:calc110,111:calc111,112:calc112,113:calc113,114:calc114,115:calc115,116:calc116,117:calc117,118:calc118,119:calc119,120:calc120,121:calc121,122:calc122,123:calc123,124:calc124,125:calc125,126:calc126,127:calc127,128:calc128,129:calc129,130:calc130,131:calc131,132:calc132,133:calc133,134:calc134,135:calc135,136:calc136,137:calc137,138:calc138,139:calc139,140:calc140,141:calc141,142:calc142,143:calc143,144:calc144,145:calc145,146:calc146,147:calc147,148:calc148,149:calc149,150:calc150,151:calc151,152:calc152,153:calc153,154:calc154,155:calc155,156:calc156,157:calc157,158:calc158,159:calc159,160:calc160,161:calc161,162:calc162,163:calc163,164:calc164,165:calc165,166:calc166,167:calc167,168:calc168,169:calc169,170:calc170,171:calc171,172:calc172,173:calc173,174:calc174,175:calc175,176:calc176,177:calc177,178:calc178,179:calc179,180:calc180,181:calc181,182:calc182,183:calc183,184:calc184,185:calc185,186:calc186,187:calc187,188:calc188,189:calc189,190:calc190,191:calc191,192:calc192,193:calc193,194:calc194,195:calc195,196:calc196,197:calc197,198:calc198,199:calc199,200:calc200,201:calc201,202:calc202,203:calc203,204:calc204,205:calc205,206:calc206,207:calc207,208:calc208,209:calc209,210:calc210,211:calc211,212:calc212,213:calc213,214:calc214,215:calc215,216:calc216,217:calc217,218:calc218,219:calc219,220:calc220,221:calc221,222:calc222,223:calc223,224:calc224,225:calc225,226:calc226,227:calc227,228:calc228,229:calc229,230:calc230,231:calc231,232:calc232,233:calc233,234:calc234,235:calc235,236:calc236,237:calc237,238:calc238,239:calc239,240:calc240,241:calc241,242:calc242,243:calc243,244:calc244,245:calc245,246:calc246,247:calc247,248:calc248,249:calc249,250:calc250,251:calc251,252:calc252,253:calc253,254:calc254,255:calc255,256:calc256,257:calc257,258:calc258,259:calc259,260:calc260,261:calc261,262:calc262,263:calc263,264:calc264,265:calc265,266:calc266,267:calc267,268:calc268,269:calc269,270:calc270,271:calc271,272:calc272,273:calc273,274:calc274,275:calc275,276:calc276,277:calc277,278:calc278,279:calc279,280:calc280,281:calc281,282:calc282,283:calc283,284:calc284,285:calc285,286:calc286,287:calc287,288:calc288,289:calc289,290:calc290,291:calc291,292:calc292,293:calc293,294:calc294,295:calc295,296:calc296,297:calc297,298:calc298}
+
+for i in range(299):
+    print(end=f'{i:3} --> ')
+    X = BitVec('X', 64)
+    mm[i](X, i)

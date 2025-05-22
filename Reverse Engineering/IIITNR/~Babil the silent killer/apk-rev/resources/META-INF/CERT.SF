@@ -1,0 +1,286 @@
+Signature-Version: 1.0
+Created-By: Android Gradle 7.2.0
+SHA1-Digest-Manifest: J97T1p/IWEvFXdVJfMpsogrgqj8=
+X-Android-APK-Signed: 2
+
+Name: AndroidManifest.xml
+SHA1-Digest: FbAaoXler6Tt4SfxCP/bmsUtFs8=
+
+Name: DebugProbesKt.bin
+SHA1-Digest: Z0OZMLZLNcAQeaVO3thh7rEhINM=
+
+Name: META-INF/androidx.activity_activity.version
+SHA1-Digest: RkNW8YDqxBjvnU/8M+42MoBO998=
+
+Name: META-INF/androidx.annotation_annotation-experimental.version
+SHA1-Digest: 4Tx/OE4OYuecGI9+583MUWSivc0=
+
+Name: META-INF/androidx.arch.core_core-runtime.version
+SHA1-Digest: e1tut2kK2rB7RpspgrtY2fhXIus=
+
+Name: META-INF/androidx.core_core.version
+SHA1-Digest: o7aBBsdX6XFdaheUBM68XOFI6YM=
+
+Name: META-INF/androidx.customview_customview.version
+SHA1-Digest: t8mdcbiD7qQRZMP1YzJ04kSRnf4=
+
+Name: META-INF/androidx.fragment_fragment.version
+SHA1-Digest: YCTFcfu3Lr1U8TE6qJKf40UZNmY=
+
+Name: META-INF/androidx.lifecycle_lifecycle-livedata-core.version
+SHA1-Digest: U63/Ctq+AUtHFU5Ia4vA7Ym34KQ=
+
+Name: META-INF/androidx.lifecycle_lifecycle-livedata.version
+SHA1-Digest: poGZm7IDwUnkQwl7MPyRqH6B9RE=
+
+Name: META-INF/androidx.lifecycle_lifecycle-runtime.version
+SHA1-Digest: 8g5rzIxfLLWuLMlOUj0ekdYdpPk=
+
+Name: META-INF/androidx.lifecycle_lifecycle-viewmodel.version
+SHA1-Digest: 5rJbuh2iNVSvJuUQ/FpsQuQ/WdQ=
+
+Name: META-INF/androidx.loader_loader.version
+SHA1-Digest: TbDlvpg++ycbvKZlifqI5Y5JpVQ=
+
+Name: META-INF/androidx.savedstate_savedstate.version
+SHA1-Digest: xC4vk1bYtZevNUbqkQuqonsnBaY=
+
+Name: META-INF/androidx.tracing_tracing.version
+SHA1-Digest: UXCYzQxE6klZPd7HGhloYQsNbAE=
+
+Name: META-INF/androidx.versionedparcelable_versionedparcelable.versio
+ n
+SHA1-Digest: lj0KiVqVg8LF3St3iLdMHAGU9T4=
+
+Name: META-INF/androidx.viewpager_viewpager.version
+SHA1-Digest: Z6PEVwMu6dlOivFDm82mN1PA+/g=
+
+Name: META-INF/androidx.window_window-java.version
+SHA1-Digest: l+R/aHD/GOdCAPEX+GazW9rpB80=
+
+Name: META-INF/androidx.window_window.version
+SHA1-Digest: dD/UOmdIakqGjND+3QpmDnBkM2c=
+
+Name: META-INF/com/android/build/gradle/app-metadata.properties
+SHA1-Digest: b1/t1htLL+3gFT/KZScPCMkZXCo=
+
+Name: META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler
+SHA1-Digest: FxU2pVhbHw9iiPvlP+E/+/+59l8=
+
+Name: META-INF/services/kotlinx.coroutines.internal.MainDispatcherFact
+ ory
+SHA1-Digest: BePkAYDH2Q31UjrS70qdVXjMuJ0=
+
+Name: assets/flutter_assets/AssetManifest.json
+SHA1-Digest: OWJwKufaNvflK5x+NuYJ4WD0KfY=
+
+Name: assets/flutter_assets/ConFig/Packages/Upgrade/Dart/iijk0345huhok
+ 00.png
+SHA1-Digest: JG8IercHeMn2Za4UiUGSUX6JdfI=
+
+Name: assets/flutter_assets/ConFig/Packages/Upgrade/Dart/iijk0345huhok
+ 01.png
+SHA1-Digest: +3Zj1qjZmjX+SOuU0Aw5IwXmmNU=
+
+Name: assets/flutter_assets/FontManifest.json
+SHA1-Digest: PMI3fZTYgtZ59SB50Ey99GtlLTM=
+
+Name: assets/flutter_assets/NOTICES.Z
+SHA1-Digest: 5Gvt/1DCrtwJEoH7sXpu1ATdhyw=
+
+Name: assets/flutter_assets/fonts/MaterialIcons-Regular.otf
+SHA1-Digest: fjuK8u7te95PD38786T5FDbLldE=
+
+Name: assets/flutter_assets/images/back.png
+SHA1-Digest: EwKRwoRFGiOEIAkLEuGDANEWpvY=
+
+Name: assets/flutter_assets/images/flag.jpg
+SHA1-Digest: 83SrFzKTL/uXu83ewSeS0FVpEvc=
+
+Name: assets/flutter_assets/images/flag.png
+SHA1-Digest: sufNEdlD2qmuw3G7KdWiV8tpIhI=
+
+Name: assets/flutter_assets/images/home_page_image.png
+SHA1-Digest: gciIdKPzSW50DsuLnTLXwgFjHD4=
+
+Name: assets/flutter_assets/images/image0.png
+SHA1-Digest: LnxF7yHNA+nC86e8CXQRQkgz7/I=
+
+Name: assets/flutter_assets/packages/cupertino_icons/assets/CupertinoI
+ cons.ttf
+SHA1-Digest: Sb/JhzvcAjrUnvtM9PgP+ae8BHg=
+
+Name: assets/flutter_assets/shaders/ink_sparkle.frag
+SHA1-Digest: JDVYgnD3DZ8kQ6yj6YPAEGxGcyY=
+
+Name: classes.dex
+SHA1-Digest: JZXUzE+2zc2mHqWNSCWIMRaWCSU=
+
+Name: kotlin-tooling-metadata.json
+SHA1-Digest: 75l3acRDJZwLptdJfY6Sg5/mFZc=
+
+Name: kotlin/annotation/annotation.kotlin_builtins
+SHA1-Digest: u2/Z7uzWXgLQ8saGO/SXitO0nP8=
+
+Name: kotlin/collections/collections.kotlin_builtins
+SHA1-Digest: hGzyGYoe+Vc1UOnD9Mg4kY4ZXxY=
+
+Name: kotlin/coroutines/coroutines.kotlin_builtins
+SHA1-Digest: cmy3peJy1Zdf5inD2qNB1hpYdmY=
+
+Name: kotlin/internal/internal.kotlin_builtins
+SHA1-Digest: YEOTs3AEwjkAx8NVYffg8DLwZiE=
+
+Name: kotlin/kotlin.kotlin_builtins
+SHA1-Digest: pcZ0iuP5T8NLScTgX/DfeIdzBlE=
+
+Name: kotlin/ranges/ranges.kotlin_builtins
+SHA1-Digest: uoCNOLWWTnndGkVv7n8CcVcUxTY=
+
+Name: kotlin/reflect/reflect.kotlin_builtins
+SHA1-Digest: qPs41j3cEReuTGR0Pq2UvzBNZ9s=
+
+Name: lib/arm64-v8a/libapp.so
+SHA1-Digest: GPpBg7xyAcm9MY4EKtfhxR2SZTw=
+
+Name: lib/arm64-v8a/libflutter.so
+SHA1-Digest: ukP1ck4FflRzu/CHOSFf4X7xRp4=
+
+Name: lib/armeabi-v7a/libapp.so
+SHA1-Digest: B7/qcMwwT8n6BprkHPM3uCvSdNU=
+
+Name: lib/armeabi-v7a/libflutter.so
+SHA1-Digest: W3Ud9l7Hd1D27Znwxrv9AomGTHc=
+
+Name: lib/x86_64/libapp.so
+SHA1-Digest: BYqLnIZaDbW92I9x/XHAYoFP1Ko=
+
+Name: lib/x86_64/libflutter.so
+SHA1-Digest: kDaWo1FoReV9lrcjRd+4VDOzRpM=
+
+Name: res/09.9.png
+SHA1-Digest: zK+hMEry3ScsYz1r+FYUmc5jXow=
+
+Name: res/2P.xml
+SHA1-Digest: 5ERU+RQcnBjcYiQYHfQ2MqdMqdI=
+
+Name: res/3m.xml
+SHA1-Digest: XI/qkNf1+5DZjdwlg+kkpH5A2rs=
+
+Name: res/4W.xml
+SHA1-Digest: Ved8+uZft86/SNn2Bd3GvdFDk64=
+
+Name: res/4u.xml
+SHA1-Digest: 3472FYq1S+bwGeDUgySgcnjEyHE=
+
+Name: res/8V.9.png
+SHA1-Digest: 8oWVu3IrBjDYh8ddzKGRX9GkL40=
+
+Name: res/8r.xml
+SHA1-Digest: Q5Ibs8GWRWWCZ0N3dL1vbmqd5iA=
+
+Name: res/93.9.png
+SHA1-Digest: fTdB4Nh7hYugKfM3F+zzezmcsXM=
+
+Name: res/BB.xml
+SHA1-Digest: PB48Jdz2+w93gF2wsvvjGkDqVQ8=
+
+Name: res/C7.xml
+SHA1-Digest: m22cymmbb/1Q+G0ItDAiTKC/ed8=
+
+Name: res/CG.png
+SHA1-Digest: 75Bc4anWg4Rfsr2NwVCGiiVsKts=
+
+Name: res/Cv.xml
+SHA1-Digest: ZBC0Lu85Ae+tgMNywsbvfYhoQ0s=
+
+Name: res/D2.png
+SHA1-Digest: ZbumH9Jm05vUzrkub988tjPUYCw=
+
+Name: res/DS.xml
+SHA1-Digest: IBVi7dHOHyLN5+24i8sf7DFvIqA=
+
+Name: res/FZ.xml
+SHA1-Digest: H/w7tEaz02hTx5gWtWEuphKKVaQ=
+
+Name: res/LD.png
+SHA1-Digest: 2UNOyfLos/DTplMeQgBxY5IxG3U=
+
+Name: res/NR.xml
+SHA1-Digest: 9x/c7R5oVTGM8wUXrD+HDt/VLpU=
+
+Name: res/O3.9.png
+SHA1-Digest: DKfkGyOAIaKV34obXHNJvrmyDDw=
+
+Name: res/Ot.png
+SHA1-Digest: s2Id1/H9Bq2ZiLaISAzAklNAsBE=
+
+Name: res/Pp.xml
+SHA1-Digest: U9tDD2SGvhR1fEJEgHSz7rw7XS0=
+
+Name: res/Pq.9.png
+SHA1-Digest: +gStvifLT23qLwl5w9SNSwrYEJE=
+
+Name: res/Qv.png
+SHA1-Digest: nRPhd3MIqJMx/Rz4FAfoK6tycvI=
+
+Name: res/SD.png
+SHA1-Digest: 35T8nmaGGJLA7BovLxduw0c3uj8=
+
+Name: res/SH.xml
+SHA1-Digest: 4arj+h0tnVMDkKN1I45MWufnzeo=
+
+Name: res/SS.xml
+SHA1-Digest: Rv73kirxs+kFaENwpJcIN17Lk40=
+
+Name: res/T2.9.png
+SHA1-Digest: 4cCtZL5QEiN48gd76bczk1cNwcU=
+
+Name: res/UT.xml
+SHA1-Digest: 2V0cN9HkQE6Mz80VFPJzgNZI4/o=
+
+Name: res/Xs.9.png
+SHA1-Digest: ZVXp1/xCgiq0CfhH+Lps62PMW6w=
+
+Name: res/aA.xml
+SHA1-Digest: o9OngVdbIBXa8ate4MZkVzHwzCY=
+
+Name: res/bM.xml
+SHA1-Digest: 2CjPPxckUOddD5Od3gC0AwI101I=
+
+Name: res/dH.9.png
+SHA1-Digest: 2hDi6QD2yDddMXAEqh0q3O/TC0c=
+
+Name: res/eK.9.png
+SHA1-Digest: udS0adTK6W8K+zJ0cuUtO2KXRjs=
+
+Name: res/hj.9.png
+SHA1-Digest: GfbwTQfXLXavtVB+NFw+7RyaGKw=
+
+Name: res/iL.xml
+SHA1-Digest: o+tH7Ppw2rSOYmLx3iywKdaa/Ow=
+
+Name: res/jK.9.png
+SHA1-Digest: Je0I876W9WEBpdp5Auf/osJZqGg=
+
+Name: res/jy.png
+SHA1-Digest: 6G4RQm9QtDRRsIEJTV8oKmNe9+I=
+
+Name: res/n1.xml
+SHA1-Digest: SWDgl+DlSgSu8gR4KjXQbY1qXuo=
+
+Name: res/q6.xml
+SHA1-Digest: qtS6mosANudP4dbemoQwpDUMmvM=
+
+Name: res/tr.9.png
+SHA1-Digest: 7pg9NmX2gU7+TzNxgNZXoDRrEQw=
+
+Name: res/u3.png
+SHA1-Digest: jJGxVUp3zp6FmkYp19TC7iQsyjk=
+
+Name: res/u6.xml
+SHA1-Digest: rgqWcuaG2VWHmf2FqzeVaoOAwh8=
+
+Name: resources.arsc
+SHA1-Digest: y6kCRlyZVk+H+3xfj8AEYmqKiBE=
+

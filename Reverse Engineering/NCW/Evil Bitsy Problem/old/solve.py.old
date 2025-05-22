@@ -1,0 +1,76 @@
+def flipbit(r):
+    bits = format(r, '#08b')[2:]
+    bits2 = ''
+    for bit in bits:
+        if bit == '1':
+            bits2 += '0'
+        else:
+            bits2 += '1'
+    return int(bits2, 2)
+
+# select 1
+def s1():
+    flag = []
+    with open('./input', 'r') as file:
+        idx = 0
+        a = ''
+        b = ''
+        for line in file:
+            if idx & 1 == 0: # first
+                a = int(line, 2)
+            if idx & 1 == 1: # second
+                b = int(line, 2)
+                # print(format(a ^ b, '#032b')[2:])
+
+                # second xor
+                x = int('00111001', 2)
+                res = (a ^ b) ^ x
+                # if idx in [12, 14, 16]:
+                    # res = flipbit(res)
+                # print(format(res, '#032b')[2:])
+                # print(idx, end=':')
+                # print(chr(res), end='')
+                flag.append(res)
+            idx += 1
+    # print(flag)
+    flag[12] = flipbit(flag[12])
+    flag[14] = flipbit(flag[14])
+    flag[16] = flipbit(flag[16])
+    # print(flag)
+    print(''.join(chr(c) for c in flag))
+
+# select 0
+def s0():
+    x1 = []
+    with open('./input', 'r') as file:
+        idx = 0
+        a = ''
+        b = ''
+        for line in file:
+            line = line[:-1]
+            if idx & 1 == 0: # first
+                a = int(line, 2)
+            if idx & 1 == 1: # second
+                b = int(line, 2)
+                r = a ^ b
+                # s = format(r, '#034b')[2:][::-1]
+                s = bin(r)[2:][::-1]
+                # print(s, end='')
+                x1.append(s)
+            idx += 1
+    for x in x1:
+        print(x, end='')
+    print('\n\n\n\n')
+    with open('./input2', 'r') as file:
+        n = 0
+        for line in file:
+            n += 1
+            line = line[::-1]
+            a = int(line, 2)
+            x = int('00111001', 2)
+            r = a ^ b
+            if n in [13, 15, 17]:
+                r = flipbit(r)
+            print(format(r, '#013b'), end='\n')
+
+s0()

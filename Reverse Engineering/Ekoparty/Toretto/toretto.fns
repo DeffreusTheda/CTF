@@ -1,0 +1,6 @@
+; toretto.bin
+r                                = $E000
+LM                               = $E000
+L                                = $E000
+m                                = $E000
+NES                              = $E000

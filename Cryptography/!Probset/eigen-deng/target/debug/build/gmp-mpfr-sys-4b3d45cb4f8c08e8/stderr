@@ -1,0 +1,2133 @@
+toom_interpolate_5pts.c:70:19: warning: expression result unused [-Wunused-value]
+   70 |   ASSERT_NOCARRY (mpn_divexact_by3 (v2, v2, kk1));    /* v2 <- v2 / 3 */
+      |   ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../gmp-src/gmp-impl.h:1723:6: note: expanded from macro 'mpn_divexact_by3'
+ 1723 |   (3 & mpn_bdiv_dbm1 (dst, src, size, __GMP_CAST (mp_limb_t, GMP_NUMB_MASK / 3)))
+      |    ~ ^
+../../gmp-src/gmp-impl.h:2525:33: note: expanded from macro 'ASSERT_NOCARRY'
+ 2525 | #define ASSERT_NOCARRY(expr)   (expr)
+      |                                 ^~~~
+1 warning generated.
+toom_interpolate_8pts.c:163:18: warning: expression result unused [-Wunused-value]
+  163 |   ASSERT_NOCARRY(mpn_divexact_by3 (r5, r5, 3 * n + 1));
+      |   ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../gmp-src/gmp-impl.h:1723:6: note: expanded from macro 'mpn_divexact_by3'
+ 1723 |   (3 & mpn_bdiv_dbm1 (dst, src, size, __GMP_CAST (mp_limb_t, GMP_NUMB_MASK / 3)))
+      |    ~ ^
+../../gmp-src/gmp-impl.h:2525:33: note: expanded from macro 'ASSERT_NOCARRY'
+ 2525 | #define ASSERT_NOCARRY(expr)   (expr)
+      |                                 ^~~~
+1 warning generated.
+mulmod_bknp1.c:335:21: warning: expression result unused [-Wunused-value]
+  335 |     ASSERT_NOCARRY (mpn_divexact_by3 (tp, tp, n + 1));
+      |     ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../gmp-src/gmp-impl.h:1723:6: note: expanded from macro 'mpn_divexact_by3'
+ 1723 |   (3 & mpn_bdiv_dbm1 (dst, src, size, __GMP_CAST (mp_limb_t, GMP_NUMB_MASK / 3)))
+      |    ~ ^
+../../gmp-src/gmp-impl.h:2525:33: note: expanded from macro 'ASSERT_NOCARRY'
+ 2525 | #define ASSERT_NOCARRY(expr)   (expr)
+      |                                 ^~~~
+1 warning generated.
+../../gmp-src/mpz/pprime_p.c:63:29: warning: operator '?:' has lower precedence than '&'; '&' will be evaluated first [-Wbitwise-conditional-parentheses]
+   63 |           is_prime = n0 & (n0 > 1) ? isprime (n0) : n0 == 2;
+      |                      ~~~~~~~~~~~~~ ^
+../../gmp-src/mpz/pprime_p.c:63:29: note: place parentheses around the '&' expression to silence this warning
+   63 |           is_prime = n0 & (n0 > 1) ? isprime (n0) : n0 == 2;
+      |                                    ^
+      |                      (            )
+../../gmp-src/mpz/pprime_p.c:63:29: note: place parentheses around the '?:' expression to evaluate it first
+   63 |           is_prime = n0 & (n0 > 1) ? isprime (n0) : n0 == 2;
+      |                                    ^                       
+      |                           (                                )
+1 warning generated.
+In file included from ../../gmp-src/tests/refmpf.c:24:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../gmp-src/tests/refmpn.c:37:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../gmp-src/tests/refmpz.c:27:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../gmp-src/tests/refmpq.c:21:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../gmp-src/tests/memory.c:24:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../gmp-src/tests/misc.c:44:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+../../gmp-src/tests/misc.c:161:43: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  161 | mp_limb_t (*calling_conventions_function) (ANYARGS);
+      |                                           ^       
+      |                                                   void
+In file included from ../../gmp-src/tests/spinner.c:32:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../gmp-src/tests/trace.c:32:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+2 warnings generated.
+1 warning generated.
+In file included from ../../gmp-src/tests/t-bswap.c:24:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../gmp-src/tests/t-constants.c:23:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../gmp-src/tests/t-count_zeros.c:24:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../gmp-src/tests/t-hightomask.c:24:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../gmp-src/tests/t-modlinv.c:25:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../gmp-src/tests/t-popc.c:24:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../gmp-src/tests/t-parity.c:23:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../gmp-src/tests/t-sub.c:25:
+../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+In file included from ../../../gmp-src/tests/mpn/t-aors_1.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-fat.c:26:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-asmtype.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-mod_1.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-get_d.c:28:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-instrument.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-divrem_1.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-iord_u.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-mp_bases.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-perfsqr.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-scan.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/logic.c:39:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-toom22.c:10:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-toom32.c:8:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-toom42.c:8:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-toom33.c:11:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-toom43.c:8:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-toom44.c:11:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-toom52.c:8:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-toom53.c:8:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-toom54.c:8:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-toom62.c:8:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-toom63.c:8:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-toom8h.cIn file included from ../../../gmp-src/tests/mpn/t-toom6h.c:13:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+:19:
+In file included from ../../../gmp-src/tests/mpn/toom-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-toom2-sqr.c:7:
+In file included from ../../../gmp-src/tests/mpn/toom-sqr-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-toom3-sqr.c:6:
+In file included from ../../../gmp-src/tests/mpn/toom-sqr-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-toom4-sqr.c:6:
+In file included from ../../../gmp-src/tests/mpn/toom-sqr-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-toom6-sqr.c:8:
+In file included from ../../../gmp-src/tests/mpn/toom-sqr-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-toom8-sqr.c:8:
+In file included from ../../../gmp-src/tests/mpn/toom-sqr-shared.h:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-div.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-mul.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-mullo.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-sqrlo.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-mulmod_bnm1.c:28:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-sqrmod_bnm1.c:27:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-mulmid.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-mulmod_bknp1.c:27:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-sqrmod_bknp1.c:27:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-addaddmul.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-hgcd.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-hgcd_appr.c:26:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-matrix22.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-invert.c:27:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-bdiv.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-fib2m.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-broot.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-brootinv.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-minvert.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-sizeinbase.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpn/t-gcd_11.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-gcd_22.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpn/t-gcdext_1.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+1 warning generated.
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+In file included from ../../../gmp-src/tests/mpz/t-cmp.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-addsub.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/reuse.c:33:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-mul_i.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-tdiv.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-mul.c:26:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-tdiv_ui.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-fdiv.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1In file included from ../../../gmp-src/tests/mpz/t-fdiv_ui.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+ warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-cdiv_ui.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-gcd.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-gcd_ui.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-lcm.c:26:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-invert.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/dive.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/dive_ui.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-sqrtrem.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/convert.c:27:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/io.c:30:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-inp_str.c:30:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/logic.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+../../../gmp-src/tests/mpz/logic.c:185:12: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  185 | dump_abort ()
+      |            ^
+      |             void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-bit.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-powm.c:26:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+2 warnings generated.
+In file included from ../../../gmp-src/tests/mpz/t-powm_ui.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-pow.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-div_2exp.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-root.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-perfsqr.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-perfpow.c:26:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+../../../gmp-src/tests/mpz/t-perfpow.c:80:13: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   80 | check_tests ()
+      |             ^
+      |              void
+In file included from ../../../gmp-src/tests/mpz/t-jac.c:38:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-bin.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+2 warnings generated.
+In file included from ../../../gmp-src/tests/mpz/t-get_d_2exp.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-get_si.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-get_d.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-set_d.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1In file included from ../../../gmp-src/tests/mpz/t-set_si.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+ warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-lucm.c:26:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-fac_ui.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-mfac_uiui.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-primorial_ui.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-fib_ui.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-lucnum_ui.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-scan.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-fits.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-divis_2exp.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-divis.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-cong.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-cong_2exp.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-sizeinbase.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-set_str.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-cmp_d.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-aorsmul.c:26:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-cmp_si.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-hamdist.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-oddeven.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-popcount.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-set_f.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpz/t-io_raw.c:30:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-import.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpz/t-export.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from In file included from ../../../gmp-src/tests/mpz/t-pprime_p.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+../../../gmp-src/tests/mpz/t-nextprime.clibtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+../../../gmp-src/tests/mpz/t-nextprime.c:74:16: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   74 | test_largegaIn file included from ../../../gmp-src/tests/mpz/t-remove.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+libtool: warning: assuming '-no-fast-install' instead
+ps ()
+      |                ^
+      |                 void
+In file included from ../../../gmp-src/tests/mpz/t-limbs.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+../../../gmp-src/tests/mpz/t-nextprime.c:110:20: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  110 | test_bitboundaries ()
+      |                    ^
+      |                     void
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+1 warning generated.
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+3 warnings generated.
+1 warning generated.
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+1 warning generated.
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+In file included from In file included from ../../../gmp-src/tests/mpq/t-equal.c../../../gmp-src/tests/mpq/t-cmp_ui.c::2324:
+:
+../../../gmp-src/tests/tests.h../../../gmp-src/tests/tests.h::5454::2525::  warning: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+
+   54 | d   oubl54e |  doublet etests_infinity_d ();
+      |                         ^
+      |                          void
+sts_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpq/t-cmp_si.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpq/t-aors.c:27:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpq/t-get_d.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpq/t-cmp.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpq/t-inp_str.c:30:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpq/t-get_str.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+11 warning warning generated generated.
+.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpq/t-inv.c:21:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpq/t-md_2exp.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+../../../gmp-src/tests/mpq/t-md_2exp.c:32:14: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   32 | check_random ()
+      |              ^
+      |               void
+In file included from ../../../gmp-src/tests/mpq/t-set_f.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpq/t-set_str.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpq/reuse.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpq/t-cmp_z.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+In file included from ../../../gmp-src/tests/mpq/io.c:29:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+libtool: warning: assuming '-no-fast-install' instead
+1 warning generated.
+1 warning generated.
+2 warnings generated.
+1 warning generated.
+1 warning generated.
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+1 warning generated.
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+In file included from ../../../gmp-src/tests/mpf/t-conv.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpf/t-dm2exp.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpf/t-sub.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpf/t-add.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-sqrt.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-muldiv.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpf/reuse.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpf/t-sqrt_ui.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-cmp_d.c:25:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpf/t-cmp_si.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-div.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpf/t-fits.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpf/t-get_d.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-get_d_2exp.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-get_si.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-get_ui.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-gsprec.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-inp_str.c:30:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-int_p.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpf/t-mul_ui.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-set.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpf/t-set_q.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-set_si.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpf/t-set_ui.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-trunc.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-ui_div.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/mpf/t-eq.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+In file included from ../../../gmp-src/tests/mpf/t-pow_ui.c:24:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+1 warning generated.
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+1 warning generated.
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+In file included from ../../../gmp-src/tests/rand/t-mt.c:22:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/rand/t-urbui.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/rand/t-lc2exp.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/rand/t-urmui.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/rand/t-iset.c:23:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+In file included from ../../../gmp-src/tests/rand/t-urndmm.c:22:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+In file included from ../../../gmp-src/tests/misc/t-scanf.c:52:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/misc/t-printf.c:54:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+In file included from ../../../gmp-src/tests/misc/t-locale.c:41:
+../../../gmp-src/tests/tests.h:54:25: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   54 | double tests_infinity_d ();
+      |                         ^
+      |                          void
+1 warning generated.
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+1 warning generated.
+libtool: warning: assuming '-no-fast-install' instead
+1 warning generated.
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for applem1-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+../../mpfr-src/src/vasprintf.c:1947:3: warning: result of comparison of constant 9223372036854775807 with expression of type 'int' is always false [-Wtautological-constant-out-of-range-compare]
+ 1947 |   INCR_TOTAL (np->ip_trailing_digits);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../mpfr-src/src/vasprintf.c:1937:28: note: expanded from macro 'INCR_TOTAL'
+ 1937 |     if (MPFR_UNLIKELY ((v) > MPFR_INTMAX_MAX))          \
+      |         ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+../../mpfr-src/src/mpfr-impl.h:1488:48: note: expanded from macro 'MPFR_UNLIKELY'
+ 1488 | # define MPFR_UNLIKELY(x) (__builtin_expect(!!(x), 0))
+      |                                                ^
+1 warning generated.
+../../mpfr-src/src/exp2m1.c:68:16: warning: variable 'nloop' set but not used [-Wunused-but-set-variable]
+   68 |   int inexact, nloop;
+      |                ^
+1 warning generated.
+../../mpfr-src/src/exp10m1.c:63:16: warning: variable 'nloop' set but not used [-Wunused-but-set-variable]
+   63 |   int inexact, nloop;
+      |                ^
+1 warning generated.
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+../../mpfr-src/tests/tdiv.c:1082:13: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+ 1082 |   int inex, err = 0;
+      |             ^
+1 warning generated.
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+../../mpfr-src/tests/tset_si.c:264:9: warning: keyword is hidden by macro definition [-Wkeyword-macro]
+  264 | #define long short
+      |         ^
+1 warning generated.
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+../../mpfr-src/tests/tstckintc.c:37:9: warning: result of comparison of constant 9223372036854775551 with expression of type 'unsigned int' is always true [-Wtautological-constant-out-of-range-compare]
+   37 |   if (u <= MPFR_PREC_MAX)
+      |       ~ ^  ~~~~~~~~~~~~~
+../../mpfr-src/tests/tstckintc.c:53:9: warning: result of comparison of constant 9223372036854775551 with expression of type 'int' is always true [-Wtautological-constant-out-of-range-compare]
+   53 |   if (i <= MPFR_PREC_MAX)
+      |       ~ ^  ~~~~~~~~~~~~~
+2 warnings generated.
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead
+libtool: warning: '-no-install' is ignored for aarch64-apple-darwin24.3.0
+libtool: warning: assuming '-no-fast-install' instead

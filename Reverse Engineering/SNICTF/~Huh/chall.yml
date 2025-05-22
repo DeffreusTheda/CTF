@@ -1,0 +1,336 @@
+Architecture:    x86_64
+EntryPoint:      "0x401780:Code_x86_64"
+DefaultABI:      SystemV_x86_64
+DefaultPrototype:
+  Kind:            DefinedType
+  Definition:      "/TypeDefinitions/22-RawFunctionDefinition"
+Segments:
+  - StartAddress:    "0x400000:Generic64"
+    VirtualSize:     1256
+    StartOffset:     0
+    FileSize:        1256
+    IsReadable:      true
+    IsWriteable:     false
+    IsExecutable:    false
+    Type:
+      Kind:            DefinedType
+      Definition:      "/TypeDefinitions/0-StructDefinition"
+  - StartAddress:    "0x401000:Generic64"
+    VirtualSize:     474765
+    StartOffset:     4096
+    FileSize:        474765
+    IsReadable:      true
+    IsWriteable:     false
+    IsExecutable:    true
+    Type:
+      Kind:            DefinedType
+      Definition:      "/TypeDefinitions/5-StructDefinition"
+  - StartAddress:    "0x475000:Generic64"
+    VirtualSize:     165570
+    StartOffset:     479232
+    FileSize:        165570
+    IsReadable:      true
+    IsWriteable:     false
+    IsExecutable:    false
+    Type:
+      Kind:            DefinedType
+      Definition:      "/TypeDefinitions/10-StructDefinition"
+  - StartAddress:    "0x49e2e8:Generic64"
+    VirtualSize:     45216
+    StartOffset:     647912
+    FileSize:        22464
+    IsReadable:      true
+    IsWriteable:     true
+    IsExecutable:    false
+    Type:
+      Kind:            DefinedType
+      Definition:      "/TypeDefinitions/15-StructDefinition"
+ExtraCodeAddresses:
+  - "0x401100:Code_x86_64"
+  - "0x401152:Code_x86_64"
+  - "0x40133f:Code_x86_64"
+  - "0x401390:Code_x86_64"
+  - "0x4013e1:Code_x86_64"
+  - "0x401432:Code_x86_64"
+  - "0x401494:Code_x86_64"
+  - "0x4014e5:Code_x86_64"
+  - "0x401536:Code_x86_64"
+  - "0x4015a5:Code_x86_64"
+  - "0x406b70:Code_x86_64"
+  - "0x406cd2:Code_x86_64"
+  - "0x406ce0:Code_x86_64"
+  - "0x406e6a:Code_x86_64"
+  - "0x41f110:Code_x86_64"
+  - "0x41f2aa:Code_x86_64"
+  - "0x41f2c0:Code_x86_64"
+  - "0x41f49a:Code_x86_64"
+  - "0x41f4b0:Code_x86_64"
+  - "0x41f63a:Code_x86_64"
+  - "0x4219d0:Code_x86_64"
+  - "0x421cee:Code_x86_64"
+  - "0x452e50:Code_x86_64"
+  - "0x4530a2:Code_x86_64"
+  - "0x4531f0:Code_x86_64"
+  - "0x453568:Code_x86_64"
+  - "0x453830:Code_x86_64"
+  - "0x453eb7:Code_x86_64"
+  - "0x4558c0:Code_x86_64"
+  - "0x4559f8:Code_x86_64"
+  - "0x474bd0:Code_x86_64"
+Functions:
+  - Entry:           "0x401780:Code_x86_64"
+TypeDefinitions:
+  - ID:              0
+    Kind:            StructDefinition
+    Size:            1256
+    Fields:
+      - Offset:          624
+        CustomName:      "unreserved__note_gnu_property"
+        OriginalName:    .note.gnu.property
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/1-StructDefinition"
+      - Offset:          656
+        CustomName:      "unreserved__note_gnu_build_id"
+        OriginalName:    .note.gnu.build-id
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/2-StructDefinition"
+      - Offset:          692
+        CustomName:      "unreserved__note_ABI_tag"
+        OriginalName:    .note.ABI-tag
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/3-StructDefinition"
+      - Offset:          728
+        CustomName:      "unreserved__rela_plt"
+        OriginalName:    .rela.plt
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/4-StructDefinition"
+  - ID:              1
+    Kind:            StructDefinition
+    Size:            32
+    Fields:          []
+  - ID:              2
+    Kind:            StructDefinition
+    Size:            36
+    Fields:          []
+  - ID:              3
+    Kind:            StructDefinition
+    Size:            32
+    Fields:          []
+  - ID:              4
+    Kind:            StructDefinition
+    Size:            528
+    Fields:          []
+  - ID:              5
+    Kind:            StructDefinition
+    Size:            474765
+    CanContainCode:  true
+    Fields:
+      - Offset:          0
+        CustomName:      "unreserved__init"
+        OriginalName:    .init
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/6-StructDefinition"
+      - Offset:          24
+        CustomName:      "unreserved__plt"
+        OriginalName:    .plt
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/7-StructDefinition"
+      - Offset:          256
+        CustomName:      "unreserved__text"
+        OriginalName:    .text
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/8-StructDefinition"
+      - Offset:          474756
+        CustomName:      "unreserved__fini"
+        OriginalName:    .fini
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/9-StructDefinition"
+  - ID:              6
+    Kind:            StructDefinition
+    Size:            23
+    CanContainCode:  true
+    Fields:          []
+  - ID:              7
+    Kind:            StructDefinition
+    Size:            176
+    CanContainCode:  true
+    Fields:          []
+  - ID:              8
+    Kind:            StructDefinition
+    Size:            474497
+    CanContainCode:  true
+    Fields:          []
+  - ID:              9
+    Kind:            StructDefinition
+    Size:            9
+    CanContainCode:  true
+    Fields:          []
+  - ID:              10
+    Kind:            StructDefinition
+    Size:            165570
+    Fields:
+      - Offset:          0
+        CustomName:      "unreserved__rodata"
+        OriginalName:    .rodata
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/11-StructDefinition"
+      - Offset:          113088
+        CustomName:      "rodata_cst32"
+        OriginalName:    rodata.cst32
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/12-StructDefinition"
+      - Offset:          113184
+        CustomName:      "unreserved__eh_frame"
+        OriginalName:    .eh_frame
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/13-StructDefinition"
+      - Offset:          165264
+        CustomName:      "unreserved__gcc_except_table"
+        OriginalName:    .gcc_except_table
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/14-StructDefinition"
+  - ID:              11
+    Kind:            StructDefinition
+    Size:            113076
+    Fields:          []
+  - ID:              12
+    Kind:            StructDefinition
+    Size:            96
+    Fields:          []
+  - ID:              13
+    Kind:            StructDefinition
+    Size:            52080
+    Fields:          []
+  - ID:              14
+    Kind:            StructDefinition
+    Size:            306
+    Fields:          []
+  - ID:              15
+    Kind:            StructDefinition
+    Size:            45216
+    Fields:
+      - Offset:          0
+        CustomName:      "unreserved__tdata"
+        OriginalName:    .tdata
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/16-StructDefinition"
+      - Offset:          24
+        CustomName:      "unreserved__tbss"
+        OriginalName:    .tbss
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/17-StructDefinition"
+      - Offset:          15456
+        CustomName:      "unreserved__got"
+        OriginalName:    .got
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/18-StructDefinition"
+      - Offset:          15616
+        CustomName:      "unreserved__got_plt"
+        OriginalName:    .got.plt
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/19-StructDefinition"
+      - Offset:          15832
+        CustomName:      "unreserved__data"
+        OriginalName:    .data
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/20-StructDefinition"
+      - Offset:          22488
+        CustomName:      "unreserved__bss"
+        OriginalName:    .bss
+        Type:
+          Kind:            DefinedType
+          Definition:      "/TypeDefinitions/21-StructDefinition"
+  - ID:              16
+    Kind:            StructDefinition
+    Size:            24
+    Fields:          []
+  - ID:              17
+    Kind:            StructDefinition
+    Size:            64
+    Fields:          []
+  - ID:              18
+    Kind:            StructDefinition
+    Size:            144
+    Fields:          []
+  - ID:              19
+    Kind:            StructDefinition
+    Size:            200
+    Fields:          []
+  - ID:              20
+    Kind:            StructDefinition
+    Size:            6632
+    Fields:          []
+  - ID:              21
+    Kind:            StructDefinition
+    Size:            22728
+    Fields:          []
+  - ID:              22
+    Kind:            RawFunctionDefinition
+    Architecture:    x86_64
+    Arguments:
+      - Location:        rcx_x86_64
+        Type:
+          Kind:            PrimitiveType
+          PrimitiveKind:   PointerOrNumber
+          Size:            8
+      - Location:        rdx_x86_64
+        Type:
+          Kind:            PrimitiveType
+          PrimitiveKind:   PointerOrNumber
+          Size:            8
+      - Location:        rsi_x86_64
+        Type:
+          Kind:            PrimitiveType
+          PrimitiveKind:   PointerOrNumber
+          Size:            8
+      - Location:        rdi_x86_64
+        Type:
+          Kind:            PrimitiveType
+          PrimitiveKind:   PointerOrNumber
+          Size:            8
+      - Location:        r8_x86_64
+        Type:
+          Kind:            PrimitiveType
+          PrimitiveKind:   PointerOrNumber
+          Size:            8
+      - Location:        r9_x86_64
+        Type:
+          Kind:            PrimitiveType
+          PrimitiveKind:   PointerOrNumber
+          Size:            8
+    ReturnValues:
+      - Location:        rax_x86_64
+        Type:
+          Kind:            PrimitiveType
+          PrimitiveKind:   PointerOrNumber
+          Size:            8
+      - Location:        rdx_x86_64
+        Type:
+          Kind:            PrimitiveType
+          PrimitiveKind:   PointerOrNumber
+          Size:            8
+    PreservedRegisters:
+      - rbx_x86_64
+      - rbp_x86_64
+      - r12_x86_64
+      - r13_x86_64
+      - r14_x86_64
+      - r15_x86_64
+    FinalStackOffset: 8

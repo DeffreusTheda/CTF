@@ -1,0 +1,2 @@
+asm:ml64>-nologo
+asm:ml64>mode:debug>-Zi

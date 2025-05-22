@@ -1,0 +1,65 @@
+
+undefined8
+Java_com_example_myapplication_MyReceiver3_poslednyiMem
+          (undefined param_1 [16],undefined8 param_2,undefined8 param_3,undefined8 param_4,
+          undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8,long *param_9)
+
+{
+  void *pvVar1;
+  long lVar2;
+  undefined8 uVar3;
+  byte *pbVar4;
+  undefined extraout_q0 [16];
+  undefined XXX [16];
+  ulong local_50 [2];
+  void *local_40;
+  long local_38;
+  
+  lVar2 = tpidr_el0;
+  local_38 = *(long *)(lVar2 + 0x28);
+  local_50[0] = 0;
+  local_50[1] = 0;
+  local_40 = (void *)0x0;
+  uVar3 = FUN_0011f674(param_9);
+  pbVar4 = (byte *)(**(code **)(*param_9 + 0x5c0))(param_9,uVar3,0);
+                    /* try { // try from 0011fac8 to 0011fb7f has its CatchHandler @ 0011fbc0 */
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (extraout_q0,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)local_50,(basic_string<>)(*pbVar4 ^ 0x11));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)local_50,(basic_string<>)(pbVar4[0x18] ^ 0x1d));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)local_50,(basic_string<>)(pbVar4[0x17] ^ 3));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)local_50,(basic_string<>)(pbVar4[1] ^ 0x19));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)local_50,(basic_string<>)(pbVar4[0xe] ^ 0x2a));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)local_50,(basic_string<>)(pbVar4[0xb] ^ 0xdd));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)local_50,(basic_string<>)(pbVar4[0x13] ^ 0x3a));
+  std::__ndk1::basic_string<>::push_back
+            (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,(basic_string<> *)local_50,
+             (basic_string<>)(pbVar4[7] ^ 9));
+  pvVar1 = (void *)((ulong)local_50 | 1);
+  if ((local_50[0] & 1) != 0) {
+    pvVar1 = local_40;
+  }
+  uVar3 = (**(code **)(*param_9 + 0x538))(param_9,pvVar1);
+  if ((local_50[0] & 1) != 0) {
+    operator.delete(local_40);
+  }
+  if (*(long *)(lVar2 + 0x28) == local_38) {
+    return uVar3;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+
+

@@ -1,0 +1,1 @@
+Decompilers won't help.

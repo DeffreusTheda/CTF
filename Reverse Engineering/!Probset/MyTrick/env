@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Run this with `source env`
+
+export RUST_BACKTRACE=full
+export RUSTFLAGS="-C debuginfo=2 -C opt-level=0"
+export CARGO_PROFILE_RELEASE_DEBUG=true

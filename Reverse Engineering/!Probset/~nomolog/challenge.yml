@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dimasma0305/ctfify/refs/heads/master/function/template/templates/others/ctf-template/.gzctf/challenge.schema.yaml
+
+name: "nomolog"
+author: ".effie"
+description: |
+  D.I.D. i do that??
+
+type: "StaticAttachment"
+value: 1000
+
+flags:
+  - "{_sshhhhhhh_d0n7_l00k_0r_54y_4ny7h1n6_oookkkkkkkk?_}"
+
+provide: "./dist"

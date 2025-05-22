@@ -1,0 +1,154 @@
+
+undefined8
+Java_com_example_myapplication_MyReceiver3_memovNet
+          (undefined param_1 [16],undefined8 param_2,undefined8 param_3,undefined8 param_4,
+          undefined8 param_5,undefined8 param_6,undefined8 param_7,undefined8 param_8,long *param_9)
+
+{
+  void *pvVar1;
+  undefined8 uVar2;
+  byte *p_byte;
+  undefined extraout_q0 [16];
+  undefined XXX [16];
+  ulong p_bstring [2];
+  void *local_40;
+  long local_38;
+  long thread_id_info;
+  
+  thread_id_info = tpidr_el0;
+  local_38 = *(long *)(thread_id_info + 0x28);
+  p_bstring[0] = 0;
+  p_bstring[1] = 0;
+  local_40 = (void *)0x0;
+                    /* try { // try from 0011f74c to 0011f753 has its CatchHandler @ 0011fa50 */
+  uVar2 = FUN_0011f674(param_9);
+                    /* try { // try from 0011f75c to 0011f767 has its CatchHandler @ 0011fa4c */
+  p_byte = (byte *)(**(code **)(*param_9 + 0x5c0))(param_9,uVar2,0);
+                    /* try { // try from 0011f778 to 0011fa0b has its CatchHandler @ 0011fa54 */
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (extraout_q0,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(*p_byte ^ 0x21));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[1] + 4));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[2] - 1));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[3] + 0xa5));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[4] + 0x1d));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[5] + 0x20));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[6] - 4));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[7] + 0xb));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[8] + 6));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,*(basic_string<> *)(p_byte + 9));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[10] + 0x13));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0xb] + 0x98));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0xc] + 0x10));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0xd] + 10));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0xe] + 3));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0xf] + 10));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x10] + 0x13));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x11] + 0x19));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x12] + 0xc));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x13] ^ 0x3c));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x14] + 6));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x15] + 6));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x16] + 10));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x17] + 0xd));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x18] + 5));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x19] ^ 0x75));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x1a] ^ 0x59));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x1b] ^ 0x88));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x1c] ^ 0xa8));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x1d] ^ 0x20));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x1e] ^ 0x13));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x1f] ^ 0x38));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x20] ^ 0xa9));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x21] ^ 0xdd));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x22] ^ 0x5b));
+  XXX = std::__ndk1::basic_string<>::push_back
+                  (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,
+                   (basic_string<> *)p_bstring,(basic_string<>)(p_byte[0x23] ^ 0x50));
+  std::__ndk1::basic_string<>::push_back
+            (XXX,param_2,param_3,param_4,param_5,param_6,param_7,param_8,(basic_string<> *)p_bstring
+             ,(basic_string<>)(p_byte[0x15] ^ 0x5d));
+  pvVar1 = (void *)((ulong)p_bstring | 1);
+  if ((p_bstring[0] & 1) != 0) {
+    pvVar1 = local_40;
+  }
+  uVar2 = (**(code **)(*param_9 + 0x538))(param_9,pvVar1);
+  if ((p_bstring[0] & 1) != 0) {
+    operator.delete(local_40);
+  }
+  if (*(long *)(thread_id_info + 0x28) == local_38) {
+    return uVar2;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail();
+}
+
+

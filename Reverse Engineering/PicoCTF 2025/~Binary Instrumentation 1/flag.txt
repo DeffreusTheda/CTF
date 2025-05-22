@@ -1,0 +1,1 @@
+picoCTF{w4ke_m3_up_w1th_fr1da_f27acc38}

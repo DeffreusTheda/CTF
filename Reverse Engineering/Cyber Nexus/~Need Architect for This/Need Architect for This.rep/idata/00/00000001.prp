@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FILE_INFO>
+    <BASIC_INFO>
+        <STATE NAME="CONTENT_TYPE" TYPE="string" VALUE="Trace" />
+        <STATE NAME="PARENT" TYPE="string" VALUE="/New Traces" />
+        <STATE NAME="FILE_ID" TYPE="string" VALUE="c0a815d0fe30557428597208" />
+        <STATE NAME="FILE_TYPE" TYPE="int" VALUE="0" />
+        <STATE NAME="READ_ONLY" TYPE="boolean" VALUE="false" />
+        <STATE NAME="NAME" TYPE="string" VALUE="Emulate chall" />
+    </BASIC_INFO>
+</FILE_INFO>
