@@ -1,6 +1,6 @@
 # CTF
 
-> [!WARNING]
+> [!NOTE]
 > Please star ⭐ this repo if you found it helpful, I would appreciate it ^-^
 
 CTFs Writeups by Deffreus Theda, A.K.A. d3ffr3u5, vinni3, Effie
@@ -11,3 +11,9 @@ with minor experience on Pwn and Forensics.
 > [!NOTE]
 > Solved challenges have `~` prefix in it's challenge directory<br>
 > Flags should be stored in `flag.txt` in their challenge directory
+
+> [!WARNING]
+> This repo us undergoing mass restructuring. Planned:
+> - solved challs does not have `~` prefix; and  
+> - unsolved chall have it instead.  
+> Feel free to contribute!
