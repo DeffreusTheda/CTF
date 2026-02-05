@@ -1,1 +1,0 @@
-picoCTF{d3bug_f0r_th3_Win_0x100_e4a066b1}
