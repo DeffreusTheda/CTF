@@ -1,0 +1,1 @@
+There has been rumours about a new secure locker under development. You have managed to obtain a first demo of the locker. Can you find a way to crack it?

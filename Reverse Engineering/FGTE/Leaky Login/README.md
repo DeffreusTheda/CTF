@@ -1,0 +1,3 @@
+## Solution
+
+Just use `strings`

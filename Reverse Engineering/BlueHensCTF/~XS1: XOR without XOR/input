@@ -1,7 +1,0 @@
-enc = 'u_cnfrj_sr_b_34}yd1tt{0upt04lbmb'
-idx = 0
-dec = ''
-while len(dec) < len(enc):
-	dec += enc[idx % len(enc)]
-	idx += 17
-print(dec)

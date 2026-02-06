@@ -1,5 +1,0 @@
-a1 = answer[q_idx * 4 + random % 4];
-a2 = answer[q_idx * 4 + (random + 1) % 4];
-a3 = answer[q_idx * 4 + (random + 2) % 4];
-a4 = answer[q_idx * 4 + (random + 3) % 4];
-answer_key = ((answer_key_arr[q_idx] + random) - 1) % 4 + 1;

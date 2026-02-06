@@ -1,1 +1,0 @@
-[Here](https://github.com/DeffreusTheda/CTF/blob/maint/Write-ups/WRITE-UP_CYBER%20SENTRIX_FINAL_LastSeenIn2026.pdf)'s the write-up!
