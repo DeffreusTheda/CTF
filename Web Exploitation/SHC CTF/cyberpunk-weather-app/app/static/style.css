@@ -1,0 +1,71 @@
+body {
+    background-color: black;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+}
+
+.cp-header {
+    text-align: center;
+    margin: 20px;
+}
+
+form {
+    width: 33%;
+    margin: auto;
+}
+
+.cp-input,
+.cp-button {
+    width: 100%;
+}
+
+.cp-input {
+    padding: 10px 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: #0f0;
+    border: 2px solid #0f0;
+    border-radius: 4px;
+}
+
+.cp-button {
+    background-color: #0f0;
+    color: black;
+    border-color: #0f0;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.cp-button:hover {
+    background-color: black;
+    color: #0f0;
+}
+
+.cp-districts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 10px 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.cp-district {
+    color: #00b7ff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cp-district:hover {
+    color: #f00;
+}
+
+p { 
+    margin-left: 20%; 
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home | Cyberpunk Weather</title>
+    <script type="text/javascript">
+        function districtClick(district) {
+            document.getElementById('districtInput').value = district.textContent;
+        }
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body::after {
+            content: "";
+            background-image: url({{ url_for('static', filename='cyberpunk.jpg') }});
+            background-size: cover;
+            background-position: center center;
+            opacity: 0.7;
+            filter: brightness(50%);
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;   
+        }
+
+        body {
+            min-height: 100%;
+            position: relative;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg">
+        <header class="cp-header">
+            <h1>Cyberpunk Weather</h1>
+        </header>
+        <main>
+            <section class="cp-content">
+                <p>Welcome to Cyberpunk Weather! Navigate the dark and gritty corners of the metropolis and always stay equipped with the latest weather updates.</p>
+                <p>Enter a district name to check its current weather conditions:</p>
+                <form method="POST">
+                    <input id="districtInput" name="district" type="text" required class="cp-input" />
+                    <button type="submit" class="cp-button">Check Weather</button>
+                </form>
+                </br>
+
+                {% if message %}
+                    {{ message|safe }}
+                {% endif %}
+
+                <p>Available Districts:</p>
+                <div class="cp-districts">
+                    {% for district in districts %}
+                        <span onclick="districtClick(this)" class="cp-district">{{ district }}</span>
+                    {% endfor %}
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Stay edgy, Night City!</p>
+        </footer>
+    </div>
+</body>
+</html>

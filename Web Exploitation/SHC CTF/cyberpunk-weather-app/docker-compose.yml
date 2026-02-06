@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  web:
+    build: .
+    ports:
+      - "5001:80"
+    read_only: true

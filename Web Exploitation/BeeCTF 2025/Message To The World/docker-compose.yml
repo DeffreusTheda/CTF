@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    image: chall:latest
+    container_name: Message_To_The_World
+    ports:
+      - "5000:5000"
+    read_only: true  
+    tmpfs:
+      - /tmp:rw,nosuid,nodev,exec 
+      - /run:rw,nosuid,nodev     
+    security_opt:
+      - no-new-privileges:true    
+    cap_drop:
+      - ALL                       
+    pids_limit: 128
+    mem_limit: 256m
+    restart: unless-stopped
