@@ -1,7 +1,0 @@
-services:
-  py50:
-    build: .
-    ports:
-      - target: 9998
-        published: 9998
-        protocol: tcp

