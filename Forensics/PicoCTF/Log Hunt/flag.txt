@@ -1,0 +1,1 @@
+picoCTF{us3_y0urlinux_sk1lls_cedfa5fb}

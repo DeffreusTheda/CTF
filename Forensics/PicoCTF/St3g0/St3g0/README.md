@@ -21,8 +21,7 @@ pico.flag.png: PNG image data, 585 x 172, 8-bit/color RGBA, non-interlaced
 
 ```
 $ zsteg pico.flag.png
-b1,r,lsb,xy         .. text: "~__B>wV_G@"
-b1,rgb,lsb,xy       .. text: "picoCTF{7h3r3_15_n0_5p00n_96ae0ac1}$t3g0"
+b1,rgb,lsb,xy       .. text: "picoCTF{7h3r3_15_n0_5p00n_a1062667}$t3g0"
 b1,abgr,lsb,xy      .. text: "E2A5q4E%uSA"
 b2,b,lsb,xy         .. text: "AAPAAQTAAA"
 b2,b,msb,xy         .. text: "HWUUUUUU"
@@ -38,4 +37,4 @@ b4,rgba,msb,xy      .. file: Applesoft BASIC program data, first line number 8
 b4,abgr,lsb,xy      .. file: Novell LANalyzer capture file
 ```
 
-Flag: `picoCTF{7h3r3_15_n0_5p00n_96ae0ac1}`
+Flag: `picoCTF{7h3r3_15_n0_5p00n_a1062667}`

@@ -1,0 +1,1 @@
+picoCTF{forensics_analysis_is_amazing_5ccc7cb0}
