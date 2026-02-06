@@ -1,3 +1,4 @@
 Reverse[[:space:]]Engineering/!Probset/NMTE-4667/src/chall.i64 filter=lfs diff=lfs merge=lfs -text
 Reverse[[:space:]]Engineering/!Probset/NMTE-4667/src/params.o filter=lfs diff=lfs merge=lfs -text
 Reverse[[:space:]]Engineering/!Probset/QnQSec_Rev-effie.zip filter=lfs diff=lfs merge=lfs -text
+Forensics/CJ[[:space:]]High-School/Whale/whale.tar.xz filter=lfs diff=lfs merge=lfs -text
