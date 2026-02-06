@@ -1,7 +1,0 @@
-services:
-  coloring:
-    build: .
-    ports:
-      - "16000:5000"
-    restart: always
-    read_only: true
