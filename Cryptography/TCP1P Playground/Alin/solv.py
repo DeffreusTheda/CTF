@@ -60,16 +60,22 @@ def main():
     # Print the ciphertext
     # print("ciphertext:", end=" ")
     # print(" ".join(map(str, result)))
-    if s.check() == sat:
-        model = s.model()
-        print(model)
-        # flag = ''.join([chr(model[x].as_long()) for x in c])
-        if check_flag(flag):
-            print("FOUND:", flag)
-        else:
-            print("Shitt:", flag)
-    else:
-        print("No solution found")
+    print("solving!")
+    max = 2
+    res = ''
+    block_clause = []
+    while s.check() == sat and max > 0:
+        max -= 1
+        print("found!")
+    
+        m = s.model()
+        for ss in sorted(m.decls(), key=lambda x: x.name()):
+            res+=chr(m[ss].as_long())
+        print(res)
+        for var in m.decls():
+            block_clause.append(var() != m[var])
+        s.add(Or(block_clause))
+    print('done.')
 
 
 if __name__ == "__main__":
